@@ -1,0 +1,43 @@
+{
+  "name": "zavino-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "build:worker": "opennextjs-cloudflare build",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "preview:worker": "opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "check:size": "wrangler deploy --dry-run",
+    "media:reels": "node scripts/prepare-reels.mjs"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "2.1.10",
+    "gsap": "3.15.0",
+    "next": "16.3.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@fontsource-variable/syne": "5.3.0",
+    "@fontsource/ibm-plex-sans": "5.3.0",
+    "@opennextjs/cloudflare": "1.20.6",
+    "@types/node": "26.6.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.5",
+    "prettier": "3.9.8",
+    "sharp": "0.35.4",
+    "typescript": "6.0.3",
+    "wrangler": "4.135.0"
+  }
+}
