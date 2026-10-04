@@ -1,12 +1,12 @@
-# Approved homepage concept
+# Archive: former typographic-reel homepage concept
 
-**03 — Typographic reel** is the chosen UI base. The desktop and mobile images below now show the approved copy. They are still frames of a scroll-responsive design, not a depiction of its image transitions. The interaction specification and implementation checks live in [UI design base](ui-design-base.md).
+**Retired exploration.** Concept 03 was chosen under the earlier creative-first brief. Its desktop and mobile images remain as historical design references; their copy, five-pillar hierarchy, and scroll-responsive imagery are no longer the build target. Use [Current direction](current-direction.md) and [Motion direction](motion-and-interaction-direction.md) for the AI-first site.
 
-**Approved small all-caps eyebrow:** “WHERE VISION TAKES FLIGHT”
+**Previously approved eyebrow, now retired for the hero:** “WHERE VISION TAKES FLIGHT”
 
-**Approved headline:** “Build it. Market it. Automate it.”
+**Previously approved headline, now retired:** “Build it. Market it. Automate it.”
 
-**Approved supporting line:** “Branding, Marketing, Website development, content and AI automation.”
+**Previously approved supporting line, now retired:** “Branding, Marketing, Website development, content and AI automation.”
 
 ## Desktop starting frame
 
@@ -23,4 +23,4 @@ The eyebrow stays small and all caps above the vertical headline sequence. The h
 
 ## What the images establish
 
-Use the layout, copy hierarchy, palette, and selective image placement as the base. The actual site must render the words as text and implement the scroll-reactive media as an interaction. Final image crops, rights, truthful project attribution, responsive behavior across device sizes, and all links need review. The [page experience blueprints](page-experience-blueprints.md) describe the sections after the hero.
+This composition shows an earlier taste for bold type and a controlled evergreen palette. It does **not** define the new hero, its copy, or its motion. The [AI-first page experience](page-experience-blueprints.md) gives the current section structure.

@@ -1,8 +1,8 @@
-# Zavino UI design base
+# Archive: former Zavino UI design base
 
-Status: **superseded concept**, 4 October 2026. The user's later AI-first brief and [Current direction](current-direction.md) replace this copy lock and visual plan. This document remains for historical reference.
+Status: **retired historical concept**, 4 October 2026. Nothing below is a current copy lock or implementation instruction. The user's later AI-first brief, [Current direction](current-direction.md), [Page experience blueprints](page-experience-blueprints.md), and [Motion direction](motion-and-interaction-direction.md) replace this hero and the scroll-reactive image plan. The frames and details below are preserved only as a record of the earlier creative-first exploration.
 
-## Copy lock
+## Former copy lock — retired
 
 The small eyebrow above the headline is exactly **“WHERE VISION TAKES FLIGHT”**. Keep it in tracked, small all-caps type with the fine horizontal rule from concept 03. It is a quiet brand signature on both desktop and mobile, and stays still while the images react to scroll.
 
@@ -16,7 +16,7 @@ The line directly beneath it is exactly:
 
 The display treatment may use uppercase letters and line breaks, but the words, order, commas, and full stops stay intact. On desktop and mobile, show the three headline phrases as a clear reading sequence. The older “Make it. Market it. Build it.” headline is superseded; **“WHERE VISION TAKES FLIGHT” remains above the new headline as the small eyebrow**. The five service pillars remain the actual navigation and page taxonomy; the three verbs are the expressive front-door message, not a replacement for that taxonomy.
 
-## Chosen visual direction
+## Former chosen visual direction — retired
 
 Use [concept 03](homepage-concepts.md) as the homepage base. The refreshed [desktop](concepts/03-typographic-reel.png) and [mobile](concepts/03-typographic-reel-mobile.png) images show the approved copy and a representative starting frame. They are composition references; the scroll response below cannot be judged from a still image.
 
@@ -26,7 +26,7 @@ Use [concept 03](homepage-concepts.md) as the homepage base. The refreshed [desk
 - **Offer clarity:** the exact supporting line sits near the headline. The next section exposes all five formal pillars: Content Production, Digital Marketing, Branding & Creative, Web Development, and AI Automation.
 - **Contact hierarchy:** “Send a brief” is the primary hero action. “Book an audit” opens [the supplied Cal.com event](https://cal.com/zavino/audit); WhatsApp is the third direct path. All three remain discoverable on mobile.
 
-## Scroll-reactive image sequence
+## Former scroll-reactive image sequence — retired
 
 The image apertures react to **visitor scroll**, rather than playing on a timer. As the user moves through the opening hero, curated stills replace one another quickly with a short opacity crossfade: the outgoing image fades out while the next fades in. The headline and contact actions do not flicker or move with every frame.
 
@@ -48,7 +48,7 @@ The sequence is an image treatment, not proof by itself. Use permission-cleared 
 
 **Reduced motion and constrained devices:** retain the complete headline, supporting line, contacts, and a representative still image. Disable the rapid sequence when reduced motion is requested; the service index and page remain fully usable. Do not autoplay a video to simulate the scroll effect. Load a sharp first frame, then prepare only the next frames needed for smooth transitions. Preserve image dimensions to prevent layout shifts and test on slower mobile connections.
 
-## Implementation and review checks
+## Historical implementation and review checks — do not apply to the new brief
 
 - The exact small all-caps eyebrow, headline, and supporting line appear in the DOM and match the refreshed concept images; they are not baked into production image assets.
 - The three phrases fit at desktop and mobile widths, and the supporting line is readable without covering media.

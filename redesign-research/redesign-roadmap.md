@@ -1,81 +1,72 @@
-# Redesign roadmap and content requirements
+# Redesign roadmap and builder acceptance criteria
 
-Planning document, 4 October 2026. This describes future work only. No source code is changed by this research pass.
+**Planning document, updated 4 October 2026.** This records work for a later implementation pass. This research update changes documentation only. Read the [AI-first direction](current-direction.md), [page map](service-architecture-and-page-map.md), [page blueprints](page-experience-blueprints.md), [motion brief](motion-and-interaction-direction.md), and preserved [NeuroXAI research](neuroxai-funnel-research.md) before designing.
 
-## Outcome to build toward
+## Outcome
 
-A visitor should see **“WHERE VISION TAKES FLIGHT”** in small all-caps type above the approved **“Build it. Market it. Automate it.”** headline and its exact supporting line, understand Zavino’s five service pillars, find a page that matches their problem, see honest evidence or a clearly labeled demonstration, and choose between sending a brief, booking an audit, or starting a WhatsApp chat. The chosen type-led hero uses fast, scroll-reactive image fades while remaining readable and usable on mobile. See [UI design base](ui-design-base.md).
+A first-time visitor should immediately understand that Zavino builds **AI automation for substantial business workflows and SaaS products**, with broad web development as a third core capability. They should see a concrete, governed customer-data-to-action example, know whether their project fits, and reach a contextual brief or scheduled conversation. The UI should be visually exceptional and visibly custom, while earning trust with accurate labels and useful details.
 
-## Sequence
+## Work sequence for the future builder
 
-### 1. Approve the offer structure and conversion path
+### 1. Confirm the offer and copy
 
-- Confirm the five pillars and nesting in [the page map](service-architecture-and-page-map.md).
-- Confirm whether all three specialized web development pages have enough original content for launch. If not, launch their complete sections on the Web Development hub first.
-- The homepage eyebrow, headline, and supporting line are approved in [UI design base](ui-design-base.md). Validate target geography and any industry focus for deeper page copy without reopening these three approved hero elements.
-- Decide whether “free audit” is an actual commitment. Current Cal.com title says “30 min meeting”; the site should not promise a free diagnostic, deliverable, or response time that the booking experience does not support.
+- Treat **AI Automation → SaaS Development → Web Development** as the homepage and primary navigation hierarchy. Keep AI UGC creative, custom AI, production, marketing, branding, SEO, and offline work discoverable in their supporting positions.
+- Start from the recommended hero in [current direction](current-direction.md). Refine only if a clearer AI-automation value proposition emerges. Do not reinstate the old “Build it. Market it. Automate it.” hero or the five equal pillars.
+- Define the qualified buyer and project-fit language: multiple systems, meaningful volume or impact, ownership, controls, and a measurable outcome. Avoid unsupported “best agency” or enterprise client claims.
+- Keep NeuroX's source-linked findings in [the research file](neuroxai-funnel-research.md). Translate its specific-offer, process, proof, and lead path patterns into Zavino's own words and terms.
 
-### 2. Gather proof and production inputs
+### 2. Prepare truthful proof and the illustrative system
 
-- Create an asset register for every existing reel and still: client, service delivered, date if known, permission to publish, rights in music/footage, and suggested destination page.
-- Request at least one real narrative for each available creative project: initial ask, Zavino’s role, deliverables, and approved outcome. Outcome can be qualitative; do not invent metrics.
-- Gather legitimate web/app/automation material: screenshots or a commissioned project story, if available. If none exists, commission in-house **Zavino Lab** concept demonstrations with an unmistakable label. A small polished demo is more credible than a fake portfolio grid.
-- Gather staff/process photos or artifacts if available. If unavailable, design the About page around real operations and authored copy.
-- Confirm client-name and logo display rights before reusing the current client strip on broader service pages.
+- Inventory every approved existing reel, still, logo, name, and testimonial with source, rights, Zavino's role, and the service it can legitimately prove.
+- Document any real automation, SaaS, or web project that may be shown: problem, systems, scope, output, outcome evidence, permission, and limitations.
+- If evidence is thin, build a **Zavino concept** demonstration of customer data → rules/AI decision → human approval → offer/action → feedback. Write a clear concept label and explanatory text before animating it. Do not invent customer records, live telemetry, conversion lifts, or client endorsements.
+- Create a small SaaS/interface concept that demonstrates product states, roles, and responsiveness. Its sophistication should show what the future site builder can do, while its status remains explicit.
 
-### 3. Write the page content before high-fidelity design
+### 3. Write pages before polishing effects
 
-For each launch route, prepare a content brief with: visitor question, promise, exact service scope, likely deliverables, process, evidence, common objections, primary/secondary CTA, and search title/description. Keep claims within what the team actually does. Do not reuse the same generic “one connected crew” paragraph across every route.
+For each core route, prepare: visitor question, fit, outcome, exact scope, integrations/data boundaries, deliverables, process, proof state, common objection, and next action. Begin with Home, Services, AI Automation, SaaS Development, Web Development, Work, About, and Contact. Add secondary routes only with distinct content and useful evidence. Preserve the old service inventory, but do not give it equal homepage weight.
 
-The first writing priority is Home → Services index → five service hubs → Contact. Then write the specialized Web Development pages and `/work`. This order ensures the core navigation has no thin or empty destinations.
+Use clear, concrete examples. AI Automation should explain approval and failure handling; SaaS should address product and operational architecture; Web should show breadth across sites, stores, portals, and apps. The content must remain readable without motion.
 
-### 4. Build the visual system and interaction prototype
+### 4. Design and prototype the signature interactions
 
-- Start from the selected concept 03 and define typography, color, spacing, media treatment, icon/line style, button states, navigation, form fields, and responsive patterns in one design system.
-- Prototype the scroll-reactive homepage image sequence first: two image apertures, approved stills, fast opacity crossfades, responsive behavior, and a static reduced-motion state. Then prototype the service chooser, a web/app demonstration, and the lead form. Verify that each is understandable in a static screenshot and on a phone.
-- Use the route-specific layouts in [page experience blueprints](page-experience-blueprints.md) and the researched patterns in [design inspiration](design-inspiration.md). The pages should vary in composition but keep one recognizable Zavino system.
-- Review motion for keyboard, touch, reduced motion, and CPU/network cost before broadening it across the site.
+- Develop a coherent visual system from evergreen/charcoal, warm ivory, one luminous signal accent, high-quality type, spacing, line work, surfaces, and responsive rules. Preserve brand recognition while moving away from the creative reel as the hero.
+- Prototype the static desktop and mobile hero first. Then build the one-shot glowing signal path, selectable scenarios, approval gate, capability-row glints, SaaS state changes, responsive web preview, and purposeful micro-interactions from the [motion brief](motion-and-interaction-direction.md).
+- Make each custom CSS element prove capability or explain a relationship. The page should look authored and high-end, not like a stock AI template. Give the next AI model room to show its best design craft; evaluate the actual visual result, not just the number of animations.
+- Test keyboard, touch, reduced motion, color contrast, slow network, and real-phone smoothness before expanding motion site-wide. The hero CTA cannot wait on animation.
 
-### 5. Implement the funnel and measurement
+### 5. Implement the lead path and measure it
 
-- Use consistent inquiry context (service, page source, optional campaign source) so the form can be preselected without rewriting the user’s brief.
-- Choose a reliable form delivery/storage route and owner notification method; test failed, duplicate, and spam submissions. Define who receives leads and who replies. Avoid exposing credentials in client code.
-- Put the [Cal.com audit link](https://cal.com/zavino/audit) on Home, relevant service pages, Contact, and the thank-you state. Check title/description/availability and time-zone behavior with the account owner.
-- Keep WhatsApp as a visible shortcut with message text tailored to the page when technically practical, while still letting the visitor edit the message.
-- Measure useful funnel events such as service-page CTA clicks, form starts, successful form submissions, WhatsApp clicks, and booking-link clicks. Do not send form contents or personal information into analytics.
+- Make **Discuss your project** open a useful brief, with AI/SaaS/Web context preselected from the source page. Keep direct [Cal.com booking](https://cal.com/zavino/audit) available after verifying the event wording and availability. Use WhatsApp and email as clear shortcuts.
+- Choose a real inbox or CRM destination and named lead owner. Verify delivery, duplicate/error states, abuse controls, and follow-up workflow. The form must never claim success before the lead is accepted.
+- Measure service CTA, form, and booking-link interactions without sending private inquiry text to analytics. Keep the form and any thank-you route aligned with the actual privacy policy.
 
-### 6. Review and launch
+### 6. Build, review, and launch
 
-- Follow the repo’s current Next.js agent rule: read the relevant installed `node_modules/next/dist/docs/` guide before code changes. Install dependencies only in the implementation pass if needed.
-- Check route content, header/footer links, service preselection, form validation and delivery, confirmation state, calendar, and WhatsApp on desktop and mobile.
-- Check real network behavior for media. The first hero frame should arrive quickly; adjacent scroll-sequence frames should be ready without downloading the full library. Full video should start only when needed. Test the interactive hero on a slower mobile connection and with fast forward/reverse scrolling.
-- Check text contrast, focus order, target size, reduced motion, captions/transcripts where appropriate, and interaction without a mouse.
-- Review metadata, canonical URLs, sitemap, robots, redirects, and structured data for the new route tree.
-- Review privacy policy and terms against actual form handling and any new service commitments. Obtain appropriate business/legal review before publishing changed terms.
+- Follow the repo's AGENTS.md rule: **read the relevant installed Next.js documentation in node_modules/next/dist/docs/ before code changes**. Heed its deprecations. This instruction applies to the future code pass.
+- Check every route, menu, anchor, form context, booking link, legal link, sitemap/redirect, and metadata path on desktop and mobile.
+- Keep the first useful content fast. Reserve diagram/media dimensions; lazy-load video; avoid a mandatory intro, giant blur animation, cursor trail, or scroll lock.
+- Verify that each client asset and claim has approval. Label every concept and in-house demo. Review privacy and commercial promises with the business before publishing.
 
-### 7. Grow the proof library after launch
+## Acceptance criteria
 
-- Publish approved `/work/[slug]` stories as engagements finish. Each story should state Zavino’s role and real results or learning.
-- Promote individual service subpages only when each has distinct content and useful evidence. On-page SEO, technical SEO, and local SEO can remain substantial sections of the SEO hub until that threshold is met.
-- Rebalance homepage proof as web, AI, and performance engagements accumulate. The design must allow new portfolio categories without redoing navigation.
-
-## Definition of done for the redesign
-
-| Area | Acceptance check |
+| Area | Pass condition |
 | --- | --- |
-| Offer clarity | The small all-caps eyebrow, headline, and supporting line match the approved copy exactly. A first-time visitor can name the five pillars from the homepage and find the exact listed subservice in at most two navigation steps. |
-| Honesty | Every client name, visual, and result has approved attribution; demos are labeled; no empty portfolio or fabricated figures. |
-| Conversion | Form, WhatsApp, and Cal.com paths are accessible on all service hubs and Contact; form service preselection works; successful submissions produce a visible confirmation and a real notification to Zavino. |
-| Web craft | The two hero image apertures change with scrolling through fast fades without shifting or hiding type; forward/reverse and fast scroll work on desktop/mobile. Reduced motion shows a complete static state, and low bandwidth still loads the first frame promptly. Other page-specific micro-interactions remain purposeful. |
-| Search | Public pages have distinct content and metadata; sitemap/redirects work; no thin placeholder routes are indexed. |
-| Operations | A named owner receives and responds to leads; spam/error handling, privacy copy, and calendar availability are verified. |
+| **Positioning** | Within the first screen, a new visitor can say “AI automation agency and SaaS builder” and describe one valuable business problem Zavino solves. Web Development is easy to find. |
+| **Offer hierarchy** | AI Automation, SaaS Development, and Web Development dominate Home and Services; adjacent offerings are discoverable after them. |
+| **Enterprise relevance** | The content explains integration, permissions, human approval, failure/recovery, product ownership, and measurement without claiming unverified MNC work. |
+| **Visual craft** | Multiple bespoke glowing CSS elements and small interactive quirks have clear roles. The page feels professional, conversion-aware, and unmistakably custom on desktop and mobile. |
+| **Motion quality** | The workflow works statically and interactively; focus/touch/reduced-motion paths are complete; text and CTA remain stable; no animation blocks access or hurts input responsiveness. |
+| **Proof integrity** | Creative work is attributed to creative services; AI/SaaS examples are marked as concepts until verified; no invented results, logos, testimonials, or live data. |
+| **Conversion** | Core page CTAs lead to a contextual brief or direct booking; submission reaches a real owner; failure/success states and privacy handling are correct. |
+| **Reference continuity** | The [NeuroXAI study](neuroxai-funnel-research.md) remains available and its useful funnel lessons appear in service content without copied claims or prices. |
 
-## Decisions that require Zavino business input before implementation
+## Business inputs to settle before publishing
 
-1. Which web, SaaS, and automation examples can be described publicly, and which must be labeled as concepts?
-2. Which client logos/names and media are cleared for reuse on new service pages?
-3. Is the Cal.com audit free, what does the caller receive, and who hosts it?
-4. Which contact inbox/CRM should receive the form, what response promise is realistic, and which budget ranges make sense by service?
-5. What project support, hosting, maintenance, ad-spend, and SEO deliverables are actually included? These should be answered in copy and proposals only after business confirmation.
+1. Which AI, SaaS, and web examples can be shown publicly, and which must remain labeled concepts?
+2. Which existing client names, logos, footage, and outcomes have explicit display rights?
+3. What exactly does the [Cal.com event](https://cal.com/zavino/audit) include, and what should the site call it?
+4. Which inbox or CRM receives inquiries, who responds, and what response statement can be kept?
+5. What project-fit or investment guidance, ownership/support terms, and technical commitments can Zavino actually honor?
 
-These are content/business signoffs for a later pass. The architecture and design research can be reviewed now without them.
+These are facts for a future launch decision. They do not prevent an excellent, reviewable design and documentation plan now.

@@ -1,6 +1,6 @@
-# Current Zavino site: redesign audit
+# Zavino site baseline: redesign audit
 
-Research date: 4 October 2026. This is a planning audit, not an implementation change. Findings come from the checked-out source, the project [README](../README.md), the original [website brief](../website%20brief.md), and the live [homepage](https://thezavino.com/), [services page](https://thezavino.com/services), and [contact page](https://thezavino.com/contact).
+Research date: 4 October 2026. This records the site and checkout as inspected for the original research pass; it is **a historical baseline**, not a live audit of later edits. Findings came from the checked-out source, the project [README](../README.md), the original [website brief](../website%20brief.md), and the live [homepage](https://thezavino.com/), [services page](https://thezavino.com/services), and [contact page](https://thezavino.com/contact). The old hero recommendation below has been replaced by the [AI-first direction](current-direction.md).
 
 ## What exists today
 
@@ -55,6 +55,6 @@ The existing site is image led, which fits production work. A full redesign must
 - `src/app/sitemap.ts`, `next.config.ts`: sitemap and legacy redirects. A future route migration needs a deliberate redirect list, especially `/portfolio` and `/case-study`, which currently lead to the home Work section.
 - `/privacy-policy`, `/terms-and-conditions`, `/cancellation-refund-policy`: legal pages should be reviewed for structured lead collection and newly offered services during implementation.
 
-## Planning recommendation
+## Former planning recommendation — retired
 
-Keep **“WHERE VISION TAKES FLIGHT”** as the small all-caps eyebrow above the approved homepage headline **“Build it. Market it. Automate it.”**, followed by **“Branding, Marketing, Website development, content and AI automation.”** The chosen type-led composition uses selective real media that changes rapidly with scroll and short fades; see [UI design base](ui-design-base.md). Use the five-pillar index and intent-specific pages to explain the exact offers and next steps.
+The earlier recommendation was to keep **“WHERE VISION TAKES FLIGHT”** above **“Build it. Market it. Automate it.”** with a five-pillar index and scroll-reactive media. That is preserved here only as history. The current recommendation is an AI automation and SaaS front door with a labeled, governed workflow demonstration; see [Current direction](current-direction.md).

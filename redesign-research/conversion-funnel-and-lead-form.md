@@ -1,89 +1,87 @@
-# Conversion funnel and lead-form plan
+# Conversion funnel and project inquiry plan
 
-Planning date: 4 October 2026. This is a Zavino proposal, informed by the source-linked [NeuroX AI sitemap and funnel review](neuroxai-funnel-research.md). It specifies the intended experience; no form or tracking is implemented in this pass.
+**Planning document, updated 4 October 2026.** This specifies a future experience, not a form already working in the site. It adapts the preserved [NeuroX AI funnel research](neuroxai-funnel-research.md) to Zavino's AI automation, SaaS, and web focus.
 
-## What to borrow from the reference
+## Conversion goal
 
-The NeuroX review found a broad route network that repeatedly moves a visitor from a specific service/problem page to a **brief form** or direct scheduling. Its **single-page form** asks for six required pieces of information: name, company, work email, service, budget, and a project brief. It preselects service context on relevant pages, then has a thank-you page with another call option. It also presents self-initiated work candidly when client examples are limited. See the research document for coverage, URLs, and caveats. The actual submission and delivery were not tested.
+Attract a buyer with a consequential workflow or product, help them judge fit, and make a first conversation easy. The site should quietly qualify for substantial, connected work through its examples, language, and intake. It does not need a hostile “no small jobs” banner or invented minimum spend. A visitor should be able to describe the systems, team, and desired outcome without writing a procurement document.
 
-Zavino should adopt the **specific page → relevant proof/explanation → contextual brief or booking** path. The route tree should remain smaller and sharper until Zavino has real depth for more pages. The homepage uses the approved small all-caps eyebrow, headline, and supporting line in [UI design base](ui-design-base.md), with “Send a brief” as its primary action. Form copy, price bands, and promises must reflect Zavino’s actual service model.
-
-## The three contact paths
-
-| Path | Best for | Exact action label | Destination and context |
-| --- | --- | --- | --- |
-| Structured brief | Visitor knows roughly what they need or wants a quote | “Send a brief” / service-specific variant | Shared lead form on Home and commercial service pages; full form at `/contact`. Service is preselected from the page, editable by visitor. |
-| Audit booking | Visitor wants to talk through a site, campaign, or business problem live | “Book an audit” | Direct link to [cal.com/zavino/audit](https://cal.com/zavino/audit). State that this opens Cal.com; check actual event title, description, and availability before launch. |
-| WhatsApp | Visitor has a quick question or prefers chat | “Message Zavino on WhatsApp” | Existing Zavino WhatsApp number, optionally with a short page-specific starter message. Never put a submitted brief or other personal information into a URL. |
-
-Phone and email can remain in the footer and Contact page; the main user choice should use the three requested paths. Avoid three visually identical “Let’s talk” buttons.
-
-## Funnel by entry point
+The path is **specific problem → relevant capability → example/proof state → scope and delivery method → brief or scheduled call**. This preserves the useful pattern on NeuroX's [service pages](https://neuroxai.com/services) and [prototype-to-production page](https://neuroxai.com/services/prototype-to-production) while using Zavino's own offer and proof.
 
 ```mermaid
 flowchart LR
-  A[Home / direct visitor] --> S[Five-pillar service choice]
-  B[Search or ad / intent visitor] --> D[Specific service page]
-  C[Work / inspiration visitor] --> W[Relevant real work or labeled concept]
-  S --> D
-  W --> D
-  D --> E[Scope, process, deliverables, evidence]
-  E --> F{Choose contact path}
-  F -->|Send a brief| G[Contextual lead form]
-  F -->|Book audit| H[Cal.com audit event]
-  F -->|Quick question| I[WhatsApp]
-  G --> J[Thank-you and optional booking]
+  A[AI-first home or search landing] --> B{Buyer need}
+  B --> C[AI Automation]
+  B --> D[SaaS Development]
+  B --> E[Web Development]
+  C --> F[Problem, system scope, controls, proof status]
+  D --> F
+  E --> F
+  F --> G{Choose next step}
+  G --> H[Short contextual brief]
+  G --> I[30-minute conversation]
+  G --> J[Email or WhatsApp shortcut]
+  H --> K[Real receipt and owner follow-up]
+  I --> K
 ```
 
-**Service page CTA placement:** one after the useful overview, one after process/proof, and a final form block near the end. A sticky header may show “Book an audit” or “Start a project,” but should not obscure reading on mobile. The form anchor must land on the actual form container; the NeuroX review identified a service-page anchor mismatch to avoid.
+## Calls to action and placement
 
-**Portfolio route:** a Content Production item links to that service and can pass the relevant category into the form. A future web or automation case study should link to its own service. Do not lead users from a food reel into an unrelated SaaS case-study claim.
+| Location | Primary wording | Secondary path | Context passed |
+| --- | --- | --- | --- |
+| Home hero | **Discuss your project** | **Explore what we build** | General inquiry; AI/SaaS/Web choice stays editable. |
+| AI Automation hub | **Map an automation project** | **Book a 30-minute call** | AI Automation preselected. |
+| SaaS hub | **Discuss a SaaS build** | **Book a 30-minute call** | SaaS Development preselected. |
+| Web hub | **Discuss a web platform** | **Book a 30-minute call** | Web Development preselected. |
+| Supporting service sections | Named service inquiry | Booking or email | Exact supporting service preselected if active. |
+| End of each core page | Contextual brief block | Direct booking | Page/source category, never personal data in URLs. |
 
-## Form layout and fields
+The existing user-supplied booking destination is [cal.com/zavino/audit](https://cal.com/zavino/audit). Before implementation, verify the event's actual title, description, duration, host, availability, and time-zone behavior. Until Zavino confirms an audit deliverable, the on-site label should be **“Book a 30-minute call”** rather than promising a free audit. A direct booking link should not require prior form submission.
 
-Use one short, visible **single-page form** with clear groups: **About you**, **What you need**, **Project details**. This follows the observed NeuroX structure and avoids making a short brief into a wizard. Reuse the same form design on commercial pages; do not fork each service into a different schema.
+WhatsApp remains a useful shortcut, especially for returning clients or quick questions, but the first-screen conversion emphasis should be a serious-project brief and scheduled conversation. Make the destination explicit: “Message on WhatsApp” should open chat, not appear identical to “Discuss your project.”
 
-| Field | Required? | Plan |
+## Short, qualifying brief
+
+Use one clear page, not a long wizard. The first fields should be easy; the higher-value qualification should come from a few precise questions. Show required fields and an honest “what happens next” sentence beside submit. Do not claim a reply SLA until the owner can meet it.
+
+| Field | Required? | Why / suggested wording |
 | --- | --- | --- |
-| Name | Yes | Plain text, human name. |
-| Company / project name | Yes, with a friendly “project name” option | Lets founders without a formal company submit. |
-| Work email | Yes | Validate format; use it for reply and confirmation. Do not require a corporate domain. |
-| Service | Yes | Options: five pillars, plus meaningful Web Development sub-options and “Multiple services / not sure.” Preselect from the route but keep editable. |
-| Budget | Yes, with “Still estimating” | Use honest ranges matched to Zavino’s quote process and currency, agreed by the business before launch. Do not force a false budget answer. |
-| Brief | Yes | Prompt: “What are you trying to make or improve? What is the current problem?” Do not enforce an arbitrary long minimum. |
-| WhatsApp number / preferred contact channel | Optional | Only collect if the visitor wants a call or WhatsApp follow-up. |
-| Website, timeframe, or reference link | Optional | Helpful for qualification without slowing every inquiry. Start with a URL field, not an upload. |
+| Name | Yes | Who should Zavino reply to? |
+| Company or project | Yes, accepting founders | Who is the work for? |
+| Work email | Yes, any valid domain | Reliable reply path; do not force a corporate domain. |
+| Project focus | Yes | **AI automation / SaaS development / Web development / AI UGC or creative / Another capability / Not sure.** Preselect from the page, keep editable. |
+| What needs to change? | Yes | One free-text brief prompt: “What workflow or product is holding you back, and what should be better?” |
+| Systems or data involved | Optional | Prompt examples: CRM, commerce, support, ERP, documents, existing app. Useful for complex automation without requiring technical knowledge. |
+| Scale or desired outcome | Optional | Example: teams involved, volume, time lost, customer journey, or launch target. Ask for context, not fabricated ROI. |
+| Timing | Optional | Discovery, target launch, or “still exploring.” |
+| Budget or investment range | Optional until Zavino agrees real bands | If used, include “still scoping” and ranges that fit substantial work; do not copy NeuroX's dollar ranges. |
+| Preferred contact / phone | Optional | Only collect if the visitor requests a call or WhatsApp follow-up. |
 
-Explain what happens after submission in one sentence directly beside the button. Do not promise “within 24 hours” unless the team commits to and can monitor that SLA. Add a short privacy notice with the privacy-policy link. If marketing updates are ever offered, ask for separate optional consent; an inquiry is not automatic newsletter consent.
+On the AI Automation page, a route-specific hint could ask: “Which systems should connect, and where must a person approve the action?” On SaaS: “Who will use the product, and what is the first useful workflow?” On Web: “Is this a site, store, portal, or custom application?” These hints can clarify the shared brief field without creating three incompatible forms.
 
-## Context and preselection
+Do not ask for customer records, secrets, or confidential datasets in the initial form. A privacy link should explain how the brief is handled. If a visitor needs an NDA, give a route to request one without falsely claiming every inquiry is automatically protected by a signed agreement.
 
-Every commercial page can render the same form with a visible heading such as “Tell us about your store” or “Tell us about the workflow.” The selected service defaults to Ecommerce, AI Automation, etc., but the visitor can change it. On `/contact`, a query parameter may preselect the service from an earlier CTA; any parameter is treated as untrusted input and mapped to a known option. Use a separate non-personal page-source value for internal reporting.
+## Form behavior and operations
 
-For a WhatsApp link, use a short starter such as “Hi Zavino, I’m interested in a Shopify or WordPress store.” This should be editable in WhatsApp. Never append the form data or email address to the link. The Cal.com URL stays the user-provided direct booking route, without a gate that forces form submission first.
+1. A service CTA opens the actual form or Contact page with the relevant category preselected. The visitor can change it. Map query values to known options and keep personal information out of URLs.
+2. Validate in the browser and on the server. Keep entered content on errors, show field-specific feedback, prevent duplicate submissions, and never show success before delivery succeeds.
+3. Route a delivered brief to a named Zavino owner or CRM with service and source context. Confirm notification, spam controls, and an actual follow-up process before launch.
+4. Confirm receipt on a real success state or a noindex thank-you page. Offer the direct 30-minute booking link there without forcing it. If delivery fails, explain the failure and offer retry plus an email/WhatsApp fallback.
+5. Measure CTA clicks, form starts, submitted briefs, delivery errors, and booking-link clicks by page/service only. A booking-link click is not a completed booking. Never send names, email, phone, free-text brief, or confidential URLs to analytics.
 
-## Submission and follow-up behavior
+## How wider services enter the journey
 
-1. Validate required fields in the browser for immediate feedback and again on the server. Error messages sit next to the relevant fields; typed content remains intact.
-2. Prevent accidental duplicate submissions and show a clear “Sending…” state. If delivery fails, say so and offer a retry plus WhatsApp as a fallback. Never show success before the lead is actually accepted.
-3. Apply basic abuse controls and rate limiting, with an accessible path for legitimate users. The specific delivery/storage provider is a later implementation decision.
-4. Deliver the brief to a named Zavino owner or CRM, preserving service/source context. Define the reply workflow and actual response expectation.
-5. After success, show `/thank-you` with a concise confirmation, expected next step, and the Cal.com option. Keep name, email, brief, and other personal data out of its URL and analytics.
+The first conversion is for AI automation, SaaS, or web work. Related needs can emerge during scoping and client work: AI UGC creative for lifecycle campaigns, custom AI inside a SaaS product, SEO for a platform launch, or brand/content work for acquisition. The site should make these capabilities findable in Services and relevant cross-links, and the team can discuss them after understanding the buyer's core problem. Do not cross-sell in a way that makes the initial offer feel unfocused.
 
-## Measurement without collecting private form content
+## Reference and verification notes
 
-Track `service_cta_click`, `form_start`, `form_submit_success`, `form_submit_error`, `whatsapp_click`, and `audit_booking_click`, together with page and service category. A booking-link click only measures a click, **not** a completed booking; a completed-booking measure needs Cal.com support/consent and separate verification. Do not send names, email addresses, phone numbers, project briefs, or free-text URLs into analytics. Review cookie/consent requirements when choosing the analytics product.
+NeuroX's [home](https://neuroxai.com/), [services](https://neuroxai.com/services), and [work](https://neuroxai.com/work) show the benefit of a concise form, direct booking, service context, and candid proof. The [research file](neuroxai-funnel-research.md) preserves its exact observed fields, selected options, page coverage, thank-you path, and one anchor mismatch. Those details should remain available to the next builder. Zavino should adapt the pattern, not copy its pricing, guarantee, response-time promise, or form delivery assumptions.
 
-## Funnel-specific QA cases
+## Acceptance checks for a future build
 
-- Direct visit to each route; CTA clearly names its destination.
-- Form service default matches page and can be changed; unknown query values fall back safely.
-- Anchor links focus or scroll to the correct form on every page.
-- Required-field, email, budget uncertainty, network-error, duplicate-click, and successful-submission states.
-- Keyboard and screen-reader reading order, visible focus, usable mobile keyboard types, and no hover-only controls.
-- WhatsApp starter text correct per page; Cal.com link resolves and displays expected time zone/availability.
-- Thank-you page is reachable only as a confirmation experience in normal flow and is not indexed as a search landing page.
-
-## Operational signoffs before implementation
-
-Confirm the form inbox/CRM owner, service labels, budget bands/currency, legitimate response-time statement, what the audit includes, and any appointment routing. These are business values, not design guesses. The rest of the funnel can be designed around the structure above.
+- A buyer can understand the offer and reach a project conversation from the first screen on desktop and mobile.
+- Each core service CTA carries the correct editable context to the same form.
+- Form, booking, email, and WhatsApp destinations work and clearly state what opens.
+- The form can be completed with keyboard and screen reader; errors, sending, failure, and success states are clear.
+- A real owner receives a test submission; a failed delivery never produces a false success state.
+- No private inquiry contents enter URLs or analytics.

@@ -1,8 +1,8 @@
-# Zavino redesign: design inspiration and interaction direction
+# Archive: Zavino redesign reference observations
 
-Research date: 4 October 2026. This is a planning document; no application code was changed. I inspected the live reference sites in a browser and cross-checked page content through their public pages. **Observed** describes what those sites currently do. **Proposed** describes an original Zavino direction, not a feature already present on the reference site. Read this beside the [current-site audit](./current-site-audit.md) and the separate page-map research.
+Research date: 4 October 2026. This preserves observations of reference sites and an **earlier, retired** design proposal. No application code was changed for this research. **Observed** describes what those sites did at the time; **Proposed** in the older text below reflects the former creative-first brief. The [current AI-first direction](current-direction.md), [page blueprints](page-experience-blueprints.md), and [motion brief](motion-and-interaction-direction.md) now govern the build. Keep the source observations, especially the [NeuroXAI funnel study](neuroxai-funnel-research.md), but do not reinstate the retired hero or five equal service pillars.
 
-## Design decision in one sentence
+## Former design decision — retired
 
 Build a **clear service website with the craft of a digital product studio**. The chosen homepage direction is [concept 03](homepage-concepts.md), keeping the small all-caps **“WHERE VISION TAKES FLIGHT”** above **“Build it. Market it. Automate it.”** and **“Branding, Marketing, Website development, content and AI automation.”** A few image apertures change rapidly with scroll through short fades while the words remain steady. The [UI design base](ui-design-base.md) is authoritative for this hero. Content production is the strongest existing visual proof. Web, SaaS, SEO, marketing, branding, and automation earn trust through precise offers, working demonstrations, deliverables, and process until their own case studies exist.
 
@@ -40,7 +40,7 @@ The design has to let cinematic media and technical service explanation coexist.
 
 Retain evergreen and warm cream as the base. Let one vivid accent identify actions and active states; do not turn every service into a separate color brand. The aviation theme can become a restrained navigation language—trajectory lines, coordinates, progress marks, or “from idea to launch”—while the offer copy stays literal. Use an asymmetric 12-column desktop grid, generous text margins, and full-width media only where the media itself explains a service. Each viewport should have one dominant visual idea, rather than a collage of equally loud cards.
 
-### Approved hero: type-led promise, scroll-reactive proof
+### Archived hero: type-led promise, scroll-reactive proof
 
 **Chosen sequence:**
 

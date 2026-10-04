@@ -2,6 +2,8 @@
 
 Research date: **4 October 2026** (Asia/Dhaka). This is an observed competitor study for Zavino's planning pass. NeuroX AI's prices, guarantees, client counts, and results below are **claims made on its own website**, not independently verified facts or promises Zavino should repeat.
 
+**Current-use note:** Preserve the source observations, page inventory, service descriptions, form findings, and reference links below. The Zavino-specific recommendations near the end were written for an earlier five-pillar brief. Where they refer to that old hierarchy, use the [current AI-first direction](current-direction.md), [page map](service-architecture-and-page-map.md), and [conversion plan](conversion-funnel-and-lead-form.md) instead. The NeuroXAI information itself remains intact.
+
 ## Scope and method
 
 - [NeuroX AI's robots.txt](https://neuroxai.com/robots.txt) declares [its XML sitemap](https://neuroxai.com/sitemap.xml). I fetched the live sitemap and enumerated **171 listed URLs**. The sitemap has one URL set, not a sitemap index.
@@ -116,7 +118,7 @@ The form copy promises a one-business-day response and offers an NDA on request;
 
 There is one visible anchor issue to avoid copying: the hero's “Send a brief” link on the [prototype service page](https://neuroxai.com/services/prototype-to-production) uses `#contact`, while that page's returned HTML exposes `id="contact-form"` but no `id="contact"`. The [home page](https://neuroxai.com/) has both IDs, so its contact fragment is valid. A redesign should check every CTA fragment against a real target during build QA.
 
-## What Zavino should borrow, adapt, and defer
+## Earlier Zavino adaptation notes — superseded where they use the old hierarchy
 
 These are **recommendations for Zavino**, not descriptions of the current NeuroX site. They complement the proposed routes in [Zavino's service architecture and page map](./service-architecture-and-page-map.md).
 
