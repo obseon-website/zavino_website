@@ -1,43 +1,34 @@
 import Link from "next/link";
-import {
-  ArrowUpRight,
-  Phone,
-  WhatsappLogo,
-} from "@phosphor-icons/react/dist/ssr";
+import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { Brand } from "./brand";
 import { policyLinks, site } from "@/lib/site";
 
 export function ContactCta() {
   return (
-    <section className="contact-cta section-shell">
+    <section className="contact-cta section-shell" aria-labelledby="contact-cta-title">
       <div className="cta-top">
-        <span className="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
+        <span className="eyebrow">LET’S FIND THE RIGHT SYSTEM</span>
         <span className="cta-wing" aria-hidden="true">
           ↗
         </span>
       </div>
-      <h2>
-        Ready for
+      <h2 id="contact-cta-title">
+        Bring us the
         <br />
-        what’s <span>next?</span>
+        <span>complex problem.</span>
       </h2>
       <div className="cta-bottom">
         <p>
-          A new idea. A bigger ambition.
+          Tell us about the workflow, product, or web platform you need to build.
           <br />
-          Let’s give it a place to take off.
+          We’ll discuss the scope and a sensible place to start.
         </p>
         <div className="button-group">
-          <a
-            className="button button-light"
-            href={site.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Let’s talk <WhatsappLogo size={22} />
-          </a>
-          <a className="text-link" href={site.phoneLink}>
-            Call the crew <Phone size={19} />
+          <Link className="button button-light" href="/contact">
+            Discuss your project <ArrowUpRight size={21} />
+          </Link>
+          <a className="text-link" href={site.auditBooking} target="_blank" rel="noopener noreferrer">
+            Book a discovery call <ArrowUpRight size={19} />
           </a>
         </div>
       </div>
@@ -51,14 +42,15 @@ export function Footer() {
         <div>
           <Brand />
           <p>
-            Independent thinking.
+            AI automation, SaaS, and web development.
             <br />
-            One connected creative crew.
+            Built around what your business needs to do.
           </p>
         </div>
         <div className="footer-links">
           <span className="footer-label">Explore</span>
-          <Link href="/#work">Our work</Link>
+          <Link href="/#solutions">Solutions</Link>
+          <Link href="/#work">Selected work</Link>
           <Link href="/about">About us</Link>
           <Link href="/services">Services</Link>
           <Link href="/contact">Contact us</Link>
@@ -96,7 +88,7 @@ export function Footer() {
             </Link>
           ))}
         </nav>
-        <span>Made to take flight.</span>
+        <span>Systems that move business forward.</span>
       </div>
     </footer>
   );

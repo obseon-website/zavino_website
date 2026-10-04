@@ -19,8 +19,8 @@ export default function Privacy() {
           title: "Who we are",
           content: (
             <p>
-              This policy explains how Zavino, a creative and marketing agency
-              based at {site.address}, handles personal information in
+              This policy explains how Zavino, a digital product and creative
+              agency based at {site.address}, handles personal information in
               connection with this website and our services. Contact us at{" "}
               <a href={`mailto:${site.email}`}>{site.email}</a> with privacy
               questions.

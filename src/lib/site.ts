@@ -9,6 +9,7 @@ export const site = {
   phoneLink: "tel:+8801844293698",
   whatsapp:
     "https://wa.me/8801844293698?text=Hello%20Zavino%2C%20I%27d%20like%20to%20discuss%20a%20project.",
+  auditBooking: "https://cal.com/zavino/audit",
   address: "Bashundhara R/A, Dhaka, Bangladesh",
   socials: [
     { name: "Instagram", url: "https://www.instagram.com/thezavino/" },
@@ -76,60 +77,61 @@ export const projects = [
 
 export const services = [
   {
-    name: "Content production",
-    short: "Made to be felt.",
+    name: "AI automation",
+    short: "Connected decisions. Useful action.",
     description:
-      "From the first storyboard to the final frame. Cinematic content that gives your brand a distinct presence.",
+      "Design and build workflows that connect customer and operational data to the actions your teams need to take.",
     items: [
-      "Cinematic reels & brand films",
-      "Product & food photography",
-      "Motion graphics & CGI",
-      "Scripting, shooting & editing",
+      "Customer data and CRM integration",
+      "Offer, lifecycle, and service workflows",
+      "AI agents with human approval",
+      "Measurement and iteration",
     ],
-    image: "reels/03-poster",
-    href: "content-production",
+    example: "A customer event triggers a relevant offer, checks eligibility and approval, then reaches the right channel.",
+    href: "ai-automation",
   },
   {
-    name: "Digital marketing",
-    short: "Creative with a destination.",
+    name: "SaaS development",
+    short: "Products built around real work.",
     description:
-      "The right creative, in front of the right people. Campaigns planned around your audience and business goals.",
+      "Take a product from a defined problem to a usable first release, or make an existing prototype ready for sustained use.",
     items: [
-      "Meta & Google advertising",
-      "Campaign strategy",
-      "Audience research",
-      "Performance reporting",
+      "Product discovery and UX",
+      "Custom SaaS and web applications",
+      "User roles, access, and billing",
+      "Integrations, testing, and handoff",
     ],
-    image: "proton-960",
-    href: "digital-marketing",
+    example: "An internal workflow becomes a secure multi-user platform with clear roles and reporting.",
+    href: "saas-development",
   },
   {
-    name: "Branding & creative",
-    short: "Distinct from the start.",
+    name: "Web development",
+    short: "The full digital foundation.",
     description:
-      "A recognizable identity, with every detail working together. Built to look like you, wherever people find you.",
+      "Build websites, stores, and custom web experiences that perform well and connect to the systems behind the business.",
     items: [
-      "Brand identity",
-      "Social media design",
-      "Packaging design",
-      "Visual direction",
+      "Business and corporate websites",
+      "Ecommerce and customer portals",
+      "Custom frontend and backend development",
+      "Performance, technical SEO, and maintenance",
     ],
-    image: "ventro-960",
-    href: "branding-creative",
+    example: "A web platform connects a public experience, internal operations, and customer data.",
+    href: "web-development",
+  },
+];
+
+export const additionalServices = [
+  {
+    name: "Custom AI",
+    description: "Private knowledge tools, intelligent assistants, and AI features shaped around your data and workflow.",
   },
   {
-    name: "Offline marketing",
-    short: "Beyond the screen.",
-    description:
-      "Bring the same creative ambition into the real world. Tangible brand experiences, carefully planned and produced.",
-    items: [
-      "Events & brand activations",
-      "Stall production",
-      "Print & outdoor creative",
-      "Production coordination",
-    ],
-    image: "halda-960",
-    href: "offline-marketing",
+    name: "AI UGC creative",
+    description: "AI-assisted creator-style concepts and campaign assets with human creative direction and review.",
+  },
+  {
+    name: "Brand, content & marketing",
+    description: "Identity, films, photography, digital campaigns, and offline activations when the wider brand needs to move with the product.",
   },
 ];
 

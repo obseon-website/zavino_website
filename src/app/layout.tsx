@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { PageMotion } from "@/components/motion";
 import { site } from "@/lib/site";
 import "./globals.css";
+import "./ai-redesign.css";
 
 const display = localFont({
   src: "../fonts/syne-latin-wght-normal.woff2",
@@ -22,24 +23,24 @@ const body = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Zavino | Where Vision Takes Flight",
+    default: "Zavino | AI Automation Agency & SaaS Development",
     template: "%s | Zavino",
   },
   description:
-    "A creative and marketing agency in Dhaka. Cinematic content, brand identity, digital campaigns, and real-world experiences. One connected crew.",
+    "Zavino builds connected AI automation, custom SaaS products, and web platforms for complex business workflows.",
   openGraph: {
     type: "website",
     locale: "en_BD",
     siteName: "Zavino",
-    title: "Zavino | Where Vision Takes Flight",
+    title: "Zavino | AI Automation Agency & SaaS Development",
     description:
-      "Independent thinking. One connected creative crew. Premium content, branding, and marketing from Dhaka.",
+      "Connected AI automation, SaaS products, and web platforms built around real business workflows.",
     images: [
       {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Zavino. Where Vision Takes Flight.",
+        alt: "Zavino. AI automation, SaaS, and web development.",
       },
     ],
   },
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
   icons: { icon: "/icon.svg", apple: "/apple-touch-icon.png" },
 };
 export const viewport: Viewport = {
-  themeColor: "#0c1410",
+  themeColor: "#0d1713",
   colorScheme: "dark",
 };
 export default function RootLayout({

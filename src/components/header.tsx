@@ -7,9 +7,10 @@ import { Brand } from "./brand";
 import { site } from "@/lib/site";
 
 const links = [
+  { href: "/#solutions", label: "Solutions" },
+  { href: "/services", label: "Services" },
   { href: "/#work", label: "Work" },
-  { href: "/about", label: "Agency" },
-  { href: "/services", label: "Expertise" },
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 export function Header() {
@@ -72,14 +73,9 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <a
-          href={site.whatsapp}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="button button-small header-cta"
-        >
-          Let’s talk <ArrowUpRight size={17} />
-        </a>
+        <Link href="/contact" className="button button-small header-cta">
+          Discuss a project <ArrowUpRight size={17} />
+        </Link>
         <button
           className="menu-toggle"
           ref={toggleRef}
@@ -116,7 +112,7 @@ export function Header() {
             rel="noopener noreferrer"
             className="button"
           >
-            Let’s talk <ArrowUpRight size={20} />
+            Message us on WhatsApp <ArrowUpRight size={20} />
           </a>
         </div>
       )}
