@@ -275,6 +275,36 @@
 .sp-location-details .text-link { align-self: start; font-size: 16px; }
 .sp-location-details > a:not(.text-link) { color: var(--muted); font-size: 15px; }
 .sp-location-details > p { margin-top: 13px; max-width: 440px; font-size: 15px; }
+/* Owned products: Zavino's own ventures, presented with the same editorial structure. */
+.sp-owned-hero h1 { font-size: clamp(53px, 7vw, 108px); }
+.sp-owned-statement { padding-block: var(--sp-space); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(45px, 7vw, 115px); }
+.sp-owned-statement .eyebrow { margin-bottom: 30px; }
+.sp-owned-statement h2 { font-size: clamp(40px, 4.8vw, 74px); }
+.sp-owned-statement > div:last-child p { font-size: 18px; margin-bottom: 25px; }
+.sp-owned-statement > div:last-child p:first-child { color: #d0d9cd; }
+.sp-owned-feature { padding-bottom: var(--sp-space); }
+.sp-owned-feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(45px, 7vw, 116px); align-items: start; }
+.sp-owned-panel { border: 1px solid var(--line); border-radius: 3px; padding: 29px; min-height: 370px; display: flex; flex-direction: column; background: radial-gradient(ellipse at 30% 100%, rgba(137,158,107,.13), transparent 70%), #101d17; }
+.sp-owned-panel-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 15px; }
+.sp-owned-panel-mark { font-family: var(--font-display), sans-serif; font-size: clamp(64px, 7vw, 104px); line-height: 1; letter-spacing: -.06em; color: var(--accent); }
+.sp-owned-panel-body strong { font-family: var(--font-display), sans-serif; font-size: clamp(28px, 3vw, 42px); font-weight: 600; letter-spacing: -.04em; }
+.sp-owned-panel-body em { font-style: normal; font-size: 13px; color: var(--muted); letter-spacing: .02em; }
+.sp-owned-panel-foot { display: block; border-top: 1px solid var(--line); padding-top: 20px; font-size: 10px; letter-spacing: .1em; color: var(--muted); }
+.sp-owned-facts { margin: 0; border-top: 1px solid var(--line); }
+.sp-owned-facts > div { display: grid; grid-template-columns: 150px 1fr; gap: 28px; padding: 25px 0; border-bottom: 1px solid var(--line); }
+.sp-owned-facts dt { font-size: 12px; letter-spacing: .05em; color: var(--accent); }
+.sp-owned-facts dd { margin: 0; font-size: 15px; line-height: 1.7; color: var(--muted); }
+.sp-owned-actions { display: flex; justify-content: space-between; align-items: center; gap: 40px; margin-top: 42px; }
+.sp-owned-actions p { font-size: 13px; max-width: 380px; margin: 0; text-align: right; }
+.sp-owned-ventures { padding-bottom: var(--sp-space); }
+.sp-owned-venture-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--line); }
+.sp-owned-venture-grid article { padding: 29px 26px 31px; border-right: 1px solid var(--line); }
+.sp-owned-venture-grid article:first-child { padding-left: 0; }
+.sp-owned-venture-grid article:last-child { padding-right: 0; border-right: 0; }
+.sp-owned-venture-grid .sp-number { display: block; color: var(--accent); margin-bottom: 40px; }
+.sp-owned-venture-grid h3 { font-size: 23px; }
+.sp-owned-venture-grid p { font-size: 14px; margin-top: 15px; }
+.sp-owned-offer { background: #192c21; }
 /* Work: accurate creative attribution alongside separately labeled Lab concepts. */
 .sp-work-hero h1 { font-size: clamp(62px, 8vw, 120px); }
 .sp-work-intro { margin-top: 36px; display: flex; justify-content: space-between; gap: 60px; align-items: end; }
@@ -356,6 +386,10 @@
   .sp-web-standards { gap: 45px; }
   .sp-work-intro { align-items: start; }
   .sp-work-intro nav { flex-direction: column; gap: 18px; }
+  .sp-owned-venture-grid { grid-template-columns: 1fr 1fr; }
+  .sp-owned-venture-grid article { padding: 28px !important; }
+  .sp-owned-venture-grid article:nth-child(2) { border-right: 0; }
+  .sp-owned-venture-grid article:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
 }
 @media (max-width: 760px) {
   .sp-page { --sp-space: 76px; }
@@ -378,7 +412,17 @@
   .sp-demo-footnote { flex-direction: column; gap: 14px; }
   .sp-demo-footnote > span { font-size: 12px; }
   .sp-demo-footnote p { font-size: 13px; }
-  .sp-scope, .sp-faq, .sp-controls, .sp-foundations, .sp-web-standards, .sp-about-statement, .sp-about-principles, .sp-about-engagement, .sp-about-location { grid-template-columns: 1fr; gap: 37px; }
+  .sp-scope, .sp-faq, .sp-controls, .sp-foundations, .sp-web-standards, .sp-about-statement, .sp-about-principles, .sp-about-engagement, .sp-about-location, .sp-owned-statement, .sp-owned-feature-grid { grid-template-columns: 1fr; gap: 37px; }
+  .sp-owned-statement h2 { font-size: 42px; }
+  .sp-owned-statement > div:last-child p { font-size: 16px; }
+  .sp-owned-panel { min-height: 320px; padding: 25px; }
+  .sp-owned-facts > div { grid-template-columns: 1fr; gap: 10px; padding: 22px 0; }
+  .sp-owned-actions { flex-direction: column; align-items: start; gap: 20px; margin-top: 33px; }
+  .sp-owned-actions p { text-align: left; }
+  .sp-owned-venture-grid { grid-template-columns: 1fr; }
+  .sp-owned-venture-grid article { padding: 25px 0 !important; border-right: 0; border-bottom: 1px solid var(--line); }
+  .sp-owned-venture-grid article:last-child { border-bottom: 0; }
+  .sp-owned-venture-grid .sp-number { margin-bottom: 24px; }
   .sp-scope-lead p { max-width: 540px; margin-top: 22px; font-size: 15px; }
   .sp-scope-list article { padding: 24px 0; gap: 17px; }
   .sp-scope-list h3 { font-size: 22px; }

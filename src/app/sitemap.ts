@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/saas-development",
     "/services/web-development",
     "/work",
+    "/zavino-owned-products",
     "/contact",
     "/privacy-policy",
     "/terms-and-conditions",
