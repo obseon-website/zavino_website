@@ -2,96 +2,51 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { ContactCta } from "@/components/footer";
-import { additionalServices, services } from "@/lib/site";
+import { ServiceArtifact } from "@/components/service-page";
 
 export const metadata: Metadata = {
   title: "AI automation, SaaS & web development",
-  description:
-    "Zavino builds connected AI automation, custom SaaS products, and web platforms. Explore the work we can scope for your business.",
+  description: "Explore Zavino’s AI automation, SaaS development, and web platforms, with supporting AI creative, content, branding, marketing, and SEO capabilities.",
   alternates: { canonical: "/services" },
 };
 
-export default function Services() {
-  return (
-    <main id="main">
-      <section className="page-hero services-hero section-shell">
-        <span className="eyebrow">CAPABILITIES / ZAVINO</span>
-        <h1>AI systems. <span>SaaS products.</span> Web platforms.</h1>
-        <p>
-          We take on connected, meaningful builds: automation across teams,
-          SaaS products, and the web platforms around them. Every engagement
-          begins with the real workflow and a clear scope.
-        </p>
-        <Link href="/contact" className="button">
-          Discuss a project <ArrowUpRight size={19} />
-        </Link>
-      </section>
+const capabilities = [
+  { id: "ai-automation", kind: "automation" as const, title: "AI automation", question: "Where does the work get stuck?", description: "Connect the data, decisions, and handoffs across your business. Build a system that knows when to act, when to wait, and when to bring a person in.", scope: ["Workflow & data discovery", "AI agents & integrations", "Human review & guardrails", "Monitoring & iteration"], link: "Explore AI automation" },
+  { id: "saas-development", kind: "saas" as const, title: "SaaS development", question: "What should your product make possible?", description: "Turn a defined problem into a product people can use. We shape the first useful release and build the roles, data, and operating foundations behind it.", scope: ["Product discovery & UX", "Frontend & backend engineering", "Roles, billing & integrations", "Release & ownership"], link: "Explore SaaS development" },
+  { id: "web-development", kind: "web" as const, title: "Web development", question: "What does your digital front door need to do?", description: "A website, store, portal, or custom application. Designed around the people using it and connected to the operations that make it work.", scope: ["Sites, stores & portals", "Custom web applications", "CMS & business integrations", "Accessibility, speed & SEO"], link: "Explore web development" },
+];
+const supporting = [
+  ["Custom AI", "Private knowledge assistants, retrieval over approved data, tailored agents, and in-product AI. We scope evaluation, access boundaries, cost, and the decisions a person should own."],
+  ["AI UGC creative", "AI-assisted creator-style concepts, image and video variants, and platform-ready campaign assets. Synthetic media, rights, brand standards, and approval are part of the brief."],
+  ["Content production", "Cinematic reels, product and food films, photography, motion graphics, and CGI. A clear creative direction carries through from production to the final deliverables."],
+  ["Branding & creative", "Brand identity, visual direction, packaging, and social content. A coherent system for the touchpoints around a product, a launch, or an established business."],
+  ["Digital marketing", "Campaign strategy, Meta and Google execution, creative inputs, tracking, and iteration. The channel plan follows the audience and objective, with measurement defined in scope."],
+  ["SEO", "Technical and on-page SEO, local search and citations, and off-page strategy. We connect site structure, content, and discoverability without promising a ranking."],
+  ["Offline marketing", "Event and stall production, print and banner materials, and activation campaigns. Physical experiences can follow the same brand direction as the digital work."],
+];
 
-      <div className="services-list">
-        {services.map((service, i) => (
-          <section
-            className="service-offer section-shell"
-            id={service.href}
-            key={service.href}
-            aria-labelledby={service.href + "-title"}
-          >
-            <div className="service-offer-title">
-              <span className="eyebrow">0{i + 1} / CORE CAPABILITY</span>
-              <h2 id={service.href + "-title"}>{service.name}</h2>
-              <h3>{service.short}</h3>
-            </div>
-            <div className="service-offer-body">
-              <p>{service.description}</p>
-              <span className="service-offer-label">TYPICAL SCOPE</span>
-              <ul>
-                {service.items.map((item) => <li key={item}>{item}</li>)}
-              </ul>
-              <div className="service-offer-example">
-                <span>EXAMPLE APPLICATION / ILLUSTRATIVE</span>
-                <p>{service.example}</p>
-              </div>
-              <Link href="/contact" className="text-link">
-                Talk about {service.name.toLowerCase()} <ArrowUpRight size={20} />
-              </Link>
-            </div>
+export default function ServicesPage() {
+  return (
+    <main id="main" className="sp-page">
+      <section className="sp-index-hero section-shell">
+        <div className="sp-hero-top"><span className="eyebrow">ZAVINO / CAPABILITIES</span><span className="sp-folio">THINK → BUILD → CONNECT</span></div>
+        <h1>Make the pieces<br /><span>work together.</span></h1>
+        <div className="sp-index-intro"><p>AI automation. SaaS products. Web platforms. We build around the work your business needs to do, and the people who need to do it.</p><a href="#ai-automation" className="text-link">Find your starting point <span aria-hidden="true">↓</span></a></div>
+        <nav className="sp-service-nav" aria-label="Our capabilities">{capabilities.map((item, i) => <a key={item.id} href={`#${item.id}`}><span>0{i + 1}</span>{item.title}<ArrowUpRight size={15} /></a>)}</nav>
+      </section>
+      <div className="sp-offers">
+        {capabilities.map((item, index) => (
+          <section key={item.id} id={item.id} className={`sp-offer sp-offer-${item.kind} section-shell`} aria-labelledby={`${item.id}-title`}>
+            <div className="sp-offer-copy"><span className="eyebrow">0{index + 1} / CORE CAPABILITY</span><h2 id={`${item.id}-title`}>{item.title}</h2><h3>{item.question}</h3><p>{item.description}</p><ul className="sp-inline-scope">{item.scope.map(scope => <li key={scope}>{scope}</li>)}</ul><Link href={`/services/${item.id}`} className="text-link">{item.link}<ArrowUpRight size={20} /></Link></div>
+            <ServiceArtifact kind={item.kind} />
           </section>
         ))}
       </div>
-
-      <section className="services-more section-shell" id="more-capabilities" aria-labelledby="more-capabilities-title">
-        <div className="services-more-heading">
-          <span className="eyebrow">ADDITIONAL CAPABILITIES</span>
-          <h2 id="more-capabilities-title">More ways to make it work.</h2>
-          <p>These services can support a core build or stand on their own when the scope calls for them.</p>
-        </div>
-        <div className="services-more-list">
-          {additionalServices.map((service, i) => (
-            <article key={service.name}>
-              <span>0{i + 4}</span>
-              <div>
-                <h3>{service.name}</h3>
-                <p>{service.description}</p>
-              </div>
-            </article>
-          ))}
-        </div>
+      <section className="sp-more section-shell" id="more-capabilities" aria-labelledby="sp-more-title">
+        <div className="sp-more-heading"><span className="eyebrow">ADDITIONAL CAPABILITIES</span><h2 id="sp-more-title">The work<br />around the work.</h2><p>A product launch may need a brand. An automated journey may need creative. These capabilities can support a wider build or form their own engagement.</p><Link href="/contact?focus=another-capability&source=/services" className="text-link">Discuss a supporting need <ArrowUpRight size={18} /></Link></div>
+        <div className="sp-more-list">{supporting.map(([title, description], index) => <article key={title}><span className="sp-number">{String(index + 4).padStart(2, "0")}</span><div><h3>{title}</h3><p>{description}</p></div></article>)}</div>
       </section>
-
-      <section className="service-engagement section-shell" aria-labelledby="engagement-title">
-        <span className="eyebrow">FROM IDEA TO OPERATION</span>
-        <div>
-          <h2 id="engagement-title">Start with the problem. Scope the right build.</h2>
-          <p>
-            We begin by understanding the people, data, systems, and decisions
-            involved. Then we agree on the first useful release, the integrations
-            it needs, and how success will be judged. Larger platforms can grow
-            in deliberate stages.
-          </p>
-          <Link href="/contact" className="text-link">
-            Tell us what you are building <ArrowUpRight size={20} />
-          </Link>
-        </div>
-      </section>
+      <section className="sp-fit section-shell"><span className="eyebrow">ONE PROBLEM. THE RIGHT SCOPE.</span><h2>You do not need<br />to arrive with a specification.</h2><div><p>Bring the workflow, the product idea, or the platform that needs to improve. We map the people and systems involved, agree on a useful first release, and make the next decisions clear.</p><Link href="/contact?source=/services" className="text-link">Tell us what needs to change <ArrowUpRight size={18} /></Link></div></section>
       <ContactCta />
     </main>
   );

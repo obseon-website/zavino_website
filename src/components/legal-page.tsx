@@ -6,10 +6,12 @@ export function LegalPage({
   title,
   summary,
   sections,
+  updated = "21 September 2026",
 }: {
   title: string;
   summary: string;
   sections: PolicySection[];
+  updated?: string;
 }) {
   return (
     <main id="main">
@@ -17,7 +19,7 @@ export function LegalPage({
         <span className="eyebrow">CLEAR FROM THE START</span>
         <h1>{title}</h1>
         <p>{summary}</p>
-        <p className="policy-date">Last updated: 21 September 2026</p>
+        <p className="policy-date">Last updated: {updated}</p>
       </section>
       <div className="legal-layout section-shell">
         <nav className="legal-nav" aria-label="On this page">

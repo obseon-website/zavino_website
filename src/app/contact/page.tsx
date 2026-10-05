@@ -1,77 +1,36 @@
 import type { Metadata } from "next";
-import {
-  ArrowUpRight,
-  Phone,
-  WhatsappLogo,
-} from "@phosphor-icons/react/dist/ssr";
+import { ArrowUpRight, EnvelopeSimple, WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
+import { ProjectForm } from "@/components/project-form";
+import { inquiryContext } from "@/lib/inquiry";
 import { site } from "@/lib/site";
+import "./contact.css";
 
 export const metadata: Metadata = {
-  title: "Discuss a project",
-  description:
-    "Talk to Zavino about AI automation, a SaaS product, or web development. Book a discovery call or send your brief.",
+  title: "Discuss your project",
+  description: "Tell Zavino about the workflow, SaaS product, or web platform you want to build. Send a short project brief or book a 30-minute call.",
   alternates: { canonical: "/contact" },
 };
 
-export default function Contact() {
+export default async function Contact({ searchParams }: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const query = await searchParams;
+  const context = inquiryContext(query.focus, query.source);
   return (
-    <main id="main">
+    <main id="main" className="contact-page">
       <section className="page-hero contact-hero section-shell">
         <span className="eyebrow">START A CONVERSATION</span>
-        <h1>Tell us what needs <span>to work better.</span></h1>
-        <p>
-          A complex workflow, a new SaaS product, or a web platform: bring us
-          the problem and the context. We’ll discuss what a useful first step
-          could look like.
-        </p>
+        <h1>Tell us what needs<br /><span>to work better.</span></h1>
+        <p>A workflow with too many handoffs. A SaaS product ready for its next chapter. A web platform that needs to do more. Start with the problem and the people around it.</p>
       </section>
-      <div className="contact-main section-shell">
-        <section className="contact-options" aria-label="Contact options">
-          <a className="contact-option" href={site.auditBooking} target="_blank" rel="noopener noreferrer">
-            <ArrowUpRight size={35} weight="light" />
-            <ArrowUpRight className="option-arrow" size={28} />
-            <h2>Book a discovery call.</h2>
-            <p>Walk us through the problem and the systems around it. Opens Cal.com.</p>
-          </a>
-          <a className="contact-option" href={"mailto:" + site.email + "?subject=Project%20brief%20for%20Zavino"}>
-            <ArrowUpRight size={35} weight="light" />
-            <ArrowUpRight className="option-arrow" size={28} />
-            <h2>Send a project brief.</h2>
-            <p>Share the goal, current workflow, and what a successful outcome would change.</p>
-          </a>
-          <a className="contact-option" href={site.whatsapp} target="_blank" rel="noopener noreferrer">
-            <WhatsappLogo size={35} weight="light" />
-            <ArrowUpRight className="option-arrow" size={28} />
-            <h2>Start on WhatsApp.</h2>
-            <p>For a quick first conversation with the Zavino team.</p>
-          </a>
-        </section>
-        <section className="contact-brief-guide" aria-labelledby="brief-guide-title">
-          <div>
-            <span className="eyebrow">A USEFUL STARTING BRIEF</span>
-            <h2 id="brief-guide-title">What should you tell us?</h2>
-          </div>
-          <ul>
-            <li><span>01</span> What your team does today and where work gets stuck.</li>
-            <li><span>02</span> Which systems or data sources are involved.</li>
-            <li><span>03</span> Who will use the result, and what success would look like.</li>
-          </ul>
-        </section>
-        <section className="contact-details">
-          <div>
-            <h3>Direct contact</h3>
-            <p>
-              <a href={"mailto:" + site.email}>{site.email}</a>
-              <br />
-              <a href={site.phoneLink}><Phone size={15} /> {site.phone}</a>
-            </p>
-          </div>
-          <div>
-            <h3>Based in Dhaka</h3>
-            <p>{site.name}<br />{site.address}</p>
-            <p>Please arrange a meeting before visiting.</p>
-          </div>
-        </section>
+      <div className="contact-layout section-shell">
+        <section aria-label="Send a project brief" className="contact-form-panel"><ProjectForm key={`${context.focus}:${context.source}`} initialFocus={context.focus} source={context.source} /></section>
+        <aside className="contact-aside">
+          <div className="contact-call"><span className="eyebrow">PREFER TO TALK IT THROUGH?</span><h2>A conversation<br />is a good start.</h2><p>Bring the goal, the current workflow, and the questions you’re still figuring out.</p><a className="button" href={site.auditBooking} target="_blank" rel="noopener noreferrer">Book a 30-minute call <ArrowUpRight size={20} /></a><span className="external-note">Opens Cal.com · Choose an available time</span></div>
+          <div className="contact-direct"><h3>A direct line.</h3><a href={`mailto:${site.email}`}><EnvelopeSimple size={21} /><span>{site.email}<small>Send your brief by email</small></span><ArrowUpRight size={18} /></a><a href={site.whatsapp} target="_blank" rel="noopener noreferrer"><WhatsappLogo size={22} /><span>Message on WhatsApp<small>Opens a chat with Zavino</small></span><ArrowUpRight size={18} /></a></div>
+          <div className="contact-next"><span className="eyebrow">WHAT HAPPENS NEXT</span><ol><li><span>01</span><p>We review the problem, the systems, and the outcome you have in mind.</p></li><li><span>02</span><p>We discuss fit and the questions that need answering.</p></li><li><span>03</span><p>Together, we define a useful first step and a scope for the work.</p></li></ol></div>
+          <p className="contact-location">Based in Dhaka, working across connected systems.<br /><span>{site.address}</span></p>
+        </aside>
       </div>
     </main>
   );

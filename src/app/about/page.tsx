@@ -1,113 +1,37 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowUpRight, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { ContactCta } from "@/components/footer";
-import { clients, site } from "@/lib/site";
+import { site } from "@/lib/site";
+import "@/app/service-pages.css";
 
 export const metadata: Metadata = {
-  title: "About us",
-  description:
-    "Meet Zavino, a Dhaka-based team building AI automation, SaaS products, web platforms, and the creative work around them.",
+  title: "About Zavino — connected thinking, considered builds",
+  description: "A Dhaka-based team connecting product thinking, AI, engineering, and creative direction to build automation, SaaS products, and web platforms.",
   alternates: { canonical: "/about" },
 };
-export default function About() {
+const principles = [
+  ["Start with the work.", "Understand the people, the data, the decisions, and the friction before choosing the technology."],
+  ["Keep people in the picture.", "Make interfaces understandable, decisions visible, and approval and ownership explicit."],
+  ["Build the whole path.", "Connect product, engineering, AI, and creative direction around the same business objective."],
+  ["Make the next step clear.", "Define scope, review working progress, surface constraints, and agree on what comes next."],
+];
+export default function AboutPage() {
   return (
-    <main id="main">
-      <section className="page-hero section-shell">
-        <span className="eyebrow">ABOUT ZAVINO</span>
-        <h1>We build for <span>the bigger picture.</span></h1>
-        <p>
-          Zavino brings product thinking, engineering, AI, and creative
-          direction together to solve connected business problems.
-        </p>
-      </section>
-      <section className="about-statement section-shell" data-reveal>
-        <h2>
-          Complex work.
-          <br />
-          <span>Clear thinking.</span>
-        </h2>
-        <div>
-          <p>
-            Zavino is based in Dhaka, Bangladesh. Our focus is AI automation,
-            SaaS products, and web development for businesses with important
-            workflows to improve.
-          </p>
-          <p>
-            We look at the full path: how data enters a system, how decisions
-            are made, how people stay in control, and how the result reaches
-            customers or teams.
-          </p>
-          <p>
-            Our creative and marketing practice remains part of the team. When
-            a product needs a brand, content, or a campaign around it, those
-            disciplines can work from the same direction.
-          </p>
-          <Link href="/services" className="text-link">
-            Explore our services <ArrowUpRight size={20} />
-          </Link>
-        </div>
-      </section>
-      <div className="about-system-band section-shell" aria-hidden="true">
-        <span>DATA</span><span>DECISIONS</span><span>PRODUCT</span><span>GROWTH</span>
-      </div>
-      <section className="values section-shell">
-        <h2>How we show up.</h2>
-        <div className="values-grid">
-          {[
-            [
-              "Start with the workflow.",
-              "We identify the people, systems, and decisions involved before choosing the technology.",
-            ],
-            [
-              "Make it usable.",
-              "A system earns its place when the people using it can understand it, trust it, and move faster with it.",
-            ],
-            [
-              "Build the full path.",
-              "Product, data, AI, web, and creative work should fit together around one business goal.",
-            ],
-            [
-              "Keep decisions visible.",
-              "We agree on scope and milestones, review what works, and make the next step explicit.",
-            ],
-          ].map(([title, description]) => (
-            <article key={title} data-reveal>
-              <h3>{title}</h3>
-              <p>{description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-      <section className="client-list-section section-shell">
-        <h2>Selected creative clients.</h2>
-        <p>These names reflect our existing creative and marketing work.</p>
-        <div className="client-list">
-          {clients.map((c) => (
-            <span key={c}>{c}</span>
-          ))}
-        </div>
-      </section>
-      <section className="contact-details section-shell">
-        <div>
-          <h3>The business behind the work.</h3>
-          <p>
-            {site.name}
-            <br />
-            AI automation, SaaS & web development
-            <br />
-            {site.address}
-          </p>
-        </div>
-        <div>
-          <h3>A direct connection.</h3>
-          <p>
-            <a href={`mailto:${site.email}`}>{site.email}</a>
-            <br />
-            <a href={site.phoneLink}>{site.phone}</a>
-          </p>
-        </div>
-      </section>
+    <main id="main" className="sp-page sp-about-page">
+      <section className="sp-about-hero section-shell"><div className="sp-hero-top"><span className="eyebrow">ABOUT / ZAVINO</span><span className="sp-folio">DHAKA, BANGLADESH</span></div><h1>Connected thinking.<br /><span>Considered builds.</span></h1><div className="sp-about-hero-bottom"><p>We bring product thinking, engineering, AI, and creative direction together for the work your business needs to do.</p><Link href="/services" className="text-link">See what we build <ArrowUpRight size={19} /></Link></div></section>
+      <figure className="sp-about-image section-shell"><Image src="/media/connected-systems.webp" alt="Abstract illustration of luminous green pathways connecting a series of dark geometric structures" width={1600} height={900} sizes="(max-width: 1480px) 90vw, 1320px" /><figcaption><span>CONNECTED SYSTEMS / ABSTRACT ILLUSTRATION</span><span>A visual expression of our approach.</span></figcaption></figure>
+      <section className="sp-about-statement section-shell"><div><span className="eyebrow">THE BIGGER PICTURE</span><h2>Good ideas need<br /><span>a connected team.</span></h2></div><div><p>Zavino is based in Dhaka, Bangladesh. Our focus is AI automation, SaaS products, and web platforms for businesses with important workflows to improve.</p><p>We look at how the pieces work together: where data enters, how a decision is made, what a person needs to approve, and how the result reaches a customer or a team.</p><p>Our creative and marketing practice is part of that picture. When a build needs a brand, content, or a campaign around it, those disciplines can work from the same direction.</p><Link href="/work" className="text-link">Explore our work & concepts <ArrowUpRight size={18} /></Link></div></section>
+      <section className="sp-about-disciplines section-shell"><span className="eyebrow">ONE DIRECTION. CONNECTED DISCIPLINES.</span><div className="sp-discipline-row"><span>Product</span><ArrowRight size={26} /><span>Engineering</span><ArrowRight size={26} /><span>AI</span><ArrowRight size={26} /><span>Creative</span></div></section>
+      <section className="sp-about-principles section-shell"><div className="sp-about-principles-heading"><span className="eyebrow">HOW WE THINK</span><h2>Complex work.<br />Clear principles.</h2></div><div className="sp-principle-list">{principles.map(([title, body], index) => <article key={title}><span className="sp-number">0{index + 1}</span><div><h3>{title}</h3><p>{body}</p></div></article>)}</div></section>
+      <section className="sp-about-engagement section-shell"><div><span className="eyebrow">HOW WE WORK TOGETHER</span><h2>Shared context.<br /><span>Visible progress.</span></h2><p>A useful engagement begins with a clear conversation and continues through concrete decisions.</p></div><ol>{[
+        ["Agree on the problem", "We map the goal, users, systems, constraints, and what an improved outcome would look like."],
+        ["Define the first release", "We make the deliverables, dependencies, responsibilities, and review points explicit in scope."],
+        ["Review working progress", "Prototypes and working increments give the team something useful to inspect and respond to."],
+        ["Prepare the handoff", "We agree on documentation, ownership, training, operating needs, and support after launch."],
+      ].map(([title, body], index) => <li key={title}><span>0{index + 1}</span><div><h3>{title}</h3><p>{body}</p></div></li>)}</ol></section>
+      <section className="sp-about-location section-shell"><div><span className="eyebrow">WHERE VISION TAKES FLIGHT</span><h2>Based in Dhaka.<br />Ready for your<br /><span>next challenge.</span></h2></div><div className="sp-location-details"><span className="sp-location-mark" aria-hidden="true">23.81° N / 90.41° E</span><address>{site.address}</address><a href={`mailto:${site.email}`} className="text-link">{site.email}<ArrowUpRight size={18} /></a><a href={site.phoneLink}>{site.phone}</a><p>Start with the workflow, product, or platform that needs to change. We will discuss fit and a sensible place to begin.</p></div></section>
       <ContactCta />
     </main>
   );

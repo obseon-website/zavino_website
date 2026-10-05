@@ -1,1 +1,4 @@
 NEXTJS_ENV=development
+# Local D1 is used by next dev through initOpenNextCloudflareForDev.
+# Keep email disabled: synthetic local tests must never send real email.
+INQUIRY_EMAIL_ENABLED=false

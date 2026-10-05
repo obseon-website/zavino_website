@@ -12,6 +12,7 @@ export default function Privacy() {
   return (
     <LegalPage
       title="Privacy policy."
+      updated="5 October 2026"
       summary="What we collect, why we need it, and how we handle it."
       sections={[
         {
@@ -33,7 +34,7 @@ export default function Privacy() {
           content: (
             <>
               <p>
-                When you contact us by phone, email, or WhatsApp, we may receive
+                When you contact us through the project form, phone, email, or WhatsApp, we may receive
                 your name, contact details, company information, project brief,
                 files, and the content of our conversations. Please share only
                 information relevant to your inquiry or project.
@@ -45,8 +46,17 @@ export default function Privacy() {
                 one-time payment codes.
               </p>
               <p>
-                This website does not currently have an inquiry form, user
-                accounts, newsletter signup, or an on-site checkout.
+                The project form collects your name, company or project, email,
+                project focus, and brief. You may also share the systems involved,
+                desired outcome, and timing. Please do not include customer
+                records, passwords, secrets, or confidential datasets.
+              </p>
+              <p>
+                Submitted briefs are stored in Cloudflare D1 with a submission
+                reference, timestamp, source page, and notification status so we
+                can review and respond. When email notifications are enabled,
+                the brief is sent to leads@thezavino.com. The website has no user
+                accounts, newsletter signup, or on-site checkout.
               </p>
             </>
           ),
@@ -64,14 +74,13 @@ export default function Privacy() {
               </p>
               <p>
                 We do not currently install third-party advertising pixels or
-                visitor analytics scripts. We use a session-storage flag on your
-                device to avoid replaying the opening animation during the same
-                browser session. It contains no contact or payment details and
-                is not sent to us.
+                visitor analytics scripts. Inquiry contents are not sent to
+                analytics. Interactive examples use temporary page state and
+                do not connect to your business systems or send messages.
               </p>
               <p>
                 Portfolio videos and fonts are served with the site. Opening an
-                external social or messaging link takes you to that provider’s
+                external booking, social, or messaging link takes you to that provider’s
                 service, where its own privacy and storage practices apply.
               </p>
             </>

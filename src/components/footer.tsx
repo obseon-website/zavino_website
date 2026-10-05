@@ -3,93 +3,16 @@ import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { Brand } from "./brand";
 import { policyLinks, site } from "@/lib/site";
 
-export function ContactCta() {
-  return (
-    <section className="contact-cta section-shell" aria-labelledby="contact-cta-title">
-      <div className="cta-top">
-        <span className="eyebrow">LET’S FIND THE RIGHT SYSTEM</span>
-        <span className="cta-wing" aria-hidden="true">
-          ↗
-        </span>
-      </div>
-      <h2 id="contact-cta-title">
-        Bring us the
-        <br />
-        <span>complex problem.</span>
-      </h2>
-      <div className="cta-bottom">
-        <p>
-          Tell us about the workflow, product, or web platform you need to build.
-          <br />
-          We’ll discuss the scope and a sensible place to start.
-        </p>
-        <div className="button-group">
-          <Link className="button button-light" href="/contact">
-            Discuss your project <ArrowUpRight size={21} />
-          </Link>
-          <a className="text-link" href={site.auditBooking} target="_blank" rel="noopener noreferrer">
-            Book a discovery call <ArrowUpRight size={19} />
-          </a>
-        </div>
-      </div>
-    </section>
-  );
+export function ContactCta({focus}: {focus?: string}) {
+  return <section className="contact-cta section-shell" aria-labelledby="contact-cta-title">
+    <div className="cta-top"><span className="eyebrow">A BETTER WAY TO WORK STARTS HERE</span><ArrowUpRight className="cta-arrow" size={68} weight="thin" aria-hidden="true"/></div>
+    <h2 id="contact-cta-title">Let’s make<br/><span>work flow.</span></h2>
+    <div className="cta-bottom"><p>Tell us which workflow or product is holding you back.<br/>We’ll find a useful place to start.</p><div className="button-group"><Link className="button" href={focus?`/contact?focus=${encodeURIComponent(focus)}`:"/contact"}>Discuss your project <ArrowUpRight size={19}/></Link><a className="text-link" href={site.auditBooking} target="_blank" rel="noopener noreferrer">Book a 30-minute call <ArrowUpRight size={17}/></a></div></div>
+  </section>;
 }
 export function Footer() {
-  return (
-    <footer className="site-footer section-shell">
-      <div className="footer-top">
-        <div>
-          <Brand />
-          <p>
-            AI automation, SaaS, and web development.
-            <br />
-            Built around what your business needs to do.
-          </p>
-        </div>
-        <div className="footer-links">
-          <span className="footer-label">Explore</span>
-          <Link href="/#solutions">Solutions</Link>
-          <Link href="/#work">Selected work</Link>
-          <Link href="/about">About us</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/contact">Contact us</Link>
-        </div>
-        <div className="footer-links">
-          <span className="footer-label">Find us</span>
-          <a href={`mailto:${site.email}`}>{site.email}</a>
-          <a href={site.phoneLink}>{site.phone}</a>
-          <p>{site.address}</p>
-        </div>
-        <div className="footer-links">
-          <span className="footer-label">Follow along</span>
-          {site.socials.map((s) => (
-            <a
-              href={s.url}
-              key={s.name}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {s.name}
-              <ArrowUpRight size={14} />
-            </a>
-          ))}
-        </div>
-      </div>
-      <div className="footer-wordmark" aria-hidden="true">
-        zavino<span>.</span>
-      </div>
-      <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Zavino</span>
-        <nav aria-label="Legal">
-          {policyLinks.map((l) => (
-            <Link key={l.href} href={l.href}>
-              {l.label}
-            </Link>
-          ))}
-        </nav>
-        <span>Systems that move business forward.</span>
-      </div>
-    </footer>
-  );
+  return <footer className="site-footer section-shell">
+    <div className="footer-top"><div className="footer-brand"><Brand/><p>Connected systems.<br/>Considered design.<br/>Where vision takes flight.</p></div><nav className="footer-links" aria-label="Footer services"><span className="footer-label">What we build</span><Link href="/services/ai-automation">AI automation</Link><Link href="/services/saas-development">SaaS development</Link><Link href="/services/web-development">Web development</Link><Link href="/services#more-capabilities">More capabilities <ArrowUpRight size={13}/></Link></nav><nav className="footer-links" aria-label="Footer navigation"><span className="footer-label">The studio</span><Link href="/work">Work</Link><Link href="/about">About</Link><Link href="/contact">Contact</Link></nav><div className="footer-links footer-contact"><span className="footer-label">Start a conversation</span><a href={`mailto:${site.email}`}>{site.email} <ArrowUpRight size={14}/></a><a href={site.whatsapp} target="_blank" rel="noopener noreferrer">Message on WhatsApp <ArrowUpRight size={14}/></a><p>{site.address}</p><div className="footer-socials">{site.socials.map(item=><a key={item.name} href={item.url} target="_blank" rel="noopener noreferrer">{item.name}</a>)}</div></div></div>
+    <div className="footer-bottom"><span>© {new Date().getFullYear()} Zavino</span><nav aria-label="Legal">{policyLinks.map(item=><Link key={item.href} href={item.href}>{item.label}</Link>)}</nav><a href="#main" className="back-top">Back to top ↑</a></div>
+  </footer>;
 }

@@ -4,7 +4,7 @@ export const site = {
     /\/$/,
     "",
   ),
-  email: "info@thezavino.com",
+  email: "leads@thezavino.com",
   phone: "+880 1844 293698",
   phoneLink: "tel:+8801844293698",
   whatsapp:

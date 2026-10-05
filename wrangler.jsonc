@@ -9,6 +9,22 @@
   "services": [
     { "binding": "WORKER_SELF_REFERENCE", "service": "zavino-website" },
   ],
-  "vars": { "NEXT_PUBLIC_SITE_URL": "https://thezavino.com" },
+  "d1_databases": [
+    {
+      "binding": "LEADS_DB",
+      "database_name": "zavino-leads",
+      "database_id": "557cb512-5302-4330-a841-45a9b3fe2038",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "send_email": [{
+    "name": "INQUIRY_EMAIL",
+    "allowed_destination_addresses": ["leads@thezavino.com"],
+    "allowed_sender_addresses": ["website@thezavino.com"]
+  }],
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://thezavino.com",
+    "INQUIRY_EMAIL_ENABLED": "false"
+  },
   "observability": { "enabled": true },
 }
