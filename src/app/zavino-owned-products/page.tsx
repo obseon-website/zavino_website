@@ -1,51 +1,52 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { ContactCta } from "@/components/footer";
 import "@/app/service-pages.css";
 
 export const metadata: Metadata = {
-  title: "Zavino owned products — ventures we build and run",
+  title: "Zavino owned products — ventures we build and operate",
   description:
-    "Aston Mark and the smaller ventures Zavino owns end to end: designed, built, sold, and powered by the same team behind our client work.",
+    "The digital products and smaller ventures Zavino owns and operates end to end, including Aston Mark — designed, engineered, sold, and maintained by the same team that serves our clients.",
   alternates: { canonical: "/zavino-owned-products" },
 };
 
 const astonFacts = [
-  ["What it is", "A digital product studio brand for creators: a men's pose and outfit guide e-book sold with Lightroom presets, CapCut LUTs, fonts, and wallpapers as one bundle."],
-  ["Who it is for", "Photographers, students, freelancers, and creators in Bangladesh and beyond who want to look confident on camera and edit like a professional — mostly on a phone."],
-  ["What we own", "The idea, the product, the brand, the storefront, the delivery automation, and the campaigns. No client handoff, no waiting on approvals."],
-  ["Why it exists", "It keeps us honest. When we sell our own product, we live the same checkout, delivery, and support problems we solve for clients."],
+  ["Overview", "A digital product brand offering creator tooling for portrait photography, sold directly to consumers in Bangladesh and international markets."],
+  ["Audience", "Photography enthusiasts, students, freelancers, and content creators who produce and edit primarily from mobile devices."],
+  ["Scope of ownership", "Product strategy, brand identity, storefront, payment processing, automated delivery, and performance marketing are handled entirely in-house."],
+  ["Rationale", "Operating a direct-to-consumer product gives our team continuous first-hand exposure to the same commercial requirements we address for clients."],
 ];
 
 const ventures = [
-  ["Digital product studios", "Guides, preset packs, template sets, and asset bundles — designed, packaged, and sold as one clean offer."],
-  ["Niche storefronts", "Small shops built around a single audience, with payments and instant delivery running without anyone watching them."],
-  ["Content & media brands", "Channels and libraries where the pipeline from idea to publish is automated end to end."],
-  ["Internal tools", "The quiet software that runs our own operations — built first, then offered to clients who need the same thing."],
+  ["Digital product businesses", "E-books, preset and asset libraries, template sets, and downloadable toolkits, packaged and sold as complete offerings."],
+  ["Specialist e-commerce", "Focused storefronts serving a defined audience, with payment processing and fulfilment automated from end to end."],
+  ["Content and media properties", "Publishing channels supported by production pipelines that run from brief to distribution without manual handling."],
+  ["Proprietary internal software", "Operational tools developed for Zavino's own use and subsequently offered to clients with equivalent requirements."],
 ];
 
 export default function ZavinoOwnedProductsPage() {
   return (
     <main id="main" className="sp-page sp-owned-page">
       <section className="sp-about-hero sp-owned-hero section-shell">
-        <div className="sp-hero-top"><span className="eyebrow">ZAVINO / OWNED PRODUCTS</span><span className="sp-folio">VENTURES WE RUN OURSELVES</span></div>
-        <h1>We don’t just<br />build it. <span>We own it.</span></h1>
+        <div className="sp-hero-top"><span className="eyebrow">ZAVINO / OWNED PRODUCTS</span><span className="sp-folio">VENTURES WE OPERATE</span></div>
+        <h1>Products we own<br /><span>and operate.</span></h1>
         <div className="sp-about-hero-bottom">
-          <p>Besides client work, Zavino owns and powers a growing set of smaller ventures — products we designed, built, sell, and operate ourselves.</p>
+          <p>In addition to client engagements, Zavino holds a portfolio of digital products and smaller ventures. Each one is designed, engineered, marketed, and maintained by our own team.</p>
           <a className="text-link" href="https://astonmarkbd.com/" target="_blank" rel="noopener noreferrer">Visit Aston Mark <ArrowUpRight size={19} /></a>
         </div>
       </section>
 
       <section className="sp-about-statement sp-owned-statement section-shell">
         <div>
-          <span className="eyebrow">WHY WE OWN PRODUCTS</span>
-          <h2>The same craft.<br /><span>Our own skin in the game.</span></h2>
+          <span className="eyebrow">OWNERSHIP BY DESIGN</span>
+          <h2>Operating our own<br /><span>ventures keeps us accountable.</span></h2>
         </div>
         <div>
-          <p>Owning a product means every decision — the offer, the checkout, the delivery, the follow-up — is ours to make and ours to answer for.</p>
-          <p>That changes how we work. We test payment flows on our own money, automate our own delivery before we automate yours, and feel every abandoned cart ourselves.</p>
-          <p>So when we build for a client, we are not guessing. We are repeating a path we have already walked with our own ventures on the line.</p>
+          <p>Owning a product places every commercial decision — pricing, checkout, fulfilment, and customer support — under our direct responsibility.</p>
+          <p>We therefore evaluate payment flows, delivery automation, and retention practice against our own revenue before recommending them to a client.</p>
+          <p>The outcome is a body of tested operating experience rather than theoretical guidance, applied directly to the work we deliver.</p>
         </div>
       </section>
 
@@ -54,19 +55,15 @@ export default function ZavinoOwnedProductsPage() {
           <span className="eyebrow">FEATURED VENTURE / 01</span>
           <div>
             <h2>Aston Mark</h2>
-            <p>A creator toolkit for people who freeze in front of a camera — a pose and outfit guide, professional Lightroom presets, CapCut LUTs, fonts, and wallpapers, sold as one instant-download bundle in Bangladesh and beyond.</p>
+            <p>Aston Mark is a digital product brand serving photographers and content creators. It packages a posing and outfit guide with professional Lightroom presets, CapCut LUTs, typography, and wallpapers, sold as a single instant-download bundle through astonmarkbd.com.</p>
           </div>
         </div>
         <div className="sp-owned-feature-grid">
-          <div className="sp-owned-panel" aria-hidden="true">
-            <span className="sp-art-label">ASTONMARKBD.COM / LIVE</span>
-            <div className="sp-owned-panel-body">
-              <span className="sp-owned-panel-mark">A</span>
-              <strong>Men’s Posebook</strong>
-              <em>450+ poses · 80+ presets · 100+ LUTs</em>
-            </div>
-            <span className="sp-owned-panel-foot">Instant download · Mobile-first · EN / বাংলা</span>
-          </div>
+          <figure className="sp-owned-panel">
+            <span className="sp-art-label">ASTONMARKBD.COM / PRODUCT</span>
+            <Image className="sp-owned-cover" src="/media/aston-mark-posebook-cover.webp" alt="Cover of the Aston Mark Men’s Posebook, the e-book at the centre of the Aston Mark product bundle" width={483} height={683} sizes="(max-width: 760px) 86vw, 34vw" priority />
+            <figcaption className="sp-owned-panel-foot">The Men’s Posebook · Instant download · astonmarkbd.com</figcaption>
+          </figure>
           <dl className="sp-owned-facts">
             {astonFacts.map(([term, detail]) => (
               <div key={term}>
@@ -77,8 +74,8 @@ export default function ZavinoOwnedProductsPage() {
           </dl>
         </div>
         <div className="sp-owned-actions">
-          <a className="button" href="https://astonmarkbd.com/" target="_blank" rel="noopener noreferrer">See Aston Mark live <ArrowUpRight size={19} /></a>
-          <p>One of several. The rest are in build, in test, or quietly running.</p>
+          <a className="button" href="https://astonmarkbd.com/" target="_blank" rel="noopener noreferrer">Visit astonmarkbd.com <ArrowUpRight size={19} /></a>
+          <p>One of several ventures currently under Zavino ownership.</p>
         </div>
       </section>
 
@@ -86,8 +83,8 @@ export default function ZavinoOwnedProductsPage() {
         <div className="sp-section-heading">
           <span className="eyebrow">THE PATTERN</span>
           <div>
-            <h2>A lot of smaller<br /><span>ventures like this.</span></h2>
-            <p>Aston Mark is the one we can show. Behind it sits a portfolio of smaller properties we own and power — each one small enough to move fast, and each one built on the same stack we sell to clients.</p>
+            <h2>A portfolio of<br /><span>smaller ventures.</span></h2>
+            <p>Aston Mark is our most visible example. It sits alongside a wider group of smaller properties that Zavino owns and operates — each built on the same technology stack and operating principles we provide to clients.</p>
           </div>
         </div>
         <div className="sp-owned-venture-grid">
@@ -103,20 +100,20 @@ export default function ZavinoOwnedProductsPage() {
 
       <section className="sp-about-engagement sp-owned-offer section-shell">
         <div>
-          <span className="eyebrow">WHAT THIS MEANS FOR YOU</span>
-          <h2>We build it<br />like <span>it’s ours.</span></h2>
-          <p>Because for our own ventures, it is. The same team that ships Zavino’s products ships yours.</p>
+          <span className="eyebrow">IMPLICATIONS FOR CLIENTS</span>
+          <h2>The same standard<br />applies to <span>your product.</span></h2>
+          <p>The team that owns and operates Zavino’s ventures is the team accountable for your engagement.</p>
         </div>
         <ol>
-          <li><span>01</span><div><h3>We run the whole path</h3><p>Product, storefront, payments, delivery, and marketing — owned in-house, not stitched together from vendors.</p></div></li>
-          <li><span>02</span><div><h3>We ship on our own money</h3><p>Our ventures fund our learning. Clients get the benefits without paying for the experiments.</p></div></li>
-          <li><span>03</span><div><h3>We stay after launch</h3><p>An owned product is never “handed off.” We maintain, measure, and improve it — and we treat yours the same way.</p></div></li>
+          <li><span>01</span><div><h3>End-to-end accountability</h3><p>Product design, storefront, payments, delivery, and marketing are delivered by a single accountable team.</p></div></li>
+          <li><span>02</span><div><h3>Capital committed to our own work</h3><p>Our ventures finance our own experimentation. Clients benefit from that experience without bearing its cost.</p></div></li>
+          <li><span>03</span><div><h3>Responsibility after launch</h3><p>Owned products are maintained indefinitely. We apply the same continuing responsibility to client engagements.</p></div></li>
         </ol>
       </section>
 
       <section className="sp-work-next section-shell">
         <span className="eyebrow">NEXT</span>
-        <h2>Have a venture<br />of your own?</h2>
+        <h2>Discuss a venture<br />of your own.</h2>
         <Link href="/contact" className="text-link">Start a conversation <ArrowRight size={18} /></Link>
       </section>
 

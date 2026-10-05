@@ -284,12 +284,9 @@
 .sp-owned-statement > div:last-child p:first-child { color: #d0d9cd; }
 .sp-owned-feature { padding-bottom: var(--sp-space); }
 .sp-owned-feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(45px, 7vw, 116px); align-items: start; }
-.sp-owned-panel { border: 1px solid var(--line); border-radius: 3px; padding: 29px; min-height: 370px; display: flex; flex-direction: column; background: radial-gradient(ellipse at 30% 100%, rgba(137,158,107,.13), transparent 70%), #101d17; }
-.sp-owned-panel-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 15px; }
-.sp-owned-panel-mark { font-family: var(--font-display), sans-serif; font-size: clamp(64px, 7vw, 104px); line-height: 1; letter-spacing: -.06em; color: var(--accent); }
-.sp-owned-panel-body strong { font-family: var(--font-display), sans-serif; font-size: clamp(28px, 3vw, 42px); font-weight: 600; letter-spacing: -.04em; }
-.sp-owned-panel-body em { font-style: normal; font-size: 13px; color: var(--muted); letter-spacing: .02em; }
-.sp-owned-panel-foot { display: block; border-top: 1px solid var(--line); padding-top: 20px; font-size: 10px; letter-spacing: .1em; color: var(--muted); }
+.sp-owned-panel { margin: 0; border: 1px solid var(--line); border-radius: 3px; padding: 29px; min-height: 370px; display: flex; flex-direction: column; background: radial-gradient(ellipse at 30% 100%, rgba(137,158,107,.13), transparent 70%), #101d17; }
+.sp-owned-cover { display: block; width: min(66%, 290px); height: auto; margin: 32px auto; border: 1px solid var(--line); box-shadow: -14px 17px 0 #0b1510, -14px 17px 0 1px var(--line); }
+.sp-owned-panel-foot { display: block; margin-top: auto; border-top: 1px solid var(--line); padding-top: 20px; font-size: 10px; letter-spacing: .1em; color: var(--muted); }
 .sp-owned-facts { margin: 0; border-top: 1px solid var(--line); }
 .sp-owned-facts > div { display: grid; grid-template-columns: 150px 1fr; gap: 28px; padding: 25px 0; border-bottom: 1px solid var(--line); }
 .sp-owned-facts dt { font-size: 12px; letter-spacing: .05em; color: var(--accent); }
