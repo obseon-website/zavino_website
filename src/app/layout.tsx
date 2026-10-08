@@ -2,22 +2,16 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { PageMotion } from "@/components/motion";
 import { site } from "@/lib/site";
 import "./globals.css";
-import "./ai-redesign.css";
+import "./demos.css";
+import "./homepage.css";
+import "./experience.css";
 
 const display = localFont({
-  src: "../fonts/syne-latin-wght-normal.woff2",
+  src: "../fonts/manrope-latin-wght-normal.woff2",
   variable: "--font-display",
-  display: "swap",
-});
-const body = localFont({
-  src: [
-    { path: "../fonts/ibm-plex-sans-latin-400-normal.woff2", weight: "400" },
-    { path: "../fonts/ibm-plex-sans-latin-500-normal.woff2", weight: "500" },
-  ],
-  variable: "--font-body",
+  weight: "200 800",
   display: "swap",
 });
 export const metadata: Metadata = {
@@ -27,14 +21,14 @@ export const metadata: Metadata = {
     template: "%s | Zavino",
   },
   description:
-    "Zavino builds connected AI automation, custom SaaS products, and web platforms for complex business workflows.",
+    "AI automation, SaaS products, and thoughtful websites. Zavino brings design and engineering together to make everyday business work easier.",
   openGraph: {
     type: "website",
     locale: "en_BD",
     siteName: "Zavino",
     title: "Zavino | AI Automation Agency & SaaS Development",
     description:
-      "Connected AI automation, SaaS products, and web platforms built around real business workflows.",
+      "AI automation, SaaS products, and thoughtful websites. Good technology for a lighter workday.",
     images: [
       {
         url: "/og.jpg",
@@ -48,22 +42,21 @@ export const metadata: Metadata = {
   icons: { icon: "/icon.svg", apple: "/apple-touch-icon.png" },
 };
 export const viewport: Viewport = {
-  themeColor: "#0d1713",
-  colorScheme: "dark",
+  themeColor: "#edf2f5",
+  colorScheme: "light",
 };
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
-      <body className={`${display.variable} ${body.variable}`}>
+    <html lang="en">
+      <body className={display.variable}>
         <a className="skip-link" href="#main">
           Skip to content
         </a>
         <Header />
         {children}
         <Footer />
-        <PageMotion />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

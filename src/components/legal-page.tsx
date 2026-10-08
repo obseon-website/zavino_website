@@ -16,7 +16,6 @@ export function LegalPage({
   return (
     <main id="main">
       <section className="page-hero legal-hero section-shell">
-        <span className="eyebrow">CLEAR FROM THE START</span>
         <h1>{title}</h1>
         <p>{summary}</p>
         <p className="policy-date">Last updated: {updated}</p>

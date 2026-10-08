@@ -53,3 +53,6 @@ temp/
 !.dev.vars.example
 *.tsbuildinfo
 qa/
+
+# Local design-review captures
+.impeccable/review/

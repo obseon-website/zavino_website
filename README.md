@@ -1,6 +1,6 @@
-# Zavino — Where Vision Takes Flight
+# Zavino
 
-Complete agency website: a homepage and six supporting pages, built locally for Cloudflare Workers with Next.js and OpenNext. GitHub integration and deployment have not been performed.
+A service-led studio website for AI automation, SaaS development, and web development. Built with Next.js App Router, React, TypeScript, and plain CSS. The visual system is documented in [DESIGN.md](DESIGN.md), with product constraints in [PRODUCT.md](PRODUCT.md).
 
 ## Run locally
 
@@ -11,70 +11,65 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:3000. No credentials or database are required. `.env.example` documents the optional canonical URL override.
-
-For a production build in the actual local Cloudflare runtime:
+Open http://localhost:3000. For a standard production preview:
 
 ```bash
-npm run preview
+npm run build
+npm run start
 ```
 
-Open http://localhost:8787. This does not publish the site. Follow [the Cloudflare deployment guide](docs/CLOUDFLARE-DEPLOYMENT.md) to connect GitHub and launch later.
+`.env.example` documents the optional canonical URL override. The contact form's persistence and notification bindings are described in the existing deployment documentation. A plain Next.js preview does not provide production Cloudflare bindings.
 
-## Pages
+## Site structure
 
-| Route                         | Content                                                                                                                              |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `/`                           | Desktop image-trail hero, logo-window introduction, mobile film deck, all 13 showreels, portfolio stills, services, process, contact |
-| `/about`                      | Agency, values, business details, clients                                                                                            |
-| `/services`                   | Four service groups, quotes, projects and retainers, FAQs                                                                            |
-| `/contact`                    | WhatsApp, calls, email, public address                                                                                               |
-| `/privacy-policy`             | Website data practices and communication/payment providers                                                                           |
-| `/terms-and-conditions`       | Proposals, advances, revisions, approvals, ownership, delivery                                                                       |
-| `/cancellation-refund-policy` | Cancellation, unused-fee reconciliation, refund timing                                                                               |
+| Route | Purpose |
+| --- | --- |
+| `/` | Promise, three services, selected work, process, project invitation |
+| `/services` | Core services and supporting creative capabilities |
+| `/services/ai-automation` | Automation scope, illustrative workflow, process, FAQs |
+| `/services/saas-development` | Product scope, illustrative role-based concept, process, FAQs |
+| `/services/web-development` | Web scope, responsive concept, standards, process, FAQs |
+| `/work` | Creative archive, 13 films, and clearly labeled lab concepts |
+| `/zavino-owned-products` | Ventures Zavino builds and operates |
+| `/about` | Studio approach, disciplines, working principles, business details |
+| `/contact` | Validated project brief, booking, email, and WhatsApp |
+| Policy routes | Privacy, terms, cancellation, and refunds |
 
-All pages are prerendered. A custom 404, sitemap, robots file, social image, icons, and legacy URL redirects are included. There is no inquiry form, analytics tracker, or public payment checkout.
+The site also includes a 404, sitemap, robots file, social preview, icons, and legacy URL redirects.
 
 ## Editing
 
-- Business details, clients, portfolio stills, services: `src/lib/site.ts`.
-- Film titles, order, descriptions: `src/lib/reels.ts`.
-- Page and policy copy: `src/app/`.
-- Shared components: `src/components/`.
-- Styles and responsive layouts: `src/app/globals.css`.
-- Symbol files: `public/brand/`; original logo path: `src/lib/logo.ts`.
-- Self-hosted fonts and licenses: `src/fonts/`.
+- Homepage service and process data: `src/lib/home.ts`.
+- Business details, supplied projects, service scopes: `src/lib/site.ts`.
+- Film titles and order: `src/lib/reels.ts`; original-to-published mapping: `src/lib/reel-manifest.json`.
+- Pages: `src/app/`; shared components: `src/components/`.
+- Shared tokens and components: `src/app/globals.css`.
+- Homepage layouts: `src/app/homepage.css`; expressive motion and footer: `src/app/experience.css`; service layouts: `src/app/service-pages.css`; concept demos: `src/app/demos.css`.
+- Self-hosted Manrope font and license: `src/fonts/`.
 
-Policy defaults are 50% project advance, 50% before delivery, retainers paid monthly in advance, two consolidated revision rounds, and approved refund processing within 7–10 working days. An accepted proposal can define project-specific terms.
+The homepage shows evidence with its true scope. The lab concepts are illustrative, creative projects are labeled as creative work, and Aston Mark is described as an owned business. Do not turn these into unsupported client results.
 
-## Media
+## Imagery and motion
 
-All 13 supplied top-level showreels are in the homepage motion collection. `src/lib/reel-manifest.json` maps their original filenames to the published assets. The desktop hero and mobile deck use the same approved collection; discarded legacy background videos are not used.
+The new daylight bridge image is a generated brand visual, not client work. Its exact prompt is saved in `docs/design/workday-bridge.prompt.txt`. Raster provenance is embedded or stored in adjacent JSON sidecars. Existing portfolio and film assets come from the supplied repository.
 
-`public/media/reels/` contains compatible H.264/AAC MP4s with fast-start metadata and original audio, plus WebP posters. Videos download only after play is pressed. The original AV1 files remain in `resources-from-old-website/videos/`.
+The homepage opens with a masked **Reveal** and short **Stagger**. Its three services share a sticky, dimensional CSS interface stage driven by native scroll through GSAP ScrollTrigger. The three UI concepts are labeled as illustrations. On smaller or shorter screens, and with reduced motion, services use a compact static flow.
 
-To regenerate, install FFmpeg (`ffmpeg` and `ffprobe` on PATH), then run:
+The shared footer adds a large Manrope wordmark, physical depth, and pointer-responsive **Parallax** with a moving light field. A homepage-only **Mask / Blur** treatment progressively diffuses the viewport’s bottom edge. The blur cannot intercept input and disappears for visible keyboard focus, open dialogs, and reduced transparency. Pointer effects require a fine pointer and no reduced-motion preference; they reset on leave, focus, scrolling, resizing, and preference changes.
 
-```bash
-npm run media:reels
-# Re-encode every film after changing compression settings:
-npm run media:reels -- --force
-```
+**Press / Tap feedback** on primary controls and **Origin-aware animation** for the native mobile dialog remain. Keyboard focus is immediate. Main content and links are present without JavaScript; a failed motion import falls back to compact services. Motion source: `service-experience.tsx`, `footer-signature.tsx`, `progressive-blur.tsx`, and `experience.css`.
 
-The script intentionally expects exactly 13 approved showreels. Review it and the gallery count when changing the collection. Commit generated videos, posters, and manifest; Cloudflare does not need FFmpeg at build time. The aviation hero is a generated brand visual; portfolio media uses the supplied work.
+Videos load only after play is pressed. To regenerate the approved 13-film collection with FFmpeg installed, run `npm run media:reels`. Originals remain in `resources-from-old-website/videos/`.
 
-## Checks
+## Validation and delivery
 
 ```bash
 npm run lint
-npm run build:worker
+npm run build
 npm run typecheck
-npm run check:size
-npm run preview:worker
+node scripts/test-inquiry.mjs
 ```
 
-`check:size` is a local dry run and requires a Worker build first. `preview:worker` reuses that build. `npm run deploy` actually publishes; use it only when ready.
+The inquiry test uses a local database and mocked notifications; it does not send a real project inquiry.
 
-Motion respects reduced-motion preferences. The introduction runs once per tab session, includes a skip button and timeout, and does not block a no-JavaScript page. Desktop service pinning becomes a normal list on smaller screens. Policy pages use a narrow desktop sidebar and a collapsed contents menu on smaller screens.
-
-Dependencies are pinned in `package.json` and `package-lock.json`. The original [Cloudflare recommendations](Cloudflare-Next.js-Recommendations.md) remain as background reference; use the project-specific guide for this site's exact settings.
+**Deliver this redesign through GitHub only. Do not run Worker deployment commands.** Existing Cloudflare integration remains in the repository because it powers the current contact runtime. The historical [deployment guide](docs/CLOUDFLARE-DEPLOYMENT.md) is background documentation, not authorization to deploy this change manually.

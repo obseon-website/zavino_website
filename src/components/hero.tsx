@@ -1,29 +1,44 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
-import { WorkflowDemo } from "./workflow-demo";
+import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 
 export function Hero() {
   return (
-    <section className="hero section-shell" aria-labelledby="hero-heading">
-      <div className="hero-copy">
-        <p className="hero-kicker">AI AUTOMATION AGENCY <span>·</span> SAAS DEVELOPMENT</p>
-        <h1 id="hero-heading">AI automation for the work your business <span>runs on.</span></h1>
-        <p className="hero-description">We connect customer and operational data, automate decisions and handoffs, and build the SaaS products that make it all work.</p>
-        <div className="hero-actions">
-          <Link href="/contact" className="button">Discuss your project <ArrowUpRight size={19} /></Link>
-          <a href="#solutions" className="text-link">Explore what we build <ArrowRight size={18} /></a>
+    <section className="home-hero section-shell" aria-labelledby="hero-heading">
+      <div className="home-hero-intro">
+        <h1 id="hero-heading" aria-label="Good technology. A lighter workday.">
+          <span className="hero-reveal-line" aria-hidden="true">
+            <span>Good technology.</span>
+          </span>
+          <span className="hero-reveal-line" aria-hidden="true">
+            <span>A lighter workday.</span>
+          </span>
+        </h1>
+        <div className="home-hero-copy">
+          <p>
+            We build AI automation, SaaS products, and websites that make the
+            everyday work of business feel easier.
+          </p>
+          <Link href="/contact" className="button">
+            Discuss your project <ArrowUpRight size={19} aria-hidden="true" />
+          </Link>
         </div>
       </div>
-      <div className="hero-system">
-        <div className="hero-system-heading"><span>CONNECTED BY DESIGN.</span><span>CONTROLLED BY PEOPLE.</span></div>
-        <WorkflowDemo compact />
-      </div>
-      <nav className="hero-services" aria-label="Core capabilities">
-        <span>From the first signal.<br /><strong>To a working system.</strong></span>
-        <Link href="/services/ai-automation">AI automation <ArrowUpRight size={18} /></Link>
-        <Link href="/services/saas-development">SaaS development <ArrowUpRight size={18} /></Link>
-        <Link href="/services/web-development">Web development <ArrowUpRight size={18} /></Link>
-      </nav>
+      <figure className="home-hero-figure">
+        <Image
+          src="/media/workday-bridge.webp"
+          alt="A pale blue ribbon bridges three separate blocks in a sunlit studio, an abstract illustration of connected work."
+          width={1536}
+          height={1024}
+          sizes="(max-width: 700px) 100vw, 92vw"
+          preload
+          className="home-hero-image"
+        />
+        <figcaption>
+          <span>Thoughtfully connected. Made for people.</span>
+          <span>Independent studio · Dhaka, Bangladesh</span>
+        </figcaption>
+      </figure>
     </section>
   );
 }

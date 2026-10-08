@@ -1,0 +1,601 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T13:43:42.998Z",
+  "title": "Design System: Zavino",
+  "extensions": {
+    "colorMeta": {
+      "blue-ink": {
+        "role": "primary",
+        "displayName": "Blue Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0434 235.98)",
+          "oklch(26.43% 0.0434 235.98)",
+          "oklch(37.86% 0.0434 235.98)",
+          "oklch(49.29% 0.0434 235.98)",
+          "oklch(60.71% 0.0434 235.98)",
+          "oklch(72.14% 0.0434 235.98)",
+          "oklch(83.57% 0.0434 235.98)",
+          "oklch(95.00% 0.0434 235.98)"
+        ]
+      },
+      "blue-accent": {
+        "role": "primary",
+        "displayName": "Blue Accent",
+        "tonalRamp": [
+          "oklch(15.00% 0.0681 239.44)",
+          "oklch(26.43% 0.0681 239.44)",
+          "oklch(37.86% 0.0681 239.44)",
+          "oklch(49.29% 0.0681 239.44)",
+          "oklch(60.71% 0.0681 239.44)",
+          "oklch(72.14% 0.0681 239.44)",
+          "oklch(83.57% 0.0681 239.44)",
+          "oklch(95.00% 0.0681 239.44)"
+        ]
+      },
+      "soft-ink": {
+        "role": "primary",
+        "displayName": "Soft Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0413 238.70)",
+          "oklch(26.43% 0.0413 238.70)",
+          "oklch(37.86% 0.0413 238.70)",
+          "oklch(49.29% 0.0413 238.70)",
+          "oklch(60.71% 0.0413 238.70)",
+          "oklch(72.14% 0.0413 238.70)",
+          "oklch(83.57% 0.0413 238.70)",
+          "oklch(95.00% 0.0413 238.70)"
+        ]
+      },
+      "ink-hover": {
+        "role": "primary",
+        "displayName": "Ink Hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.0502 231.93)",
+          "oklch(26.43% 0.0502 231.93)",
+          "oklch(37.86% 0.0502 231.93)",
+          "oklch(49.29% 0.0502 231.93)",
+          "oklch(60.71% 0.0502 231.93)",
+          "oklch(72.14% 0.0502 231.93)",
+          "oklch(83.57% 0.0502 231.93)",
+          "oklch(95.00% 0.0502 231.93)"
+        ]
+      },
+      "near-white": {
+        "role": "neutral",
+        "displayName": "Near White",
+        "tonalRamp": [
+          "oklch(15.00% 0.0028 128.49)",
+          "oklch(26.43% 0.0028 128.49)",
+          "oklch(37.86% 0.0028 128.49)",
+          "oklch(49.29% 0.0028 128.49)",
+          "oklch(60.71% 0.0028 128.49)",
+          "oklch(72.14% 0.0028 128.49)",
+          "oklch(83.57% 0.0028 128.49)",
+          "oklch(95.00% 0.0028 128.49)"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "tonalRamp": [
+          "oklch(15.00% 0.0067 233.64)",
+          "oklch(26.43% 0.0067 233.64)",
+          "oklch(37.86% 0.0067 233.64)",
+          "oklch(49.29% 0.0067 233.64)",
+          "oklch(60.71% 0.0067 233.64)",
+          "oklch(72.14% 0.0067 233.64)",
+          "oklch(83.57% 0.0067 233.64)",
+          "oklch(95.00% 0.0067 233.64)"
+        ]
+      },
+      "deep-mist": {
+        "role": "neutral",
+        "displayName": "Deep Mist",
+        "tonalRamp": [
+          "oklch(15.00% 0.0126 236.63)",
+          "oklch(26.43% 0.0126 236.63)",
+          "oklch(37.86% 0.0126 236.63)",
+          "oklch(49.29% 0.0126 236.63)",
+          "oklch(60.71% 0.0126 236.63)",
+          "oklch(72.14% 0.0126 236.63)",
+          "oklch(83.57% 0.0126 236.63)",
+          "oklch(95.00% 0.0126 236.63)"
+        ]
+      },
+      "muted-ink": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0280 234.96)",
+          "oklch(26.43% 0.0280 234.96)",
+          "oklch(37.86% 0.0280 234.96)",
+          "oklch(49.29% 0.0280 234.96)",
+          "oklch(60.71% 0.0280 234.96)",
+          "oklch(72.14% 0.0280 234.96)",
+          "oklch(83.57% 0.0280 234.96)",
+          "oklch(95.00% 0.0280 234.96)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "tonalRamp": [
+          "oklch(15.00% 0.0434 235.98 / 0.149)",
+          "oklch(26.43% 0.0434 235.98 / 0.149)",
+          "oklch(37.86% 0.0434 235.98 / 0.149)",
+          "oklch(49.29% 0.0434 235.98 / 0.149)",
+          "oklch(60.71% 0.0434 235.98 / 0.149)",
+          "oklch(72.14% 0.0434 235.98 / 0.149)",
+          "oklch(83.57% 0.0434 235.98 / 0.149)",
+          "oklch(95.00% 0.0434 235.98 / 0.149)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15.00% 0.0000 0)",
+          "oklch(26.43% 0.0000 0)",
+          "oklch(37.86% 0.0000 0)",
+          "oklch(49.29% 0.0000 0)",
+          "oklch(60.71% 0.0000 0)",
+          "oklch(72.14% 0.0000 0)",
+          "oklch(83.57% 0.0000 0)",
+          "oklch(95.00% 0.0000 0)"
+        ]
+      },
+      "demo-paper": {
+        "role": "neutral",
+        "displayName": "Demo Paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.0025 228.78)",
+          "oklch(26.43% 0.0025 228.78)",
+          "oklch(37.86% 0.0025 228.78)",
+          "oklch(49.29% 0.0025 228.78)",
+          "oklch(60.71% 0.0025 228.78)",
+          "oklch(72.14% 0.0025 228.78)",
+          "oklch(83.57% 0.0025 228.78)",
+          "oklch(95.00% 0.0025 228.78)"
+        ]
+      },
+      "contact-ground": {
+        "role": "neutral",
+        "displayName": "Contact Ground",
+        "tonalRamp": [
+          "oklch(15.00% 0.0152 235.39)",
+          "oklch(26.43% 0.0152 235.39)",
+          "oklch(37.86% 0.0152 235.39)",
+          "oklch(49.29% 0.0152 235.39)",
+          "oklch(60.71% 0.0152 235.39)",
+          "oklch(72.14% 0.0152 235.39)",
+          "oklch(83.57% 0.0152 235.39)",
+          "oklch(95.00% 0.0152 235.39)"
+        ]
+      },
+      "field-border": {
+        "role": "neutral",
+        "displayName": "Field Border",
+        "tonalRamp": [
+          "oklch(15.00% 0.0326 240.53)",
+          "oklch(26.43% 0.0326 240.53)",
+          "oklch(37.86% 0.0326 240.53)",
+          "oklch(49.29% 0.0326 240.53)",
+          "oklch(60.71% 0.0326 240.53)",
+          "oklch(72.14% 0.0326 240.53)",
+          "oklch(83.57% 0.0326 240.53)",
+          "oklch(95.00% 0.0326 240.53)"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Error",
+        "tonalRamp": [
+          "oklch(15.00% 0.1398 29.39)",
+          "oklch(26.43% 0.1398 29.39)",
+          "oklch(37.86% 0.1398 29.39)",
+          "oklch(49.29% 0.1398 29.39)",
+          "oklch(60.71% 0.1398 29.39)",
+          "oklch(72.14% 0.1398 29.39)",
+          "oklch(83.57% 0.1398 29.39)",
+          "oklch(95.00% 0.1398 29.39)"
+        ]
+      },
+      "approved": {
+        "role": "neutral",
+        "displayName": "Approved",
+        "tonalRamp": [
+          "oklch(15.00% 0.0125 156.99)",
+          "oklch(26.43% 0.0125 156.99)",
+          "oklch(37.86% 0.0125 156.99)",
+          "oklch(49.29% 0.0125 156.99)",
+          "oklch(60.71% 0.0125 156.99)",
+          "oklch(72.14% 0.0125 156.99)",
+          "oklch(83.57% 0.0125 156.99)",
+          "oklch(95.00% 0.0125 156.99)"
+        ]
+      },
+      "held": {
+        "role": "neutral",
+        "displayName": "Held",
+        "tonalRamp": [
+          "oklch(15.00% 0.0168 88.00)",
+          "oklch(26.43% 0.0168 88.00)",
+          "oklch(37.86% 0.0168 88.00)",
+          "oklch(49.29% 0.0168 88.00)",
+          "oklch(60.71% 0.0168 88.00)",
+          "oklch(72.14% 0.0168 88.00)",
+          "oklch(83.57% 0.0168 88.00)",
+          "oklch(95.00% 0.0168 88.00)"
+        ]
+      },
+      "concept-paper": {
+        "role": "neutral",
+        "displayName": "Concept Paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.0011 197.14)",
+          "oklch(26.43% 0.0011 197.14)",
+          "oklch(37.86% 0.0011 197.14)",
+          "oklch(49.29% 0.0011 197.14)",
+          "oklch(60.71% 0.0011 197.14)",
+          "oklch(72.14% 0.0011 197.14)",
+          "oklch(83.57% 0.0011 197.14)",
+          "oklch(95.00% 0.0011 197.14)"
+        ]
+      },
+      "signature-ink": {
+        "role": "neutral",
+        "displayName": "Signature Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0512 238.30)",
+          "oklch(26.43% 0.0512 238.30)",
+          "oklch(37.86% 0.0512 238.30)",
+          "oklch(49.29% 0.0512 238.30)",
+          "oklch(60.71% 0.0512 238.30)",
+          "oklch(72.14% 0.0512 238.30)",
+          "oklch(83.57% 0.0512 238.30)",
+          "oklch(95.00% 0.0512 238.30)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Homepage headline, with responsive clamps documented in DESIGN.md."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Shared section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Current homepage service-chapter headings; the same clamp applies in compact flow."
+      },
+      "inner-display": {
+        "displayName": "Inner Display",
+        "purpose": "Default supporting-page h1; route-specific hero clamps remain in source."
+      },
+      "inner-headline": {
+        "displayName": "Inner Headline",
+        "purpose": "Default supporting-page h2."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Platform reading stack."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Filled and outline action text."
+      },
+      "field": {
+        "displayName": "Field",
+        "purpose": "Readable entry text at every viewport."
+      },
+      "selected-demo-control": {
+        "displayName": "Selected Demo Control",
+        "purpose": "Pressed scenario and role selectors."
+      },
+      "footer-display": {
+        "displayName": "Footer Display",
+        "purpose": "User-authorized oversized Manrope signature; not a general heading scale."
+      }
+    },
+    "shadows": [
+      {
+        "name": "menu",
+        "value": "0 16px 60px #18344526",
+        "purpose": "Floating mobile navigation panel."
+      },
+      {
+        "name": "homepage-product-cover",
+        "value": "6px 14px 30px #213c4c26",
+        "purpose": "Physical cover depth on the homepage."
+      },
+      {
+        "name": "owned-product-cover",
+        "value": "6px 12px 26px #213c4c26",
+        "purpose": "Existing cover variant on the owned-product route."
+      },
+      {
+        "name": "concept-window",
+        "value": "0 2px 3px #213c4c08, 8px 18px 36px #213c4c14, 20px 45px 65px #213c4c12",
+        "purpose": "Dimensional illustrative interface windows in the service stage."
+      },
+      {
+        "name": "concept-float",
+        "value": "2px 5px 12px #213c4c12, 8px 16px 30px #213c4c1a",
+        "purpose": "Floating concept annotations."
+      },
+      {
+        "name": "concept-keycap",
+        "value": "inset 0 1px 1px #fff, inset 0 -4px 3px #bacbd8, 4px 12px 20px #213c4c20",
+        "purpose": "Physical keycap material with a light surface gradient."
+      },
+      {
+        "name": "concept-phone",
+        "value": "4px 10px 22px #213c4c24",
+        "purpose": "Illustrative phone silhouette in the web chapter."
+      },
+      {
+        "name": "footer-extrusion",
+        "value": "0 1px 0 #dbe9f2, 0 3px 0 #9eb4c3, 0 6px 1px #8fa9bb, 0 16px 30px #3f65832b",
+        "purpose": "Text shadow, not box shadow: the solid-color footer signature."
+      },
+      {
+        "name": "footer-extrusion-mobile",
+        "value": "0 1px 0 #dbe9f2, 0 2px 0 #9eb4c3, 0 3px 1px #8fa9bb, 0 8px 18px #3f658329",
+        "purpose": "Text-shadow variant at widths up to 700px; removed for reduced transparency and forced colors."
+      }
+    ],
+    "motion": [
+      {
+        "name": "shared-easing",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Shared entrance, press, menu, and footer transition easing; the scroll timeline stays linear."
+      },
+      {
+        "name": "Press / Tap feedback — press",
+        "value": "140ms; scale(0.96)",
+        "purpose": "Pointer press on filled/icon controls; disabled and focus-visible states excluded."
+      },
+      {
+        "name": "Press / Tap feedback — release",
+        "value": "100ms",
+        "purpose": "Interruptible transform return; absent with reduced motion."
+      },
+      {
+        "name": "Origin-aware animation — enter",
+        "value": "180ms; translateY(-4px) scale(0.97); transform-origin: top right",
+        "purpose": "Menu opens with opacity and discrete display/overlay retention."
+      },
+      {
+        "name": "Origin-aware animation — exit",
+        "value": "120ms",
+        "purpose": "Menu closes along the same path."
+      },
+      {
+        "name": "reduced-motion-menu",
+        "value": "80ms; opacity only",
+        "purpose": "Menu transition without movement or scale."
+      },
+      {
+        "name": "keyboard-response",
+        "value": "none",
+        "purpose": "Keyboard focus/menu actions, Escape, and menu-link navigation are instant."
+      },
+      {
+        "name": "Reveal",
+        "value": "800ms; translate3d(0,112%,0) rotate(2deg) to rest",
+        "purpose": "Masked homepage headline entrance, no-preference only."
+      },
+      {
+        "name": "Stagger",
+        "value": "70ms",
+        "purpose": "Second hero line delay."
+      },
+      {
+        "name": "hero-copy-entrance",
+        "value": "650ms duration; 150ms delay; translateY(24px); opacity 0.01 to 1",
+        "purpose": "Coordinates supporting copy with the headline."
+      },
+      {
+        "name": "hero-figure-entrance",
+        "value": "850ms duration; 180ms delay; translateY(24px); opacity 0.01 to 1",
+        "purpose": "One entrance for the static brand image."
+      },
+      {
+        "name": "Scroll-driven animation",
+        "value": "scrub: true; ease: none; start: top 45%; end: bottom 75%",
+        "purpose": "Three illustrative service concepts follow native scroll. Enabled at minimum 800px width and 650px height with no reduced motion; CSS sticky stage, no wheel interception. Setup and ScrollTrigger refreshInit uniformly fit the visual plane after subtracting sticky top, the unscaled caption plus margin, computed blur height, and 16px clearance. The frame reserves scaled height; no measurement runs on scroll frames. Natural height is clamp(25rem, 41vw, 37rem), overridden to 35rem at 800–1100px. Cleanup removes the refresh listener and inline height/transform."
+      },
+      {
+        "name": "service-concept-pose",
+        "value": "rotateX(6deg) rotateY(-9deg) rotateZ(-3deg)",
+        "purpose": "Resting dimensional pose for the first two concepts; the final web concept settles flat. Transform and opacity are reversible through scroll."
+      },
+      {
+        "name": "Parallax — footer-wordmark",
+        "value": "180ms; rotateX/rotateY up to ±3.5deg; translateX up to ±5px",
+        "purpose": "Interruptible CSS response to direct child transform writes, coalesced with requestAnimationFrame; mouse, fine pointer, hover, and no-preference only."
+      },
+      {
+        "name": "Parallax — footer-light",
+        "value": "240ms; translateX up to ±60%; translateY up to ±25%",
+        "purpose": "The companion light moves without repainting a changing gradient. Pointer leave, focus, scroll, resize, preference changes, and unmount reset/clean up the effect."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-hero-min",
+        "value": "1480px"
+      },
+      {
+        "name": "supporting-grid-max",
+        "value": "1100px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1050px"
+      },
+      {
+        "name": "contact-stack-max",
+        "value": "900px"
+      },
+      {
+        "name": "mobile-navigation-max",
+        "value": "899px"
+      },
+      {
+        "name": "supporting-stack-max",
+        "value": "760px"
+      },
+      {
+        "name": "homepage-and-demo-stack-max",
+        "value": "700px"
+      },
+      {
+        "name": "contact-fields-stack-max",
+        "value": "600px"
+      },
+      {
+        "name": "narrow-supporting-grid-max",
+        "value": "380px"
+      },
+      {
+        "name": "compact-header-max",
+        "value": "359px"
+      },
+      {
+        "name": "service-scroll-min-width",
+        "value": "800px"
+      },
+      {
+        "name": "service-scroll-min-height",
+        "value": "650px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The filled project action with fine-pointer hover and the authored press response.",
+      "html": "<a class=\"ds-primary\" href=\"/contact\">Discuss your project <svg width=\"19\" height=\"19\" viewBox=\"0 0 256 256\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z\"/></svg></a>",
+      "css": ".ds-primary { display: inline-flex; align-items: center; justify-content: center; gap: 1.75rem; min-height: 3.25rem; padding: 0.875rem 1.375rem 0.875rem 1.5rem; border: 1px solid transparent; border-radius: 0.375rem; font: 500 0.875rem/1.4 var(--font-body, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif); text-decoration: none; text-align: center; cursor: pointer; touch-action: manipulation; background: var(--ink, #213c4c); color: #fff; } @media (hover:hover) and (pointer:fine) { .ds-primary:hover { background:#345769; } } .ds-primary:focus-visible { outline: 2px solid var(--accent, #315d7a); outline-offset: 5px; } @media (prefers-reduced-motion: no-preference) { .ds-primary { transition: transform 100ms var(--ease, cubic-bezier(0.23,1,0.32,1)); } .ds-primary:active:not(:disabled):not(:focus-visible) { transform: scale(0.96); transition-duration: 140ms; } .ds-primary:focus-visible { transition: none; } }"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "An outlined alternate action with the same dimensions and press response.",
+      "html": "<button class=\"ds-secondary\" type=\"button\">Explore our work <svg width=\"19\" height=\"19\" viewBox=\"0 0 256 256\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z\"/></svg></button>",
+      "css": ".ds-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 1.75rem; min-height: 3.25rem; padding: 0.875rem 1.375rem 0.875rem 1.5rem; border: 1px solid transparent; border-radius: 0.375rem; font: 500 0.875rem/1.4 var(--font-body, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif); text-decoration: none; text-align: center; cursor: pointer; touch-action: manipulation; background: transparent; border-color: var(--line, #213c4c26); color: var(--ink, #213c4c); } @media (hover:hover) and (pointer:fine) { .ds-secondary:hover { background:var(--surface-2, #e0e9ef); } } .ds-secondary:focus-visible { outline: 2px solid var(--accent, #315d7a); outline-offset: 5px; } @media (prefers-reduced-motion: no-preference) { .ds-secondary { transition: transform 100ms var(--ease, cubic-bezier(0.23,1,0.32,1)); } .ds-secondary:active:not(:disabled):not(:focus-visible) { transform: scale(0.96); transition-duration: 140ms; } .ds-secondary:focus-visible { transition: none; } }"
+    },
+    {
+      "name": "Icon button",
+      "kind": "button",
+      "refersTo": "icon-button",
+      "description": "The 44px menu and utility control with an explicit accessible name.",
+      "html": "<button class=\"ds-icon\" type=\"button\" aria-label=\"Open menu\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 256 256\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z\"/></svg></button>",
+      "css": ".ds-icon { display:inline-grid; place-items:center; width:2.75rem; min-height:2.75rem; padding:0.5rem; border:1px solid var(--line, #213c4c26); border-radius:0.375rem; color:var(--ink, #213c4c); background:transparent; cursor:pointer; } .ds-icon:disabled { opacity:0.4; cursor:default; } @media (hover:hover) and (pointer:fine) { .ds-icon:hover:not(:disabled) { background:var(--surface-2, #e0e9ef); } } .ds-icon:focus-visible { outline: 2px solid var(--accent, #315d7a); outline-offset: 5px; } @media (prefers-reduced-motion: no-preference) { .ds-icon { transition: transform 100ms var(--ease, cubic-bezier(0.23,1,0.32,1)); } .ds-icon:active:not(:disabled):not(:focus-visible) { transform: scale(0.96); transition-duration: 140ms; } .ds-icon:focus-visible { transition: none; } }"
+    },
+    {
+      "name": "Contact field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "A labelled square field with 16px entry text and an immediate focus boundary.",
+      "html": "<label class=\"ds-label\" for=\"ds-email\">Email <span>*</span><input class=\"ds-field\" id=\"ds-email\" type=\"email\" autocomplete=\"email\" placeholder=\"you@company.com\" required></label>",
+      "css": ".ds-label { display:block; font:500 14px/1.65 var(--font-body, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif); color:var(--ink, #213c4c); } .ds-label > span { color:var(--accent, #315d7a); } .ds-field { display:block; width:100%; margin-top:10px; padding:13px 15px; border:1px solid #718594; border-radius:0; background:#ffffff; color:var(--ink, #213c4c); font:400 16px/1.55 var(--font-body, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif); caret-color:var(--accent, #315d7a); } .ds-field::placeholder { color:#617482; opacity:1; } .ds-field:focus { outline:2px solid var(--accent, #315d7a); outline-offset:3px; border-color:var(--accent, #315d7a); } .ds-field[aria-invalid=\"true\"] { border-color:#a63e32; }"
+    },
+    {
+      "name": "Desktop navigation",
+      "kind": "nav",
+      "description": "Horizontal navigation with an underlined current page and visible focus.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"/services\" aria-current=\"page\">Services</a><a href=\"/work\">Work</a><a href=\"/about\">Studio</a></nav>",
+      "css": ".ds-nav { display:flex; align-items:center; gap:2.25rem; font:400 0.875rem/1.65 var(--font-body, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif); color:var(--ink, #213c4c); } .ds-nav a { display:flex; align-items:center; min-height:2.75rem; color:inherit; text-decoration:none; text-decoration-thickness:1px; text-underline-offset:0.25em; } .ds-nav a[aria-current] { text-decoration:underline; } .ds-nav a:focus-visible { outline: 2px solid var(--accent, #315d7a); outline-offset: 5px; }"
+    },
+    {
+      "name": "Demo selection controls",
+      "kind": "chip",
+      "refersTo": "demo-control-selected",
+      "description": "Scenario and role selection uses aria-pressed, deeper mist, and stronger text. State changes are immediate.",
+      "html": "<div class=\"ds-selectors\" role=\"group\" aria-label=\"Example role\"><button type=\"button\" aria-pressed=\"true\">Client</button><button type=\"button\" aria-pressed=\"false\">Team</button><button type=\"button\" aria-pressed=\"false\">Admin</button></div>",
+      "css": ".ds-selectors { display:flex; flex-wrap:wrap; gap:0.375rem; padding:1rem 1.5rem; } .ds-selectors button { flex:1; min-height:2.75rem; padding:0.625rem 0.75rem; border:0; border-radius:0.375rem; background:transparent; color:var(--muted, #536570); font:400 0.8125rem/1.65 var(--font-body, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif); cursor:pointer; } .ds-selectors button[aria-pressed=\"true\"] { background:var(--surface-2, #e0e9ef); color:var(--ink, #213c4c); font-weight:600; } @media (hover:hover) and (pointer:fine) { .ds-selectors button:hover { background:var(--surface-2, #e0e9ef); } } .ds-selectors button:focus-visible { outline: 2px solid var(--accent, #315d7a); outline-offset: 5px; } @media (max-width:700px) { .ds-selectors { padding:0.75rem; gap:0.25rem; } .ds-selectors button { font-size:0.75rem; padding-inline:0.5rem; } }"
+    },
+    {
+      "name": "Workflow step",
+      "kind": "card",
+      "description": "A selected node from an illustrative workflow, with a small radius and accent outline.",
+      "html": "<button class=\"ds-step\" type=\"button\" aria-pressed=\"true\"><span class=\"ds-number\">03</span><strong>Human review</strong><span class=\"ds-description\">Approve the prepared action before it moves forward.</span></button>",
+      "css": ".ds-step { display:flex; flex-direction:column; width:100%; min-height:9rem; padding:1rem; text-align:left; border:1px solid var(--line, #213c4c26); border-radius:0.375rem; background:#fff; color:var(--ink, #213c4c); font-family:var(--font-body, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif); cursor:pointer; } .ds-number { margin-bottom:1rem; font-size:0.75rem; color:var(--accent, #315d7a); font-variant-numeric:tabular-nums; } .ds-step strong { font-size:0.9375rem; font-weight:600; line-height:1.4; } .ds-description { margin-top:0.375rem; font-size:0.8125rem; line-height:1.5; color:var(--muted, #536570); } .ds-step[aria-pressed=\"true\"] { outline:2px solid var(--accent, #315d7a); outline-offset:-1px; background:var(--surface, #edf2f5); } @media (hover:hover) and (pointer:fine) { .ds-step:hover { background:var(--surface-2, #e0e9ef); } } .ds-step:focus-visible { outline: 2px solid var(--accent, #315d7a); outline-offset: 5px; } @media (max-width:700px) { .ds-step { min-height:7rem; } .ds-number { margin-bottom:0.5rem; } }"
+    },
+    {
+      "name": "Dimensional concept window",
+      "kind": "card",
+      "refersTo": "concept-window",
+      "description": "Static specimen of a decorative interface concept, visibly attributed as illustrative; it does not simulate the live sticky stage. The live stage uniformly scales only the inner visual plane and reserves its scaled height in an outer frame, keeping the 0.75rem (12px) caption outside the transform. Local miniature labels and material colors are not general UI tokens.",
+      "html": "<figure class=\"ds-concept\"><div class=\"ds-concept-window\"><div class=\"ds-concept-toolbar\">Room to build.</div><div class=\"ds-concept-heading\"><span>Workspace / Your product</span><h4>Big ideas.<br>A useful first step.</h4></div><div class=\"ds-concept-task\"><strong>The first working release</strong><small>Design + engineering</small></div></div><figcaption>Illustrative interface concepts</figcaption></figure>",
+      "css": ".ds-concept { margin:0; color:var(--ink, #213c4c); font-family:var(--font-body, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif); } .ds-concept-window { height:100%; background:#fdfefe; box-shadow:0 2px 3px #213c4c08,8px 18px 36px #213c4c14,20px 45px 65px #213c4c12; border-radius:16px; overflow:hidden; } .ds-concept-toolbar { display:flex; align-items:center; min-height:3.5rem; padding:0.8rem 1.25rem; border-bottom:1px solid var(--line, #213c4c26); font-size:0.8125rem; } .ds-concept-heading { padding:1.4rem 1.5rem 1.2rem; } .ds-concept-heading > span { font-size:0.6875rem; color:var(--muted, #536570); } .ds-concept-heading h4 { margin:0.75rem 0 0; font-family:var(--font-display, Manrope), sans-serif; font-size:clamp(1.5rem,2.5vw,2.25rem); font-weight:500; line-height:1.14; letter-spacing:-0.035em; } .ds-concept-task { border-radius:8px; padding:0.8rem; background:#eef3f6; margin:0 1.5rem 1.5rem; } .ds-concept-task strong { display:block; font-size:0.75rem; font-weight:500; line-height:1.45; } .ds-concept-task small { display:block; font-size:0.625rem; color:var(--muted, #536570); margin-top:0.35rem; } .ds-concept figcaption { margin-top:2rem; font-size:0.75rem; color:var(--muted, #536570); }"
+    },
+    {
+      "name": "Footer signature",
+      "kind": "custom",
+      "refersTo": "footer-signature",
+      "description": "Static specimen of the shared monumental wordmark and material light. The live component adds guarded pointer Parallax; keyboard focus and reduced motion leave it still.",
+      "html": "<div class=\"ds-signature\"><span class=\"ds-signature-light\" aria-hidden=\"true\"></span><div class=\"ds-signature-top\"><p>Independent minds.<br>Connected work.</p><a class=\"ds-signature-invite\" href=\"/contact\">Have something in mind?<span>Let’s make it happen <svg width=\"19\" height=\"19\" viewBox=\"0 0 256 256\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z\"/></svg></span></a></div><a class=\"ds-wordmark\" href=\"/\" aria-label=\"Zavino homepage\"><span class=\"ds-sculpture\" aria-hidden=\"true\">zavino<span>.</span></span></a></div>",
+      "css": ".ds-signature { position:relative; isolation:isolate; overflow:clip; background:linear-gradient(165deg,#e9f0f5 12%,#ccdde8 100%); perspective:1000px; font-family:var(--font-body, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif); } .ds-signature-light { position:absolute; z-index:-1; width:85%; height:120%; left:7.5%; top:-20%; pointer-events:none; background:radial-gradient(ellipse,#f8fcffe8 0%,#eff7fc66 32%,#ecf4f800 68%); } .ds-signature-top { display:flex; align-items:start; justify-content:space-between; gap:2rem; padding:3.5rem var(--gutter,clamp(1.375rem,5vw,5rem)) 0; } .ds-signature-top p { margin:0; font-size:clamp(1rem,1.5vw,1.375rem); line-height:1.5; color:var(--ink, #213c4c); } .ds-signature-invite { display:flex; flex-direction:column; align-items:flex-end; gap:0.625rem; padding-block:0.375rem; font-size:0.8125rem; color:var(--muted, #536570); text-decoration:none; } .ds-signature-invite > span { display:flex; align-items:center; gap:1.5rem; color:var(--ink, #213c4c); font-size:clamp(1rem,1.5vw,1.375rem); } .ds-wordmark { display:block; text-align:center; margin-block:1.5rem 2.75rem; padding:1rem 2%; perspective:1000px; text-decoration:none; outline-offset:-10px; } .ds-sculpture { display:inline-block; color:#36566b; font-family:var(--font-display, Manrope), sans-serif; font-size:clamp(5rem,26vw,27rem); font-weight:600; line-height:0.94; letter-spacing:-0.04em; transform-style:preserve-3d; transform-origin:center; text-shadow:0 1px 0 #dbe9f2,0 3px 0 #9eb4c3,0 6px 1px #8fa9bb,0 16px 30px #3f65832b; } .ds-sculpture > span { color:#7998ad; } .ds-signature a:focus-visible { outline:2px solid var(--accent, #315d7a); outline-offset:5px; } .ds-wordmark:focus-visible { outline-offset:-10px; } @media (prefers-reduced-motion:no-preference) and (hover:hover) and (pointer:fine) { .ds-sculpture { transition:transform 180ms var(--ease,cubic-bezier(0.23,1,0.32,1)); } .ds-signature-light { transition:transform 240ms var(--ease,cubic-bezier(0.23,1,0.32,1)); } .ds-signature-invite:hover > span { text-decoration:underline; } } .ds-signature:focus-within .ds-sculpture,.ds-signature:focus-within .ds-signature-light { transform:none !important; transition:none; } @media (max-width:700px) { .ds-signature-top { padding-top:2.25rem; gap:1.5rem; } .ds-signature-top p { font-size:0.875rem; } .ds-signature-invite { font-size:0.75rem; text-align:right; min-height:44px; } .ds-signature-invite > span { font-size:0.875rem; gap:0.5rem; } .ds-wordmark { margin-block:1.75rem 1.5rem; } .ds-sculpture { text-shadow:0 1px 0 #dbe9f2,0 2px 0 #9eb4c3,0 3px 1px #8fa9bb,0 8px 18px #3f658329; } } @media (prefers-reduced-motion:reduce) { .ds-sculpture,.ds-signature-light { transform:none !important; transition:none; } } @media (prefers-reduced-transparency:reduce),(forced-colors:active) { .ds-signature-light { display:none; } .ds-signature { background:var(--surface,#edf2f5); } .ds-sculpture { text-shadow:none; color:var(--ink, #213c4c); } }"
+    },
+    {
+      "name": "Progressive bottom blur",
+      "kind": "custom",
+      "description": "An isolated canvas specimen of the four-mask lower-edge treatment. The live homepage fixes it at z-index 15 and hides it for visible keyboard focus or open dialogs; this preview confines it to its own canvas.",
+      "html": "<div class=\"ds-blur-canvas\" aria-hidden=\"true\"><p>Good technology.<br>A lighter workday.</p><div class=\"ds-edge-blur\"><i></i><i></i><i></i><i></i></div></div>",
+      "css": ".ds-blur-canvas { position:relative; overflow:clip; min-height:12rem; background:var(--surface,#edf2f5); color:var(--ink, #213c4c); } .ds-blur-canvas p { margin:0; padding:2rem; font-family:var(--font-display, Manrope), sans-serif; font-size:2rem; font-weight:500; line-height:1.12; letter-spacing:-0.035em; } .ds-edge-blur { pointer-events:none; position:absolute; inset:auto 0 0; height:96px; contain:layout paint; } .ds-edge-blur > i { position:absolute; inset:0; pointer-events:none; } .ds-edge-blur > i:nth-child(1) { backdrop-filter:blur(2px); mask-image:linear-gradient(transparent 0%,#000 35%,#000 55%,transparent 80%); } .ds-edge-blur > i:nth-child(2) { backdrop-filter:blur(4px); mask-image:linear-gradient(transparent 25%,#000 55%,#000 75%,transparent); } .ds-edge-blur > i:nth-child(3) { backdrop-filter:blur(8px); mask-image:linear-gradient(transparent 50%,#000 85%); } .ds-edge-blur > i:nth-child(4) { backdrop-filter:blur(16px); mask-image:linear-gradient(transparent 70%,#000); background:linear-gradient(transparent,#cbdce733); } @media (max-width:700px) { .ds-edge-blur { height:64px; } .ds-edge-blur > i:nth-child(4) { backdrop-filter:blur(12px); } } @media (prefers-reduced-transparency:reduce),(forced-colors:active) { .ds-edge-blur { display:none; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Daylight Studio Catalogue",
+    "overview": "Zavino presents technology through the physical calm of an industrial design catalogue: cool daylight, matte objects, generous image fields, clear type, and open rows. The visual system makes the work approachable while retaining enough structure for service detail, product concepts, and inquiry forms.\n\nPreserve the Zavino name and symbol. The implemented world replaces the former dark systems dashboard with mist surfaces and blue ink. Imagery carries material character; navigation and controls stay quiet. The user-approved motion expansion adds a coordinated hero Reveal and Stagger, a native-scroll service showcase, a dimensional footer with pointer Parallax, and a bounded progressive Blur/Mask. Press / Tap feedback and Origin-aware menu animation remain in place.",
+    "keyCharacteristics": [
+      "Cool grounds group whole sections.",
+      "Medium-weight Manrope headings pair with platform body text.",
+      "Broad imagery, ruled service chapters, and a bounded visual stage give content room to breathe.",
+      "Controls use small radii, clear boundaries, and visible focus.",
+      "Work and demonstrations retain explicit, truthful attribution.",
+      "Motion is tied to entrance, scroll progress, or direct input; compact and preference-based alternatives remain available."
+    ],
+    "rules": [
+      {
+        "name": "The Section Ground Rule",
+        "body": "Use the pale grounds to organize content groups; use blue ink for reading and actions.",
+        "section": "colors"
+      },
+      {
+        "name": "The Readable Entry Rule",
+        "body": "Editable text stays at the field size, and labels remain visible above the control.",
+        "section": "typography"
+      },
+      {
+        "name": "The Object Depth Rule",
+        "body": "Reserve dimensional depth for physical imagery, floating dialogs, illustrative interface objects, and the footer signature; keep ordinary reading surfaces flat.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use pale grounds for section grouping and blue ink for reading and actions.",
+      "Do pair medium Manrope headings with readable platform body text.",
+      "Do preserve broad image fields, ruled service chapters, and the hierarchy between primary and supporting content.",
+      "Do preserve visible focus, explicit field labels, immediate keyboard responses, and preference-based alternatives.",
+      "Do distinguish owned products, delivered creative work, and illustrative concepts in nearby copy.",
+      "Do retain provenance when replacing or adding a shipping raster."
+    ],
+    "donts": [
+      "Don't restore the former dark dashboard aesthetic or add technical decoration to imply sophistication.",
+      "Don't add decorative kickers or use nonsequential numbers as a house style.",
+      "Don't turn every service or content group into a raised card.",
+      "Don't intercept native scrolling or add continuous idle animation; the brand image remains a still.",
+      "Don't reduce editable text below the field token or animate keyboard focus.",
+      "Don't present concepts, simulated states, or brand imagery as delivered customer outcomes."
+    ]
+  }
+}
