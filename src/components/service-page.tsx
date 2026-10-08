@@ -6,7 +6,6 @@ import {
   ArrowUpRight,
 } from "@phosphor-icons/react/dist/ssr";
 import { site } from "@/lib/site";
-import "@/app/service-pages.css";
 
 export function ServiceHero({
   label,
@@ -184,114 +183,6 @@ export function ServiceRelated({
         <ArrowUpRight size={19} />
       </Link>
     </aside>
-  );
-}
-
-export function ServiceArtifact({
-  kind,
-}: {
-  kind: "automation" | "saas" | "web";
-}) {
-  if (kind === "automation")
-    return (
-      <div className="sp-capability-art sp-art-automation" aria-hidden="true">
-        <span className="sp-art-label">SIGNAL → DECISION → ACTION</span>
-        <div className="sp-mini-sources">
-          <span>CRM</span>
-          <span>Commerce</span>
-          <span>Support</span>
-        </div>
-        <div className="sp-mini-join">
-          <i />
-          <i />
-          <i />
-        </div>
-        <div className="sp-mini-engine">
-          <span className="sp-signal-dot" />
-          <strong>Rules + intelligence</strong>
-          <span>01</span>
-        </div>
-        <div className="sp-mini-gate">
-          <span>Human review</span>
-          <span>
-            In control <i />
-          </span>
-        </div>
-        <div className="sp-mini-output">
-          <ArrowRight size={15} /> Approved action
-        </div>
-      </div>
-    );
-  if (kind === "saas")
-    return (
-      <div className="sp-capability-art sp-art-saas" aria-hidden="true">
-        <span className="sp-art-label">ONE PRODUCT. EVERY PERSPECTIVE.</span>
-        <div className="sp-mini-product">
-          <div className="sp-mini-product-top">
-            <span className="sp-signal-dot" />
-            <strong>Product workspace</strong>
-            <span>↗</span>
-          </div>
-          <div className="sp-mini-roles">
-            <span>Customer</span>
-            <span>Admin</span>
-            <span>Operations</span>
-          </div>
-          <div className="sp-mini-product-row">
-            <span>01</span>
-            <strong>A useful first workflow</strong>
-            <i />
-          </div>
-          <div className="sp-mini-product-row">
-            <span>02</span>
-            <strong>Clear roles & permissions</strong>
-            <i />
-          </div>
-          <div className="sp-mini-product-row">
-            <span>03</span>
-            <strong>Room to build forward</strong>
-            <i />
-          </div>
-        </div>
-      </div>
-    );
-  return (
-    <div className="sp-capability-art sp-art-web" aria-hidden="true">
-      <span className="sp-art-label">ONE EXPERIENCE. EVERY SCREEN.</span>
-      <div className="sp-mini-browser">
-        <div className="sp-browser-chrome">
-          <i />
-          <i />
-          <i />
-          <span>your next platform</span>
-        </div>
-        <div className="sp-browser-content">
-          <span>
-            A clearer digital
-            <br />
-            front door.
-          </span>
-          <i />
-          <div>
-            <b />
-            <b />
-            <b />
-          </div>
-        </div>
-      </div>
-      <div className="sp-mini-phone">
-        <i />
-        <span>
-          A clearer
-          <br />
-          digital
-          <br />
-          front door.
-        </span>
-        <b />
-        <em />
-      </div>
-    </div>
   );
 }
 

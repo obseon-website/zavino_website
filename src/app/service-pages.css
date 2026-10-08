@@ -315,7 +315,7 @@
   margin-top: 38px;
   padding-block: 54px 64px;
   background: var(--surface-2);
-  border-top: 1px solid rgba(49, 93, 122, 0.3);
+  border-top: 1px solid oklch(from var(--forest-700) l c h / 0.3);
   position: relative;
 }
 
@@ -406,7 +406,7 @@
 }
 .sp-service-nav a:hover {
   color: var(--accent);
-  background: rgba(49, 93, 122, 0.025);
+  background: oklch(from var(--forest-700) l c h / 0.025);
 }
 .sp-offer {
   padding-block: var(--sp-space);
@@ -498,7 +498,7 @@
   background: linear-gradient(var(--line), var(--accent));
 }
 .sp-mini-engine {
-  border: 1px solid rgba(49, 93, 122, 0.5);
+  border: 1px solid oklch(from var(--forest-700) l c h / 0.5);
   background: var(--surface-2);
   box-shadow: none;
   padding: 21px 18px;
@@ -526,7 +526,7 @@
 .sp-mini-gate {
   margin: 17px 0;
   padding: 15px 18px;
-  border: 1px dashed rgba(49, 93, 122, 0.28);
+  border: 1px dashed oklch(from var(--forest-700) l c h / 0.28);
   display: flex;
   justify-content: space-between;
   gap: 12px;
@@ -590,8 +590,8 @@
 }
 .sp-mini-roles span:first-child {
   color: var(--accent);
-  background: rgba(49, 93, 122, 0.08);
-  border-color: rgba(49, 93, 122, 0.3);
+  background: oklch(from var(--forest-700) l c h / 0.08);
+  border-color: oklch(from var(--forest-700) l c h / 0.3);
 }
 .sp-mini-product-row {
   display: flex;
@@ -670,8 +670,8 @@
   display: block;
   height: 34px;
   width: 24%;
-  background: #c3d5e0;
-  border-top: 1px solid rgba(49, 93, 122, 0.25);
+  background: var(--forest-200);
+  border-top: 1px solid oklch(from var(--forest-700) l c h / 0.25);
 }
 .sp-mini-phone {
   position: absolute;
@@ -710,7 +710,7 @@
   display: block;
   width: 100%;
   height: 24px;
-  background: #c3d5e0;
+  background: var(--forest-200);
   margin-top: 13px;
 }
 .sp-more {
@@ -822,7 +822,7 @@
   line-height: 1.7;
 }
 .sp-control-band {
-  background: #e1ebf1;
+  background: var(--forest-100);
   color: var(--ink);
 }
 .sp-controls {
@@ -911,10 +911,10 @@
   border: 1px solid var(--line);
 }
 .sp-release-now {
-  background: #e1ebf1;
+  background: var(--forest-100);
 }
 .sp-release-later {
-  background: #f0f4f6;
+  background: var(--forest-50);
   border-left: 0 !important;
 }
 .sp-release-grid h3 {
@@ -2435,7 +2435,7 @@
 }
 
 .sp-owned-cover {
-  box-shadow: 6px 12px 26px #213c4c26;
+  box-shadow: 6px 12px 26px oklch(from var(--ink) l c h / 0.149);
 }
 .sp-capability-art,
 .sp-owned-panel {

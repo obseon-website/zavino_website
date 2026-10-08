@@ -1,5 +1,5 @@
 .contact-page {
-  --contact-border: rgba(33, 60, 76, 0.24);
+  --contact-border: oklch(from var(--forest-800) l c h / 0.24);
 }
 .project-form .sr-only {
   position: absolute;
@@ -78,7 +78,7 @@
   width: 100%;
   padding: 13px 15px;
   margin-top: 10px;
-  border: 1px solid #718594;
+  border: 1px solid var(--forest-500);
   border-radius: 0;
   background: #ffffff;
   color: var(--ink);
@@ -93,7 +93,7 @@
 }
 .project-form input::placeholder,
 .project-form textarea::placeholder {
-  color: #617482;
+  color: var(--forest-600);
   opacity: 1;
 }
 .project-form input:focus,
@@ -219,7 +219,7 @@
 }
 .contact-call .button {
   background: transparent;
-  border: 1px solid #718594;
+  border: 1px solid var(--forest-500);
   color: var(--accent);
   width: 100%;
   max-width: 345px;
@@ -303,7 +303,7 @@
   align-items: center;
   justify-content: center;
   color: var(--accent);
-  border: 1px solid #718594;
+  border: 1px solid var(--forest-500);
   border-radius: 50%;
   margin-bottom: 36px;
 }

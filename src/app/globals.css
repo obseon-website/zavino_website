@@ -1,12 +1,31 @@
-/* Daylight studio. Content 0, sticky navigation 20, native dialogs in the top layer. */
+/* Forest / daylight: perceptual lightness steps, one controlled green hue.
+   Content 0, progressive blur 15, sticky navigation 20, native dialogs above. */
 :root {
-  --bg: #f9faf8;
-  --surface: #edf2f5;
-  --surface-2: #e0e9ef;
-  --ink: #213c4c;
-  --muted: #536570;
-  --accent: #315d7a;
-  --line: #213c4c26;
+  --forest-950: oklch(23% 0.035 158);
+  --forest-900: oklch(30% 0.048 158);
+  --forest-800: oklch(38% 0.058 158);
+  --forest-700: oklch(46% 0.064 158);
+  --forest-600: oklch(52% 0.045 158);
+  --forest-500: oklch(62% 0.049 158);
+  --forest-400: oklch(74% 0.042 158);
+  --forest-300: oklch(82% 0.033 158);
+  --forest-200: oklch(89% 0.024 158);
+  --forest-100: oklch(94% 0.014 158);
+  --forest-50: oklch(97.5% 0.006 158);
+  --white: oklch(99.5% 0.002 110);
+  --linen: oklch(96% 0.014 92);
+  --sand: oklch(88% 0.031 86);
+  --bg: var(--forest-50);
+  --surface: var(--forest-100);
+  --surface-2: var(--forest-200);
+  --ink: var(--forest-900);
+  --muted: oklch(47% 0.027 158);
+  --accent: var(--forest-700);
+  --line: oklch(from var(--ink) l c h / 0.17);
+  --focus: var(--forest-700);
+  --selection: var(--forest-200);
+  --success: var(--forest-700);
+  --danger: oklch(44% 0.14 28);
   --gutter: clamp(1.375rem, 5vw, 5rem);
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --ease: cubic-bezier(0.23, 1, 0.32, 1);
@@ -17,7 +36,7 @@
 html {
   background: var(--bg);
   scroll-padding-top: 6rem;
-  scrollbar-color: #91a6b3 var(--surface);
+  scrollbar-color: var(--forest-400) var(--surface);
 }
 body {
   margin: 0;
@@ -32,8 +51,8 @@ body:has(dialog[open]) {
   overflow: hidden;
 }
 ::selection {
-  background: #c7dce9;
-  color: #183445;
+  background: var(--selection);
+  color: var(--forest-950);
 }
 a {
   color: inherit;
@@ -201,7 +220,7 @@ svg {
 }
 @media (hover: hover) and (pointer: fine) {
   .button:hover {
-    background: #345769;
+    background: var(--forest-700);
   }
   .button-secondary:hover,
   .button-outline:hover {
@@ -231,7 +250,7 @@ svg {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: #edf2f5f2;
+  background: oklch(from var(--surface) l c h / 0.949);
   backdrop-filter: blur(12px);
 }
 .header-inner {
@@ -294,12 +313,12 @@ svg {
   border-radius: 0.875rem;
   color: var(--ink);
   background: var(--bg);
-  box-shadow: 0 16px 60px #18344526;
+  box-shadow: 0 16px 60px oklch(from var(--forest-950) l c h / 0.149);
   overflow: auto;
   overscroll-behavior: contain;
 }
 .mobile-menu::backdrop {
-  background: #18344538;
+  background: oklch(from var(--forest-950) l c h / 0.22);
 }
 .mobile-menu-inner {
   padding: 1.5rem;
@@ -375,7 +394,7 @@ svg {
   margin-top: 1.75rem;
 }
 .contact-cta {
-  background: #dce7ee;
+  background: var(--forest-100);
 }
 .contact-cta-inner {
   padding-block: clamp(4.5rem, 8vw, 7.5rem);
@@ -389,7 +408,7 @@ svg {
   line-height: 1.07;
 }
 .contact-cta h2 span {
-  color: #526f81;
+  color: var(--forest-600);
 }
 .contact-cta-copy {
   max-width: 27rem;
@@ -494,7 +513,7 @@ svg {
   max-height: 92dvh;
 }
 .media-dialog::backdrop {
-  background: #132633cc;
+  background: oklch(from var(--forest-950) l c h / 0.8);
 }
 .dialog-inner {
   padding: 24px;
@@ -513,7 +532,7 @@ svg {
   width: 100%;
   max-height: 67dvh;
   object-fit: contain;
-  background: #050a07;
+  background: var(--forest-950);
 }
 .dialog-inner > p {
   font-size: 13px;
@@ -563,7 +582,7 @@ svg {
   gap: 20px;
   scroll-snap-type: x mandatory;
   padding-block: 10px 20px;
-  scrollbar-color: #91a6b3 var(--surface);
+  scrollbar-color: var(--forest-400) var(--surface);
 }
 .reel-card {
   flex: 0 0 250px;
@@ -592,7 +611,7 @@ svg {
 }
 .reel-card-play svg {
   box-sizing: content-box;
-  background: #213c4ccc;
+  background: oklch(from var(--ink) l c h / 0.8);
   color: white;
   padding: 17px;
   border: 1px solid #ffffff55;
@@ -602,7 +621,7 @@ svg {
   position: absolute;
   bottom: 12px;
   right: 12px;
-  background: #213c4c;
+  background: var(--ink);
   color: white;
   padding: 3px 8px;
   font-size: 10px;
@@ -878,13 +897,13 @@ svg {
     backdrop-filter: none;
   }
   .mobile-menu::backdrop {
-    background: #18344580;
+    background: oklch(from var(--forest-950) l c h / 0.502);
   }
 }
 @media (prefers-contrast: more) {
   :root {
-    --muted: #213c4c;
-    --line: #536570;
+    --muted: var(--ink);
+    --line: var(--muted);
   }
   .site-header {
     background: var(--surface);

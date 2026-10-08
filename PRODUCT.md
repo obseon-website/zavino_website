@@ -28,13 +28,18 @@ AI automation, SaaS development, and web development remain the three core servi
 
 ## Brand Commitments
 
-Preserve Zavino's name and symbol. The user approved the mist-blue, daylight visual world on 8 October 2026 and then requested a more expressive landing page: scroll-driven or reactive components, a reveal entrance, progressive blur at the bottom, and an impressive footer. This supersedes the original two-subtle-interaction limit. Preserve the calmer palette, distilled service hierarchy, readable content, and accessible navigation while showing design and engineering craft.
+Preserve Zavino’s name and symbol. The latest explicit user instruction on 8 October 2026 establishes dark forest green and sage through an OKLCH system, while retaining the daylight industrial design catalogue, local Manrope, distilled content, and truthful evidence. This supersedes the earlier blue palette, two-interaction limit, and static mobile service fallback.
+
+Provide distinct working concepts for automation, SaaS, and web on detailed service pages, the services directory, and homepage mobile chapters. The large footer wordmark is a playful button with tap/drag and keyboard alternatives, without navigation. Progressive blur is shared across routes and informs native route transitions. The active hero is a coherent miniature ivory fighter jet on a green ramp. Keep real controls readable, preserve native vertical scrolling, and provide reduced-motion alternatives.
 
 ## Evidence on Hand
 
 - `src/lib/site.ts`: contact details, approved creative project descriptions, service scopes, and clients.
 - `public/media/`: supplied creative portfolio, showreels, and owned-product cover.
-- `src/components/workflow-demo.tsx` and `product-demo.tsx`: illustrative concepts, not customer outcomes.
+- `src/components/service-playground.tsx` and `service-experience.tsx`: local illustrative concepts with truthful captions, not customer outcomes. Automation approval sends no data.
+- `docs/design/services-motion-brief.md`: the latest explicit visual, interaction, mobile, asset, and delivery contract.
+- `docs/design/flight-ramp.prompt.txt` and `public/media/flight-ramp.webp.json`: exact prompt and provenance for the active hero.
+- `docs/design/services-motion-verification.md`: saved build/browser evidence and its limits. Viewport emulation does not establish physical-touch or frame-time performance.
 - `src/app/zavino-owned-products/page.tsx`: existing owned-product description.
 - No supported numerical business outcomes, testimonials, enterprise certifications, or delivery guarantees are supplied.
 
@@ -44,3 +49,4 @@ Preserve Zavino's name and symbol. The user approved the mist-blue, daylight vis
 - Show evidence with its true scope.
 - Keep a clear route from service understanding to a project conversation.
 - Preserve access to detailed content while shortening the homepage.
+- Keep service concepts usable on mobile with real controls outside decorative scenes; keyboard and reduced-motion alternatives preserve state.

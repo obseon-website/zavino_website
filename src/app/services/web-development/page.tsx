@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, ArrowRight } from "@phosphor-icons/react/dist/ssr";
-import { WebDemo } from "@/components/product-demo";
+import { ServicePlayground } from "@/components/service-playground";
 import {
   ServiceBrief,
   ServiceFaq,
@@ -69,7 +69,22 @@ export default function WebDevelopmentPage() {
           "Connected to your operations",
         ]}
       />
-      <section className="sp-web-paths section-shell" id="approach">
+      <section className="sp-web-showcase section-shell" id="approach">
+        <div className="sp-web-showcase-heading">
+          <h2>
+            An experience that
+            <br />
+            <span>holds together.</span>
+          </h2>
+          <p>
+            Responsive design changes the composition, the navigation, and the
+            way content is presented. It should preserve a clear route to the
+            action people came to take.
+          </p>
+        </div>
+        <ServicePlayground kind="web" />
+      </section>
+      <section className="sp-web-paths section-shell">
         <ServiceSectionHeading title="What should your platform do?">
           The right build begins with the job it needs to perform. These are
           distinct paths, with a scope shaped around the audience and the
@@ -88,24 +103,6 @@ export default function WebDevelopmentPage() {
             </article>
           ))}
         </div>
-      </section>
-      <section className="sp-web-showcase section-shell">
-        <div className="sp-web-showcase-heading">
-          <h2>
-            An experience that
-            <br />
-            <span>holds together.</span>
-          </h2>
-          <p>
-            Responsive design changes the composition, the navigation, and the
-            way content is presented. It should preserve a clear route to the
-            action people came to take.
-          </p>
-        </div>
-        <WebDemo />
-        <p className="sp-concept-label">
-          ZAVINO LAB / ILLUSTRATIVE RESPONSIVE CONCEPT
-        </p>
       </section>
       <section className="sp-web-standards section-shell">
         <div>

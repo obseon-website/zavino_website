@@ -2,11 +2,15 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { PageTransition } from "@/components/page-transition";
+import { ProgressiveBlur } from "@/components/progressive-blur";
 import { site } from "@/lib/site";
 import "./globals.css";
 import "./demos.css";
 import "./homepage.css";
+import "./service-pages.css";
 import "./experience.css";
+import "./service-playground.css";
 
 const display = localFont({
   src: "../fonts/manrope-latin-wght-normal.woff2",
@@ -42,7 +46,7 @@ export const metadata: Metadata = {
   icons: { icon: "/icon.svg", apple: "/apple-touch-icon.png" },
 };
 export const viewport: Viewport = {
-  themeColor: "#edf2f5",
+  themeColor: "#eef3ee",
   colorScheme: "light",
 };
 export default function RootLayout({
@@ -55,8 +59,9 @@ export default function RootLayout({
           Skip to content
         </a>
         <Header />
-        {children}
+        <PageTransition>{children}</PageTransition>
         <Footer />
+        <ProgressiveBlur />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

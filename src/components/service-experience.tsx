@@ -12,6 +12,7 @@ import {
   Cursor,
 } from "@phosphor-icons/react";
 import { homeServices } from "@/lib/home";
+import { ServicePlayground } from "@/components/service-playground";
 
 /** Native scrolling drives one bounded, reversible showcase. Copy remains ordinary links. */
 export function ServiceExperience() {
@@ -175,6 +176,12 @@ export function ServiceExperience() {
                 Explore the service <ArrowRight size={17} aria-hidden="true" />
               </span>
             </Link>
+            <div className="home-mobile-playground">
+              <ServicePlayground
+                kind={(["automation", "saas", "web"] as const)[index]}
+                compact
+              />
+            </div>
             <span className="service-chapter-marker" aria-hidden="true">
               <i />
               {index + 1} / 3
@@ -324,7 +331,7 @@ export function ServiceExperience() {
                   </span>
                 </div>
                 <Image
-                  src="/media/workday-bridge.webp"
+                  src="/media/flight-ramp.webp"
                   alt=""
                   width={1536}
                   height={1024}
@@ -344,7 +351,7 @@ export function ServiceExperience() {
                   technology.
                 </strong>
                 <Image
-                  src="/media/workday-bridge.webp"
+                  src="/media/flight-ramp.webp"
                   alt=""
                   width={1536}
                   height={1024}

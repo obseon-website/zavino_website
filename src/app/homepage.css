@@ -18,7 +18,7 @@
   letter-spacing: -0.04em;
 }
 .home-hero h1 span {
-  color: #5d7789;
+  color: var(--muted);
 }
 .home-hero-copy {
   max-width: 24rem;
@@ -38,7 +38,7 @@
   width: 100%;
   height: clamp(19rem, 33vw, 31rem);
   object-fit: cover;
-  object-position: center 55%;
+  object-position: center 30%;
   border-radius: 0.25rem;
 }
 .home-hero-figure figcaption {
@@ -138,13 +138,13 @@
   justify-content: center;
   min-height: 31rem;
   padding: 2.5rem;
-  background: #dde3e7;
+  background: var(--forest-200);
   overflow: hidden;
   position: relative;
 }
 .home-owned-visual img {
   width: min(55%, 235px);
-  box-shadow: 6px 14px 30px #213c4c26;
+  box-shadow: 6px 14px 30px oklch(from var(--ink) l c h / 0.149);
   outline: 1px solid #0000001a;
   outline-offset: -1px;
 }
@@ -161,7 +161,7 @@
   margin-bottom: 1.5rem;
 }
 .home-owned-copy h3 > span {
-  color: #5d7789;
+  color: var(--muted);
 }
 .home-owned-copy > p {
   max-width: 43ch;
@@ -265,7 +265,7 @@
     background: var(--surface-2);
   }
   .home-owned-visual:hover {
-    background: #d3dde3;
+    background: var(--forest-200);
   }
 }
 @media (min-width: 1480px) {
@@ -313,7 +313,7 @@
   }
   .home-hero-image {
     height: 15rem;
-    object-position: 50% 55%;
+    object-position: 48% 45%;
   }
   .home-hero-figure figcaption {
     font-size: 0.6875rem;

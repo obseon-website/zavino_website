@@ -1,0 +1,6 @@
+Use case: precise-object-edit.
+Asset type: Zavino website hero, landscape 1536x1024.
+Input image: edit target, the existing daylight photograph of a paper ribbon ramp bridging three ivory stone blocks.
+Primary request: add a beautifully made miniature fighter jet resting coherently on the upward slope of the ribbon near its central crest, with its nose pointing up the ramp toward the right. Make the jet a clear focal point, about a quarter of the image width, an elegant ivory and matte silver scale model with a smoked canopy and small landing wheels visibly touching the ramp. Recognizable swept wings and twin tail fins; no insignia, lettering, logos, missiles, or extra props.
+Color palette: change the blue ribbon to rich dark forest green, and change the blue studio backdrop to a very pale warm sage. Keep ivory stone blocks.
+Constraints: preserve the ribbon's graceful shape, the three blocks, the camera angle, the wide composition, the lighting direction, and tactile material quality. Match the jet's perspective and cast/contact shadows to the scene. This must feel like one premium tabletop product photograph, not a pasted collage. Keep jet and crest within the middle 60% so they remain visible in mobile crops. No text, no watermark.

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { Hero } from "@/components/hero";
 import { ServiceExperience } from "@/components/service-experience";
-import { ProgressiveBlur } from "@/components/progressive-blur";
 import { ContactCta } from "@/components/footer";
 import { homeProcess } from "@/lib/home";
 import { projects } from "@/lib/site";
@@ -152,7 +151,6 @@ export default function Home() {
         </Link>
       </section>
       <ContactCta />
-      <ProgressiveBlur />
     </main>
   );
 }

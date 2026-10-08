@@ -3,7 +3,7 @@
 .product-window,
 .web-preview {
   border: 1px solid var(--line);
-  background: #f9fbfc;
+  background: var(--forest-50);
   border-radius: 0.75rem;
   overflow: hidden;
   color: var(--ink);
@@ -128,7 +128,7 @@
   position: absolute;
   width: 1.5rem;
   height: 1px;
-  background: #8b9eaa;
+  background: var(--forest-400);
   right: -1.5rem;
   top: 50%;
 }
@@ -137,8 +137,8 @@
   position: absolute;
   width: 5px;
   height: 5px;
-  border-top: 1px solid #8b9eaa;
-  border-right: 1px solid #8b9eaa;
+  border-top: 1px solid var(--forest-400);
+  border-right: 1px solid var(--forest-400);
   right: 1px;
   top: -2px;
   transform: rotate(45deg);
@@ -435,7 +435,7 @@
   width: 0.375rem;
   height: 0.375rem;
   border-radius: 50%;
-  background: #9cafbc;
+  background: var(--forest-400);
 }
 .web-preview-body {
   padding: 1.5rem;
@@ -515,7 +515,7 @@
   .gate-approve:hover,
   .product-action:hover:not(:disabled),
   .web-mini-task button:hover {
-    background: #345769;
+    background: var(--forest-700);
   }
 }
 @media (max-width: 700px) {

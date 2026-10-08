@@ -26,8 +26,8 @@ export function Hero() {
       </div>
       <figure className="home-hero-figure">
         <Image
-          src="/media/workday-bridge.webp"
-          alt="A pale blue ribbon bridges three separate blocks in a sunlit studio, an abstract illustration of connected work."
+          src="/media/flight-ramp.webp"
+          alt="An ivory miniature fighter jet poised on a forest-green ribbon ramp that bridges three stone blocks in a sunlit studio."
           width={1536}
           height={1024}
           sizes="(max-width: 700px) 100vw, 92vw"

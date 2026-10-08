@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Check } from "@phosphor-icons/react/dist/ssr";
-import { ProductDemo } from "@/components/product-demo";
+import { ServicePlayground } from "@/components/service-playground";
 import {
   ServiceBrief,
   ServiceFaq,
@@ -50,11 +50,8 @@ export default function SaasDevelopmentPage() {
             Operations needs to know what happened. A useful product considers
             all three.
           </p>
-          <span className="sp-concept-label">
-            ZAVINO LAB / ILLUSTRATIVE PRODUCT CONCEPT
-          </span>
         </div>
-        <ProductDemo />
+        <ServicePlayground kind="saas" />
       </section>
       <section className="sp-release section-shell">
         <ServiceSectionHeading

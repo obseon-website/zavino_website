@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { ContactCta } from "@/components/footer";
-import { ServiceArtifact } from "@/components/service-page";
+import { ServicePlayground } from "@/components/service-playground";
 
 export const metadata: Metadata = {
   title: "AI automation, SaaS & web development",
@@ -139,7 +139,7 @@ export default function ServicesPage() {
                 <ArrowUpRight size={20} />
               </Link>
             </div>
-            <ServiceArtifact kind={item.kind} />
+            <ServicePlayground kind={item.kind} compact />
           </section>
         ))}
       </div>

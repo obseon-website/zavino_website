@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowDown, Check, ShieldCheck } from "@phosphor-icons/react/dist/ssr";
-import { WorkflowDemo } from "@/components/workflow-demo";
+import { ServicePlayground } from "@/components/service-playground";
 import {
   ServiceBrief,
   ServiceFaq,
@@ -72,7 +72,7 @@ export default function AiAutomationPage() {
           next step. This is an illustrative Zavino concept, showing one
           possible workflow.
         </ServiceSectionHeading>
-        <WorkflowDemo />
+        <ServicePlayground kind="automation" />
         <div className="sp-demo-footnote">
           <span>
             <ShieldCheck size={17} /> The approval gate is part of the system.
