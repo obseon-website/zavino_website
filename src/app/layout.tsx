@@ -21,24 +21,24 @@ const display = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Zavino | Practical technology for business",
+    default: "Zavino | AI revenue, operations, SaaS & content",
     template: "%s | Zavino",
   },
   description:
-    "Zavino builds AI systems, SaaS products, custom web apps, websites, and content workflows for businesses in Bangladesh and globally.",
+    "AI systems that help you follow up with leads, handle daily tasks, and create content. SaaS products built around your idea. Based in Dhaka, working worldwide.",
   openGraph: {
     type: "website",
     locale: "en_BD",
     siteName: "Zavino",
-    title: "Zavino | Practical technology for business",
+    title: "Zavino | AI revenue, operations, SaaS & content",
     description:
-      "Technology that helps businesses move smarter. AI systems, SaaS, web apps, and intelligent content workflows.",
+      "Grow your business. Simplify the work. AI for sales, operations, and content, plus SaaS products for your next idea.",
     images: [
       {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Zavino. AI automation, SaaS, and web development.",
+        alt: "Zavino — AI systems and SaaS products.",
       },
     ],
   },

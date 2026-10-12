@@ -47,15 +47,6 @@ export const projects = [
       "A bold visual world built around the spirit of adventure. Campaign creative for Jeep Bangladesh.",
   },
   {
-    id: "halda",
-    title: "Halda Valley",
-    category: "Lifestyle / Product storytelling",
-    image: "halda",
-    alt: "Halda Valley tea campaign with a tea set and flowers",
-    description:
-      "A richly detailed product story that brings the ritual of tea to life. Visual content for Halda Valley.",
-  },
-  {
     id: "proton",
     title: "Proton Bangladesh",
     category: "Automotive / Visual content",
@@ -63,15 +54,6 @@ export const projects = [
     alt: "Red Proton SUV photographed against a dramatic mountain backdrop",
     description:
       "Product-focused creative with a confident presence. Automotive campaign visuals for Proton Bangladesh.",
-  },
-  {
-    id: "ventro",
-    title: "Ventro",
-    category: "Product / Creative direction",
-    image: "ventro",
-    alt: "Ventro leather wallet on a warm amber surface",
-    description:
-      "Material, light, and detail come together in considered product imagery. Creative content for Ventro.",
   },
 ];
 

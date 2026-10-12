@@ -378,3 +378,18 @@
   font-size: 12px;
   font-weight: 400;
 }
+
+.form-options {
+  margin-top: 1.5rem;
+  border-block: 1px solid var(--line);
+}
+.form-options summary {
+  cursor: pointer;
+  padding-block: 1rem;
+  color: var(--ink);
+  font-size: 0.9375rem;
+}
+.form-options .form-extra-fields {
+  margin-top: 0;
+  padding-block: 0.75rem 1.5rem;
+}

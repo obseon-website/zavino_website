@@ -15,6 +15,7 @@ import {
   ShieldCheck,
   UserCheck,
 } from "@phosphor-icons/react";
+import { useButtonConfetti } from "@/components/button-confetti";
 
 const scenarios = [
   {
@@ -77,6 +78,7 @@ const labels = [
 const icons = [Lightning, Database, Brain, UserCheck, PaperPlaneTilt, Pulse];
 
 export function WorkflowDemo({ compact = false }: { compact?: boolean }) {
+  const { celebrate, cancel } = useButtonConfetti();
   const [scenarioIndex, setScenarioIndex] = useState(0);
   const [selected, setSelected] = useState(3);
   const [gate, setGate] = useState<"waiting" | "approved" | "held">("waiting");
@@ -208,11 +210,13 @@ export function WorkflowDemo({ compact = false }: { compact?: boolean }) {
               ref={gateButton}
               className={gate === "waiting" ? "gate-approve" : "gate-reset"}
               type="button"
-              onClick={() => {
+              onClick={(event) => {
                 if (gate === "waiting") {
+                  celebrate(event);
                   setGate("approved");
                   setSelected(4);
                 } else {
+                  cancel();
                   setGate("waiting");
                   setSelected(3);
                 }

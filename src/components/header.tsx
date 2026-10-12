@@ -9,6 +9,7 @@ import { Brand } from "./brand";
 
 const navigation = [
   { href: "/services", label: "Services" },
+  { href: "/labs", label: "Zavino Labs" },
   { href: "/work", label: "Work" },
   { href: "/about", label: "Studio" },
 ];
@@ -105,21 +106,19 @@ export function Header() {
             </button>
           </div>
           <nav aria-label="Mobile navigation">
-            {[
-              ...navigation,
-              { href: "/labs", label: "Zavino Labs" },
-              { href: "/contact", label: "Contact" },
-            ].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                aria-current={path === link.href ? "page" : undefined}
-                onClick={() => closeMenu(true)}
-              >
-                {link.label}
-                <ArrowUpRight size={24} aria-hidden="true" />
-              </Link>
-            ))}
+            {[...navigation, { href: "/contact", label: "Contact" }].map(
+              (link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  aria-current={path === link.href ? "page" : undefined}
+                  onClick={() => closeMenu(true)}
+                >
+                  {link.label}
+                  <ArrowUpRight size={24} aria-hidden="true" />
+                </Link>
+              ),
+            )}
           </nav>
           <a
             className="button"
@@ -128,8 +127,7 @@ export function Header() {
             rel="noopener noreferrer"
             onClick={() => closeMenu(true)}
           >
-            Book an AI Workflow Audit{" "}
-            <ArrowUpRight size={18} aria-hidden="true" />
+            Book a call <ArrowUpRight size={18} aria-hidden="true" />
           </a>
         </div>
       </dialog>

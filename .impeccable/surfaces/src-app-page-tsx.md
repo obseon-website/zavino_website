@@ -7,7 +7,7 @@ related_targets: ["src/components/hero.tsx","src/components/header.tsx","src/com
 
 # Homepage redesign
 
-Authority: the final “Current green and mobile expansion” section is the latest approved contract. Earlier blue/static-mobile sections below are retained only as history. The original raw seed receipt was not retained; seed `77f0a797` is a historical record, not new randomness or a comp approval.
+Authority: the final “Four services and clear product evidence” section is the latest approved contract. Earlier blue/static-mobile sections below are retained only as history. The original raw seed receipt was not retained; seed `77f0a797` is a historical record, not new randomness or a comp approval.
 
 Mode: Persuade. Primary action: discuss a project. User confirmed the three core services and code-first delivery; visual-world choice is delegated by the request.
 
@@ -66,3 +66,13 @@ FIRST VIEWPORT: Keep the compact navigation and clear headline/actions. The acti
 FORM: Automation prepares fields before explicit approval; SaaS reorders a workspace stack; web shifts browser/phone emphasis. Real controls stay outside the aria-hidden scene, with 44px minimum selectors, 48px actions, readable status, and instant keyboard changes. Narrow components hide only decorative selector icons and reserve enough automation height. The large wordmark is a no-navigation button with touch/drag spring play and an instant keyboard/reduced-motion finish change. The lower-edge blur is global; native route snapshots use bounded defocus/refocus, with keyboard and preference alternatives. This is a code-first extension, not a new direction tournament. Historical candidate 6 and seed `77f0a797` remain recorded; the raw receipt was not retained. No new seed or approved comp is claimed.
 
 FINISH: Reconcile PRODUCT.md, DESIGN.md, and the sidecar against current source and the latest explicit instruction. The verification record distinguishes emulated browser evidence from physical-touch and frame-time evidence; its pre-correction observations are not new design rules. Root coordinates the final review and GitHub-only push. Do not run Workers deployment commands.
+
+## Four services and clear product evidence — latest authority, 12 October 2026
+
+Mode: Persuade. Primary action: discuss a project. Preserve the existing forest-green and sage catalogue aesthetic, Manrope, hero jet, tactile concepts, and footer lettering.
+
+STORY: Understand AI Revenue, AI Operations & Agents, SaaS Products, and AI Content once; explore Outbid.bd and Forma in Zavino Labs; see a concise four-step process; contact the team. Remove Aston Mark, Halda Valley, and Ventro imagery from visible pages. Keep secondary web/training services accessible in the service directory. Work contains remaining creative campaigns and films; product evidence belongs in Labs.
+
+FORM: Four 54svh desktop service chapters share a native sticky stage with matching scroll boundaries and pre-reserved height. On mobile, examples are available through native disclosures. Completion actions produce a small button-origin burst before reset; reduced-motion and keyboard actions update immediately. Product view features use distinct task icons. Repeat, reset, and route cleanup do not stack celebrations.
+
+FINISH: Bounded desktop/mobile inspection, an optional correction batch and one confirmation pass, required lint/type/build checks, and inquiry regression tests. Report source-reviewed preference behavior separately from browser-verified actions. No deployment is implied by this request.

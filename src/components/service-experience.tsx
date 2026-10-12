@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -10,8 +9,12 @@ import {
   EnvelopeSimple,
   Stack,
   Cursor,
+  Robot,
+  PencilLine,
+  CaretDown,
 } from "@phosphor-icons/react";
 import { homeServices } from "@/lib/home";
+import { workflowExamples, type WorkflowKind } from "@/lib/service-concepts";
 import { ServicePlayground } from "@/components/service-playground";
 
 /** Native scrolling drives one bounded, reversible showcase. Copy remains ordinary links. */
@@ -74,21 +77,28 @@ export function ServiceExperience() {
             const posed =
               "translate3d(0,0,0) rotateX(6deg) rotateY(-9deg) rotateZ(-3deg)";
             gsap.set(panels[0], { transform: posed, opacity: 1 });
-            gsap.set([panels[1], panels[2]], {
+            gsap.set(Array.from(panels).slice(1), {
               transform:
-                "translate3d(15%,28%,-100px) rotateX(12deg) rotateY(-16deg) rotateZ(7deg)",
+                "translate3d(4%,9%,-60px) rotateX(9deg) rotateY(-12deg) rotateZ(1deg)",
               opacity: 0,
             });
             const timeline = gsap.timeline({
               scrollTrigger: {
                 trigger: element,
-                start: "top 45%",
-                end: "bottom 75%",
-                scrub: true,
+                // Use the exact native sticky boundaries, so entering/leaving
+                // the stage never changes its coordinate system mid-transition.
+                start: () =>
+                  `top top+=${parseFloat(getComputedStyle(stage).top)}`,
+                end: () =>
+                  `bottom top+=${parseFloat(getComputedStyle(stage).top) + stage.offsetHeight}`,
+                scrub: 0.18,
                 invalidateOnRefresh: true,
                 onUpdate: ({ progress: value }) => {
                   element.dataset.chapter = String(
-                    Math.min(2, Math.floor(value * 3)),
+                    Math.min(
+                      panels.length - 1,
+                      Math.floor(value * panels.length),
+                    ),
                   );
                   if (progress) progress.style.transform = `scaleX(${value})`;
                 },
@@ -100,46 +110,34 @@ export function ServiceExperience() {
                   }),
               },
             });
-            timeline
-              .to(
-                panels[0],
-                {
-                  transform:
-                    "translate3d(-12%,-18%,-90px) rotateX(10deg) rotateY(10deg) rotateZ(-8deg)",
-                  opacity: 0,
-                  duration: 0.1,
-                  ease: "none",
-                },
-                0.26,
-              )
-              .to(
-                panels[1],
-                { transform: posed, opacity: 1, duration: 0.12, ease: "none" },
-                0.3,
-              )
-              .to(
-                panels[1],
-                {
-                  transform:
-                    "translate3d(-12%,-18%,-90px) rotateX(10deg) rotateY(10deg) rotateZ(-8deg)",
-                  opacity: 0,
-                  duration: 0.1,
-                  ease: "none",
-                },
-                0.61,
-              )
-              .to(
-                panels[2],
-                {
-                  transform:
-                    "translate3d(0,0,0) rotateX(0deg) rotateY(0deg) rotateZ(0deg)",
-                  opacity: 1,
-                  duration: 0.12,
-                  ease: "none",
-                },
-                0.65,
-              )
-              .to({}, { duration: 0.23 }, 0.77);
+            // Divide the same native-scroll stage across all four services.
+            panels.forEach((panel, index) => {
+              if (index === 0) return;
+              const position = index / panels.length;
+              timeline
+                .to(
+                  panels[index - 1],
+                  {
+                    transform:
+                      "translate3d(-4%,-8%,-60px) rotateX(9deg) rotateY(-3deg) rotateZ(-5deg)",
+                    opacity: 0,
+                    duration: 0.07,
+                    ease: "none",
+                  },
+                  position - 0.045,
+                )
+                .to(
+                  panel,
+                  {
+                    transform: posed,
+                    opacity: 1,
+                    duration: 0.07,
+                    ease: "none",
+                  },
+                  position - 0.035,
+                );
+            });
+            timeline.to({}, { duration: 0.19 }, 0.81);
             return () => {
               ScrollTrigger.removeEventListener("refreshInit", fitStage);
               frame.style.removeProperty("height");
@@ -169,22 +167,21 @@ export function ServiceExperience() {
                 {service.name}
                 <ArrowUpRight size={21} aria-hidden="true" />
               </h3>
-              <p className="service-chapter-outcome">{service.outcome}</p>
+              <p className="service-chapter-outcome">{service.line}</p>
               <p>{service.description}</p>
-              <span className="home-service-scope">{service.scope}</span>
               <span className="service-chapter-more">
-                Explore the service <ArrowRight size={17} aria-hidden="true" />
+                Learn more <ArrowRight size={17} aria-hidden="true" />
               </span>
             </Link>
-            <div className="home-mobile-playground">
-              <ServicePlayground
-                kind={(["automation", "saas", "web"] as const)[index]}
-                compact
-              />
-            </div>
+            <details className="home-mobile-playground">
+              <summary>
+                Try an example <CaretDown size={17} aria-hidden="true" />
+              </summary>
+              <ServicePlayground kind={service.kind} compact />
+            </details>
             <span className="service-chapter-marker" aria-hidden="true">
               <i />
-              {index + 1} / 3
+              {index + 1} / {homeServices.length}
             </span>
           </article>
         ))}
@@ -192,56 +189,8 @@ export function ServiceExperience() {
       <div className="service-stage" aria-hidden="true">
         <div className="service-stage-frame">
           <div className="service-visuals">
-            <div className="service-visual visual-automation">
-              <div className="concept-window">
-                <div className="concept-toolbar">
-                  <span className="concept-mark">
-                    <EnvelopeSimple size={17} />
-                  </span>
-                  <span>Your everyday, connected.</span>
-                  <span className="concept-dots">
-                    <i />
-                    <i />
-                    <i />
-                  </span>
-                </div>
-                <div className="automation-message">
-                  <span className="concept-avatar">H</span>
-                  <div>
-                    <strong>A new project inquiry</strong>
-                    <span>Someone has a good idea.</span>
-                  </div>
-                  <ArrowUpRight size={20} />
-                </div>
-                <div className="automation-connector">
-                  <span />
-                  <ArrowRight size={20} />
-                  <span />
-                </div>
-                <div className="automation-result">
-                  <div className="concept-tick">
-                    <Check size={28} />
-                  </div>
-                  <h4>A little less busywork.</h4>
-                  <p>
-                    The brief is organized.
-                    <br />
-                    Your team can take it from here.
-                  </p>
-                </div>
-              </div>
-              <div className="concept-float automation-float">
-                <Check size={19} />
-                <span>Ready for a human.</span>
-                <span className="float-dot" />
-              </div>
-              <span className="concept-keycap keycap-a">
-                <EnvelopeSimple size={35} />
-              </span>
-              <span className="concept-keycap keycap-b">
-                <ArrowRight size={37} />
-              </span>
-            </div>
+            <WorkflowVisual kind="automation" />
+            <WorkflowVisual kind="operations" />
             <div className="service-visual visual-product">
               <div className="concept-window product-concept">
                 <div className="concept-toolbar">
@@ -303,76 +252,77 @@ export function ServiceExperience() {
                 <Stack size={35} />
               </span>
             </div>
-            <div className="service-visual visual-web">
-              <div className="concept-window web-concept">
-                <div className="concept-toolbar">
-                  <span className="concept-dots">
-                    <i />
-                    <i />
-                    <i />
-                  </span>
-                  <span className="concept-url">
-                    A better digital front door
-                  </span>
-                  <ArrowUpRight size={17} />
-                </div>
-                <div className="web-concept-nav">
-                  <strong>zavino.</strong>
-                  <span>Work &nbsp; Studio &nbsp; Contact</span>
-                </div>
-                <div className="web-concept-heading">
-                  <h4>
-                    Good technology.
-                    <br />
-                    <span>A lighter workday.</span>
-                  </h4>
-                  <span className="web-concept-action">
-                    <ArrowUpRight size={23} />
-                  </span>
-                </div>
-                <Image
-                  src="/media/flight-ramp.webp"
-                  alt=""
-                  width={1536}
-                  height={1024}
-                  sizes="540px"
-                  className="web-concept-image"
-                />
-                <div className="concept-bottom">
-                  Considered at every size.
-                  <span className="device-outline" />
-                </div>
-              </div>
-              <div className="concept-phone">
-                <span />
-                <strong>
-                  Good
-                  <br />
-                  technology.
-                </strong>
-                <Image
-                  src="/media/flight-ramp.webp"
-                  alt=""
-                  width={1536}
-                  height={1024}
-                  sizes="130px"
-                />
-                <div>
-                  Made for people.
-                  <ArrowUpRight size={13} />
-                </div>
-              </div>
-            </div>
+            <WorkflowVisual kind="content" />
           </div>
         </div>
         <div className="service-stage-caption">
-          <span>Illustrative interface concepts</span>
+          <span>Service examples</span>
           <div className="service-scroll-progress">
             <i />
           </div>
           <span>Scroll to explore</span>
         </div>
       </div>
+    </div>
+  );
+}
+
+function WorkflowVisual({ kind }: { kind: WorkflowKind }) {
+  const example = workflowExamples[kind];
+  const Icon =
+    kind === "operations"
+      ? Robot
+      : kind === "content"
+        ? PencilLine
+        : EnvelopeSimple;
+  return (
+    <div className={`service-visual visual-${kind}`}>
+      <div className="concept-window">
+        <div className="concept-toolbar">
+          <span className="concept-mark">
+            <Icon size={17} />
+          </span>
+          <span>{example.title}</span>
+          <span className="concept-dots">
+            <i />
+            <i />
+            <i />
+          </span>
+        </div>
+        <div className="automation-message">
+          <span className="concept-avatar">
+            <Icon size={20} />
+          </span>
+          <div>
+            <strong>{example.incoming}</strong>
+            <span>{example.request}</span>
+          </div>
+          <ArrowUpRight size={20} />
+        </div>
+        <div className="automation-connector">
+          <span />
+          <ArrowRight size={20} />
+          <span />
+        </div>
+        <div className="automation-result">
+          <div className="concept-tick">
+            <Check size={28} />
+          </div>
+          <h4>{example.result}</h4>
+          <p>{example.statuses[1]}</p>
+        </div>
+      </div>
+      <div className="concept-float automation-float">
+        <Check size={19} />
+        <span>Your team has the final say.</span>
+        <span className="float-dot" />
+      </div>
+      <span className="concept-keycap keycap-a">
+        <Icon size={35} />
+      </span>
+      <span className="concept-keycap keycap-b">
+        <ArrowRight size={37} />
+      </span>
     </div>
   );
 }

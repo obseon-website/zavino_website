@@ -1,97 +1,84 @@
 export const serviceCatalog = [
   {
     slug: "ai-revenue-systems",
-    name: "AI Revenue Systems",
-    line: "Turn more inquiries into qualified conversations and stronger sales follow-up.",
+    name: "AI Revenue",
+    line: "Turn inquiries into sales conversations.",
     description:
-      "Lead capture, instant follow-up, CRM workflows, sales automation, customer communication, and conversion systems that keep the next step clear.",
+      "Capture leads, follow up, and keep your sales tools in sync. Your team stays in charge of the conversations that matter.",
     items: [
-      "Lead capture & qualification",
-      "CRM & sales workflows",
-      "Customer communication",
-      "Conversion & follow-up",
+      "Lead capture",
+      "Sales follow-up",
+      "CRM connections",
+      "Customer messages",
     ],
   },
   {
     slug: "ai-operations-agents",
     name: "AI Operations & Agents",
-    line: "Give teams back time by reducing repetitive work and making everyday operations run smoother.",
+    line: "Less repetitive work. More time for your team.",
     description:
-      "Internal workflows, reporting, customer support, knowledge agents, task automation, and business-tool integrations, with clear boundaries and human oversight.",
+      "Build AI assistants that answer questions, handle routine tasks, and connect your tools. Your team reviews important decisions.",
     items: [
-      "Internal workflows & reporting",
-      "Knowledge & support agents",
-      "Business-tool integrations",
-      "Human review & monitoring",
+      "Routine tasks & reports",
+      "Support assistants",
+      "Answers from company knowledge",
+      "Tool connections",
     ],
   },
   {
     slug: "saas-development",
-    name: "Custom SaaS Products",
-    line: "Turn a useful business idea into a product people can use, pay for, and grow with.",
+    name: "SaaS Products",
+    line: "Turn your idea into a product.",
     description:
-      "Build, launch, improve, and maintain SaaS products for founders, businesses, and new digital ventures. Start with one useful release and build from real use.",
+      "Design, build, and launch software your customers can use and pay for. Start with the features they need most.",
     items: [
-      "Product strategy & UX",
+      "Product design",
       "Accounts, roles & billing",
-      "Integrations & release",
-      "Ongoing product development",
-    ],
-  },
-  {
-    slug: "web-apps-platforms",
-    name: "Custom Web Apps & AI-Powered Platforms",
-    line: "Build the platform your business cannot run properly without.",
-    description:
-      "Custom web applications, dashboards, client portals, internal tools, marketplaces, booking systems, management systems, and AI-powered business platforms.",
-    items: [
-      "Portals & internal tools",
-      "Booking & management systems",
-      "Marketplaces & dashboards",
-      "AI-powered websites & platforms",
+      "Build & launch",
+      "Improvements after launch",
     ],
   },
   {
     slug: "ai-content-flows",
-    name: "AI Content Flows",
-    line: "Build a smarter content operation—not just more content.",
+    name: "AI Content",
+    line: "Create content with less effort.",
     description:
-      "AI-powered systems to research, create, approve, organize, repurpose, and manage content across channels, with your team in control of the final word.",
+      "Plan, draft, and reuse content across channels. We connect the steps, and your team approves what goes out.",
     items: [
-      "Research & content planning",
-      "Drafting & human approval",
-      "Repurposing across channels",
-      "Asset organization & workflows",
+      "Research & planning",
+      "Drafts & approval",
+      "Content for each channel",
+      "Asset organization",
     ],
+  },
+] as const;
+
+export const additionalServices = [
+  {
+    slug: "web-apps-platforms",
+    name: "Websites & Web Apps",
+    description:
+      "Websites, client portals, dashboards, and custom tools for your business.",
+    href: "/services/web-development",
   },
   {
     slug: "enterprise-ai-training",
     name: "Enterprise AI Training",
-    line: "Help teams use AI with confidence, better judgment, and practical business value.",
     description:
-      "AI workshops, role-based AI training, AI adoption strategy, productivity systems, and implementation support for enterprise teams in Bangladesh.",
-    items: [
-      "Role-based AI workshops",
-      "Practical productivity systems",
-      "AI adoption strategy",
-      "Implementation support",
-    ],
-    availability: "For enterprise teams in Bangladesh",
+      "Practical workshops that help your team use AI in their daily work. For enterprise teams in Bangladesh.",
+    href: "/contact?focus=enterprise-ai-training&source=/services",
   },
 ] as const;
 
 export const supportItems = [
-  "Monthly maintenance",
-  "System monitoring",
-  "New feature development",
-  "AI workflow improvement",
-  "Content-flow optimization",
-  "Technical support and training",
+  "Maintenance & monitoring",
+  "New features & improvements",
+  "Team support & training",
 ] as const;
 
 export const supportCopy =
-  "A launch is the beginning, not the finish line. Zavino provides ongoing maintenance, improvements, new feature development, AI monitoring, system optimization, technical support, and team training after launch.";
+  "We keep your product running and help it improve as your business grows.";
 export const supportingCopy =
-  "When a product, platform, or launch needs a stronger story, Zavino can support it with brand direction, launch content, creative assets, and growth support.";
+  "Need a website, launch content, or help getting your team started with AI? We can help with that too.";
 export const auditCopy =
-  "Bring the workflow, product idea, web app, website, or business problem. We will help define a practical first step.";
+  "Tell us what you want to build or improve. We’ll help you find a clear first step.";

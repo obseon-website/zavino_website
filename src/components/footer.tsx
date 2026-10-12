@@ -9,33 +9,32 @@ export function ContactCta({ focus }: { focus?: string }) {
     <section className="contact-cta" aria-labelledby="contact-cta-title">
       <div className="section-shell contact-cta-inner">
         <h2 id="contact-cta-title">
-          What could
+          Have a project
           <br />
-          <span>work better?</span>
+          <span>in mind?</span>
         </h2>
         <div className="contact-cta-copy">
           <p>{auditCopy}</p>
           <div className="button-group">
-            <a
-              className="button"
-              href={site.auditBooking}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Book an AI Workflow Audit{" "}
-              <ArrowUpRight size={19} aria-hidden="true" />
-            </a>
             <Link
-              className="text-link"
+              className="button"
               href={
                 focus
                   ? `/contact?focus=${encodeURIComponent(focus)}`
                   : "/contact"
               }
             >
-              Or send your requirement{" "}
+              Tell us about your project{" "}
               <ArrowUpRight size={17} aria-hidden="true" />
             </Link>
+            <a
+              className="text-link"
+              href={site.auditBooking}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Or book a call <ArrowUpRight size={19} aria-hidden="true" />
+            </a>
           </div>
         </div>
       </div>

@@ -161,24 +161,36 @@ html[data-navigation-input="keyboard"]::view-transition-new(*) {
   display: none;
 }
 .service-stage {
+  --service-stage-top: 8rem;
+  --service-natural-height: clamp(25rem, 41vw, 37rem);
   min-width: 0;
   align-self: start;
   position: sticky;
-  top: 8rem;
+  top: var(--service-stage-top);
+}
+.service-stage-frame {
+  /* Reserve the fitted plane before GSAP loads; it uses the same budget. */
+  height: min(
+    var(--service-natural-height),
+    calc(100svh - var(--service-stage-top) - 10.125rem)
+  );
 }
 .service-visuals {
   position: relative;
   perspective: 1200px;
-  height: clamp(25rem, 41vw, 37rem);
+  height: var(--service-natural-height);
   transform-origin: center top;
 }
 .service-visual {
   position: absolute;
   inset: 10% 5% 5%;
   transform-style: preserve-3d;
+  transform: translate3d(0, 0, 0) rotateX(6deg) rotateY(-9deg) rotateZ(-3deg);
 }
 .service-visual:not(:first-child) {
   opacity: 0;
+  transform: translate3d(4%, 9%, -60px) rotateX(9deg) rotateY(-12deg)
+    rotateZ(1deg);
 }
 .concept-window {
   height: 100%;
@@ -547,6 +559,7 @@ html[data-navigation-input="keyboard"]::view-transition-new(*) {
   margin: 2rem 0 0 5%;
   font-size: 0.75rem;
   color: var(--muted);
+  line-height: 1.5;
 }
 .service-scroll-progress {
   height: 1px;
@@ -563,7 +576,7 @@ html[data-navigation-input="keyboard"]::view-transition-new(*) {
 }
 @media (min-width: 800px) and (min-height: 650px) and (prefers-reduced-motion: no-preference) {
   .service-chapter {
-    min-height: 68svh;
+    min-height: 54svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -595,6 +608,10 @@ html[data-navigation-input="keyboard"]::view-transition-new(*) {
     i,
   .service-experience[data-chapter="2"]
     .service-chapter:nth-child(3)
+    .service-chapter-marker
+    i,
+  .service-experience[data-chapter="3"]
+    .service-chapter:nth-child(4)
     .service-chapter-marker
     i {
     background: var(--ink);
@@ -807,10 +824,8 @@ body:has(dialog[open]) .viewport-blur {
     grid-template-columns: 0.85fr 1.15fr;
   }
   .service-stage {
-    top: 9rem;
-  }
-  .service-visuals {
-    height: 35rem;
+    --service-stage-top: 9rem;
+    --service-natural-height: 35rem;
   }
   .service-visual {
     inset: 8% 0 8% 0;

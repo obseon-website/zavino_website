@@ -1,118 +1,87 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { ContactCta } from "@/components/footer";
 import { homeProcess } from "@/lib/home";
-import { supportingCopy } from "@/lib/services";
-import { site } from "@/lib/site";
-import "@/app/service-pages.css";
 
 export const metadata: Metadata = {
-  title: "About Zavino — connected thinking, considered builds",
+  title: "About Zavino — a team for your next idea",
   description:
-    "A Dhaka-based team connecting product thinking, AI, engineering, and creative direction to build automation, SaaS products, and web platforms.",
+    "Meet the Dhaka-based team building AI systems and SaaS products. We connect design and engineering to help businesses turn ideas into useful tools.",
   alternates: { canonical: "/about" },
 };
+
 const principles = [
   [
-    "Start with the work.",
-    "Understand the people, the data, the decisions, and the friction before choosing the technology.",
+    "Understand first.",
+    "We learn how your team works before deciding what to build.",
   ],
-  [
-    "Keep people in the picture.",
-    "Make interfaces understandable, decisions visible, and approval and ownership explicit.",
-  ],
-  [
-    "Build the whole path.",
-    "Connect product, engineering, AI, and creative direction around the same business objective.",
-  ],
-  [
-    "Make the next step clear.",
-    "Define scope, review working progress, surface constraints, and agree on what comes next.",
-  ],
+  ["Keep it clear.", "Simple tools, clear decisions, and people in control."],
+  ["Build together.", "You see working progress and help shape the next step."],
 ];
+
 export default function AboutPage() {
   return (
     <main id="main" className="sp-page sp-about-page">
       <section className="sp-about-hero section-shell">
         <h1>
-          Connected thinking.
+          A team for
           <br />
-          <span>Considered builds.</span>
+          <span>your next idea.</span>
         </h1>
         <div className="sp-about-hero-bottom">
           <p>
-            We bring product thinking, engineering, AI, and creative direction
-            together for the work your business needs to do.
+            We’re Zavino, a team in Dhaka building AI systems and SaaS products
+            for businesses worldwide.
           </p>
           <Link href="/services" className="text-link">
-            See what we build <ArrowUpRight size={19} />
+            See what we do
+            <ArrowUpRight size={19} aria-hidden="true" />
           </Link>
         </div>
       </section>
       <figure className="sp-about-image section-shell">
         <Image
           src="/media/workday-bridge.webp"
-          alt="A blue ribbon connecting three separate blocks in a daylight studio."
+          alt="A ribbon connecting three blocks in a sunlit studio."
           width={1600}
           height={900}
           sizes="(max-width: 1480px) 90vw, 1320px"
         />
-        <figcaption>
-          <span>CONNECTED WORK / STUDIO ILLUSTRATION</span>
-          <span>A visual expression of our approach.</span>
-        </figcaption>
+        <figcaption>Design, engineering, and AI. Working together.</figcaption>
       </figure>
       <section className="sp-about-statement section-shell">
         <div>
           <h2>
-            Good ideas need
+            Useful technology.
             <br />
-            <span>a connected team.</span>
+            <span>One connected team.</span>
           </h2>
         </div>
         <div>
           <p>
-            Zavino builds practical technology for businesses in Bangladesh and
-            globally: AI systems, SaaS products, custom web apps, AI-powered
-            websites, and content workflows. We continue to maintain and improve
-            them after launch.
+            We help businesses follow up with leads, reduce routine work, and
+            create content. We also turn product ideas into software people can
+            use.
           </p>
           <p>
-            We look at how the pieces work together: where data enters, how a
-            decision is made, what a person needs to approve, and how the result
-            reaches a customer or a team.
+            From the first plan to launch and support, our designers and
+            developers work with you as one team.
           </p>
-          <p>{supportingCopy}</p>
-          <Link href="/work" className="text-link">
-            Explore our work & concepts <ArrowUpRight size={18} />
+          <Link href="/labs" className="text-link">
+            Try the products we’ve built
+            <ArrowUpRight size={18} aria-hidden="true" />
           </Link>
-        </div>
-      </section>
-      <section className="sp-about-disciplines section-shell">
-        <div className="sp-discipline-row">
-          <span>Product</span>
-          <ArrowRight size={26} />
-          <span>Engineering</span>
-          <ArrowRight size={26} />
-          <span>AI</span>
-          <ArrowRight size={26} />
-          <span>Creative</span>
         </div>
       </section>
       <section className="sp-about-principles section-shell">
         <div className="sp-about-principles-heading">
-          <h2>
-            Complex work.
-            <br />
-            Clear principles.
-          </h2>
+          <h2>How we work.</h2>
         </div>
         <div className="sp-principle-list">
-          {principles.map(([title, body], index) => (
+          {principles.map(([title, body]) => (
             <article key={title}>
-              <span className="sp-number">0{index + 1}</span>
               <div>
                 <h3>{title}</h3>
                 <p>{body}</p>
@@ -124,52 +93,22 @@ export default function AboutPage() {
       <section className="sp-about-engagement section-shell">
         <div>
           <h2>
-            Shared context.
+            From a conversation
             <br />
-            <span>Visible progress.</span>
+            <span>to something useful.</span>
           </h2>
-          <p>
-            A useful engagement begins with a clear conversation and continues
-            through concrete decisions.
-          </p>
         </div>
         <ol>
-          {homeProcess.map(({ title, description: body }, index) => (
-            <li key={title}>
-              <span>0{index + 1}</span>
+          {homeProcess.map((stage, index) => (
+            <li key={stage.title}>
+              <span aria-hidden="true">0{index + 1}</span>
               <div>
-                <h3>{title}</h3>
-                <p>{body}</p>
+                <h3>{stage.title}</h3>
+                <p>{stage.description}</p>
               </div>
             </li>
           ))}
         </ol>
-      </section>
-      <section className="sp-about-location section-shell">
-        <div>
-          <h2>
-            Based in Dhaka.
-            <br />
-            Ready for your
-            <br />
-            <span>next challenge.</span>
-          </h2>
-        </div>
-        <div className="sp-location-details">
-          <span className="sp-location-mark" aria-hidden="true">
-            23.81° N / 90.41° E
-          </span>
-          <address>{site.address}</address>
-          <a href={`mailto:${site.email}`} className="text-link">
-            {site.email}
-            <ArrowUpRight size={18} />
-          </a>
-          <a href={site.phoneLink}>{site.phone}</a>
-          <p>
-            Start with the workflow, product, or platform that needs to change.
-            We will discuss fit and a sensible place to begin.
-          </p>
-        </div>
       </section>
       <ContactCta />
     </main>

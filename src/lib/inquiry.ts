@@ -1,18 +1,23 @@
 export const inquiryFocusOptions = [
   {
     value: "ai-revenue-systems",
-    label: "AI Revenue System",
+    label: "AI Revenue",
     hint: "Where do inquiries arrive, and what should happen before the sales team takes over?",
   },
   {
     value: "ai-operations-agents",
-    label: "AI Operations / Agent",
+    label: "AI Operations & Agents",
     hint: "Which repeated task or handoff should work better, and which tools are involved?",
   },
   {
     value: "saas-development",
-    label: "SaaS Product",
+    label: "SaaS Products",
     hint: "Who will use it, and what is the first useful workflow it should support?",
+  },
+  {
+    value: "ai-content-flows",
+    label: "AI Content",
+    hint: "What content do you create, and which steps would you like to make easier?",
   },
   {
     value: "web-apps-platforms",
@@ -23,11 +28,6 @@ export const inquiryFocusOptions = [
     value: "web-development",
     label: "Website / Digital Experience",
     hint: "What should the website help visitors understand or do?",
-  },
-  {
-    value: "ai-content-flows",
-    label: "AI Content Flow",
-    hint: "How does content move from research to approval today, and where does it get stuck?",
   },
   {
     value: "enterprise-ai-training",

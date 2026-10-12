@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { site } from "@/lib/site";
+import Link from "next/link";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 
 export function Hero() {
@@ -8,36 +8,28 @@ export function Hero() {
       <div className="home-hero-intro">
         <h1
           id="hero-heading"
-          aria-label="Technology that helps businesses move smarter."
+          aria-label="Grow your business. Simplify the work."
         >
           <span className="hero-reveal-line" aria-hidden="true">
-            <span>Technology that helps</span>
+            <span>Grow your business.</span>
           </span>
           <span className="hero-reveal-line" aria-hidden="true">
-            <span>businesses move smarter.</span>
+            <span>Simplify the work.</span>
           </span>
         </h1>
         <div className="home-hero-copy">
           <p>
-            Zavino builds AI automation, custom SaaS, web apps, websites, and
-            intelligent content workflows that help businesses save time,
-            strengthen sales, improve operations, and grow with confidence.
+            We build AI systems for sales, daily operations, and content. And
+            SaaS products for your next idea.
           </p>
-          <a
-            href={site.auditBooking}
-            className="button"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Book an AI Workflow Audit{" "}
+          <Link href="/contact" className="button">
+            Let’s talk about your project{" "}
             <ArrowUpRight size={19} aria-hidden="true" />
-          </a>
+          </Link>
           <a href="#solutions" className="text-link hero-explore">
-            Explore What We Build <ArrowUpRight size={18} aria-hidden="true" />
+            See what we do <ArrowUpRight size={18} aria-hidden="true" />
           </a>
-          <p className="hero-location">
-            Built in Dhaka. Working with ambitious businesses worldwide.
-          </p>
+          <p className="hero-location">Based in Dhaka. Working worldwide.</p>
         </div>
       </div>
       <figure className="home-hero-figure">

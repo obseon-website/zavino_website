@@ -26,7 +26,7 @@ export function ServiceHero({
     <section className="sp-hero section-shell">
       <nav className="sp-hero-top" aria-label="Service breadcrumb">
         <Link href="/services" className="sp-back">
-          <ArrowLeft size={15} /> All capabilities
+          <ArrowLeft size={15} /> All services
         </Link>
         <span className="sp-current-service" aria-current="page">
           {label}
@@ -38,20 +38,20 @@ export function ServiceHero({
         </div>
         <div className="sp-hero-aside">
           <p>{description}</p>
-          <a
-            className="button"
-            href={site.auditBooking}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Book an AI Workflow Audit <ArrowUpRight size={18} />
-          </a>
           <Link
-            className="sp-down"
+            className="button"
             href={`/contact?focus=${focus}&source=/services/${focus}`}
           >
             {action} <ArrowUpRight size={15} />
           </Link>
+          <a
+            className="sp-down"
+            href={site.auditBooking}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Or book a call <ArrowUpRight size={18} />
+          </a>
         </div>
       </div>
       <div className="sp-hero-facts">
@@ -203,20 +203,20 @@ export function ServiceBrief({
       <div className="sp-brief-bottom">
         <p>{description}</p>
         <div className="sp-brief-actions">
-          <a
-            className="button"
-            href={site.auditBooking}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Book an AI Workflow Audit <ArrowUpRight size={18} />
-          </a>
           <Link
-            className="text-link"
+            className="button"
             href={`/contact?focus=${focus}&source=/services/${focus}`}
           >
             {action} <ArrowUpRight size={17} />
           </Link>
+          <a
+            className="text-link"
+            href={site.auditBooking}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Or book a call <ArrowUpRight size={18} />
+          </a>
         </div>
       </div>
     </section>

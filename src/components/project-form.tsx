@@ -31,7 +31,7 @@ export function ProjectForm({
   const form = useRef<HTMLFormElement>(null);
   const hint =
     inquiryFocusOptions.find((option) => option.value === focus)?.hint ||
-    "What workflow or product is holding you back, and what should be better?";
+    "What do you want to build or improve?";
 
   function showStatus() {
     requestAnimationFrame(() => status.current?.focus());
@@ -161,7 +161,7 @@ export function ProjectForm({
           target="_blank"
           rel="noopener noreferrer"
         >
-          Book an AI Workflow Audit <ArrowUpRight size={20} />
+          Book a call <ArrowUpRight size={20} />
         </a>
         <p className="form-small">
           Have something to add?{" "}
@@ -184,11 +184,8 @@ export function ProjectForm({
       aria-busy={pending}
     >
       <div className="form-heading">
-        <h2>Start with the problem.</h2>
-        <p>
-          Required fields are marked with an asterisk. A few useful details are
-          enough.
-        </p>
+        <h2>Your project details.</h2>
+        <p>Fields marked * are required. A few details are enough.</p>
       </div>
       <div
         className="form-status"
@@ -243,20 +240,8 @@ export function ProjectForm({
             />
             {errorFor("country")}
           </label>
-          <label htmlFor="phone">
-            Phone / WhatsApp <span className="optional-label">Optional</span>
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              autoComplete="tel"
-              maxLength={inquiryLimits.phone}
-              {...accessibility("phone")}
-            />
-            {errorFor("phone")}
-          </label>
           <label className="form-full" htmlFor="email">
-            Work Email <span>*</span>
+            Email <span>*</span>
             <input
               id="email"
               name="email"
@@ -293,7 +278,7 @@ export function ProjectForm({
             {errorFor("focus")}
           </label>
           <label className="form-full" htmlFor="brief">
-            Briefly describe your requirement <span>*</span>
+            Tell us about your project <span>*</span>
             <span className="field-hint" id="brief-hint">
               {hint}
             </span>
@@ -309,30 +294,46 @@ export function ProjectForm({
             {errorFor("brief")}
           </label>
         </div>
-        <div className="form-grid form-extra-fields">
-          <label htmlFor="budget">
-            Estimated budget <span className="optional-label">Optional</span>
-            <input
-              id="budget"
-              name="budget"
-              placeholder="Amount and currency, or still exploring"
-              maxLength={inquiryLimits.budget}
-              {...accessibility("budget")}
-            />
-            {errorFor("budget")}
-          </label>
-          <label htmlFor="timing">
-            Preferred timeline <span className="optional-label">Optional</span>
-            <input
-              id="timing"
-              name="timing"
-              placeholder="A target date, or flexible"
-              maxLength={inquiryLimits.timing}
-              {...accessibility("timing")}
-            />
-            {errorFor("timing")}
-          </label>
-        </div>
+        <details className="form-options">
+          <summary>Add optional details</summary>
+          <div className="form-grid form-extra-fields">
+            <label htmlFor="budget">
+              Estimated budget <span className="optional-label">Optional</span>
+              <input
+                id="budget"
+                name="budget"
+                placeholder="Amount and currency, or still exploring"
+                maxLength={inquiryLimits.budget}
+                {...accessibility("budget")}
+              />
+              {errorFor("budget")}
+            </label>
+            <label htmlFor="timing">
+              Preferred timeline{" "}
+              <span className="optional-label">Optional</span>
+              <input
+                id="timing"
+                name="timing"
+                placeholder="A target date, or flexible"
+                maxLength={inquiryLimits.timing}
+                {...accessibility("timing")}
+              />
+              {errorFor("timing")}
+            </label>
+            <label htmlFor="phone">
+              Phone / WhatsApp <span className="optional-label">Optional</span>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                autoComplete="tel"
+                maxLength={inquiryLimits.phone}
+                {...accessibility("phone")}
+              />
+              {errorFor("phone")}
+            </label>
+          </div>
+        </details>
         <div className="form-trap" aria-hidden="true">
           <label htmlFor="website">
             Leave this empty
@@ -346,9 +347,7 @@ export function ProjectForm({
           </label>
         </div>
         <p className="form-small">
-          Please leave out passwords, customer records, and confidential
-          datasets. Need an NDA first?{" "}
-          <a href={`mailto:${site.email}?subject=NDA%20request`}>Email us</a>.
+          Please leave out passwords and private customer data.
         </p>
         <div className="form-submit">
           <button className="button" type="submit" disabled={pending}>
@@ -356,8 +355,8 @@ export function ProjectForm({
             <ArrowUpRight size={20} />
           </button>
           <p>
-            We’ll review your context and use your email to discuss a useful
-            next step. <Link href="/privacy-policy">Privacy policy</Link>.
+            We’ll email you to discuss your project.{" "}
+            <Link href="/privacy-policy">Privacy policy</Link>.
           </p>
         </div>
       </fieldset>

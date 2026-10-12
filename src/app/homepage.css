@@ -494,3 +494,67 @@
     border-right: 0;
   }
 }
+
+/* Labs uses the same sage surfaces and large type as the studio catalogue. */
+.home-labs-visual {
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 25rem;
+  padding: clamp(2rem, 4vw, 4rem);
+}
+.home-labs-wordmark {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(4rem, 7.5vw, 6rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+.home-labs-wordmark > span {
+  color: var(--forest-600);
+}
+.home-labs-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 2rem;
+  font-size: 0.8125rem;
+}
+.home-owned-copy h2 {
+  margin-bottom: 1.25rem;
+}
+.home-labs-products {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+.home-labs-products li {
+  border-top: 1px solid var(--line);
+}
+.home-labs-products a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+.home-labs-products small {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+@media (hover: hover) and (pointer: fine) {
+  .home-labs-products a:hover,
+  .home-labs-visual:hover .home-labs-note {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+}
+@media (max-width: 700px) {
+  .home-labs-visual {
+    min-height: 19rem;
+    padding: 2rem;
+  }
+}

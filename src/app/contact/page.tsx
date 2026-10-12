@@ -10,9 +10,9 @@ import { site } from "@/lib/site";
 import "./contact.css";
 
 export const metadata: Metadata = {
-  title: "What could work better in your business?",
+  title: "Contact Zavino — let’s talk about your project",
   description:
-    "Tell Zavino about the workflow, SaaS product, or web platform you want to build. Send your requirement or book an AI Workflow Audit.",
+    "Tell us what you want to build or improve. Send your project details or book a call with the Zavino team.",
   alternates: { canonical: "/contact" },
 };
 
@@ -27,14 +27,13 @@ export default async function Contact({
     <main id="main" className="contact-page">
       <section className="page-hero contact-hero section-shell">
         <h1>
-          What could work better
+          Let’s talk about
           <br />
-          <span>in your business?</span>
+          <span>your project.</span>
         </h1>
         <p>
-          Tell us about the workflow, product idea, website, platform, or
-          customer journey you want to improve. We will help you find a
-          practical place to start.
+          Tell us what you want to build or improve. You don’t need to have it
+          all figured out.
         </p>
       </section>
       <div className="contact-layout section-shell">
@@ -55,17 +54,14 @@ export default async function Contact({
               <br />
               is a good start.
             </h2>
-            <p>
-              Bring the goal, the current workflow, and the questions you’re
-              still figuring out.
-            </p>
+            <p>Prefer to talk it through? Choose a time that works for you.</p>
             <a
               className="button"
               href={site.auditBooking}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Book an AI Workflow Audit <ArrowUpRight size={20} />
+              Book a call <ArrowUpRight size={20} />
             </a>
             <span className="external-note">
               Opens Cal.com · Choose an available time
@@ -94,26 +90,20 @@ export default async function Contact({
             <ol>
               <li>
                 <span>01</span>
-                <p>
-                  We review the problem, the systems, and the outcome you have
-                  in mind.
-                </p>
+                <p>We read your project details.</p>
               </li>
               <li>
                 <span>02</span>
-                <p>We discuss fit and the questions that need answering.</p>
+                <p>We get in touch to discuss your idea.</p>
               </li>
               <li>
                 <span>03</span>
-                <p>
-                  Together, we define a useful first step and a scope for the
-                  work.
-                </p>
+                <p>Together, we agree on a useful first step.</p>
               </li>
             </ol>
           </div>
           <p className="contact-location">
-            Built in Dhaka. Working with ambitious businesses worldwide.
+            Based in Dhaka. Working worldwide.
             <br />
             <span>{site.address}</span>
           </p>

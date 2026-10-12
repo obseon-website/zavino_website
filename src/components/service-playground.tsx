@@ -11,16 +11,28 @@ import {
   Cursor,
   Desktop,
   EnvelopeSimple,
-  Fingerprint,
   FolderSimple,
+  Robot,
   ShieldCheck,
   DeviceMobile,
   Sparkle,
   Stack,
   Users,
+  PencilLine,
+  SquaresFour,
+  NavigationArrow,
+  ClipboardText,
+  UserSwitch,
+  Pulse,
+  UserGear,
+  CreditCard,
+  GearSix,
+  UserCircle,
 } from "@phosphor-icons/react";
+import { workflowExamples, type WorkflowKind } from "@/lib/service-concepts";
+import { useButtonConfetti } from "@/components/button-confetti";
 
-export type ServiceKind = "automation" | "saas" | "web";
+export type ServiceKind = WorkflowKind | "saas" | "web";
 
 /** These are working, local illustrations. They never send data or imply client results. */
 export function ServicePlayground({
@@ -34,15 +46,15 @@ export function ServicePlayground({
     <div
       className={`service-playground playground-${kind}${compact ? " playground-compact" : ""}`}
     >
-      {kind === "automation" ? (
-        <Automation />
-      ) : kind === "saas" ? (
+      {kind === "saas" ? (
         <Product />
-      ) : (
+      ) : kind === "web" ? (
         <Website />
+      ) : (
+        <Automation kind={kind} />
       )}
       <p className="playground-caption">
-        Interactive studio concept <span>Made to be explored.</span>
+        Interactive example <span>Try the controls above.</span>
       </p>
     </div>
   );
@@ -57,19 +69,22 @@ function useInputMotion() {
   return { root, input };
 }
 
-function Automation() {
+function Automation({ kind }: { kind: WorkflowKind }) {
   const [step, setStep] = useState(0);
   const { root, input } = useInputMotion();
-  const status = [
-    "An inquiry arrives. Give it a useful next step.",
-    "The brief is ready. A person decides what happens next.",
-    "Approved in this example. Nothing has been sent.",
-  ][step];
+  const { celebrate, cancel } = useButtonConfetti();
+  const example = workflowExamples[kind];
+  const Icon =
+    kind === "operations"
+      ? Robot
+      : kind === "content"
+        ? PencilLine
+        : EnvelopeSimple;
   return (
     <div ref={root} className="playground-interaction" data-step={step}>
       <div className="snippet-scene automation-scene" aria-hidden="true">
         <span className="snippet-keycap mail-key">
-          <EnvelopeSimple />
+          <Icon />
         </span>
         <span className="snippet-keycap check-key">
           <ShieldCheck />
@@ -77,8 +92,8 @@ function Automation() {
         <div className="inquiry-slip">
           <span className="snippet-avatar">H</span>
           <div>
-            <strong>A new project inquiry</strong>
-            <span>“Our team has a good idea.”</span>
+            <strong>{example.incoming}</strong>
+            <span>{example.request}</span>
           </div>
           <ArrowUpRight />
         </div>
@@ -92,7 +107,7 @@ function Automation() {
         <div className="brief-window">
           <div className="snippet-toolbar">
             <span>
-              <FolderSimple /> A little less busywork.
+              <Icon /> {example.title}
             </span>
             <span className="window-dots">
               <i />
@@ -105,40 +120,28 @@ function Automation() {
               <Sparkle />
             </span>
             <div>
-              <span>Project brief</span>
-              <strong>From scattered to sorted.</strong>
+              <span>{example.title}</span>
+              <strong>{example.result}</strong>
             </div>
           </div>
           <div className="brief-fields">
-            <div>
-              <span>What they need</span>
-              <strong>A better customer experience</strong>
-              <Check />
-            </div>
-            <div>
-              <span>Who takes it forward</span>
-              <strong>The right person on your team</strong>
-              <Check />
-            </div>
-            <div>
-              <span>The next step</span>
-              <strong>
-                {step === 2
-                  ? "Approved for a conversation"
-                  : "A conversation, with context"}
-              </strong>
-              <Check />
-            </div>
+            {example.fields.map((field) => (
+              <div key={field[0]}>
+                <span>{field[0]}</span>
+                <strong>
+                  {step === 2 && field.length === 3 ? field[2] : field[1]}
+                </strong>
+                <Check />
+              </div>
+            ))}
           </div>
           <div className="approval-stamp">
             <CheckCircle weight="fill" />
             <span>
               {
-                [
-                  "Waiting for a brief.",
-                  "Ready for a human.",
-                  "Approved by you.",
-                ][step]
+                ["Ready to start.", "Ready for review.", "Approved by you."][
+                  step
+                ]
               }
             </span>
           </div>
@@ -146,17 +149,19 @@ function Automation() {
       </div>
       <div className="playground-controls">
         <p className="playground-status" aria-live="polite">
-          {status}
+          {example.statuses[step]}
         </p>
         <button
           className="snippet-action"
           onClick={(event) => {
             input(event);
+            if (step === 1) celebrate(event);
+            if (step === 2) cancel();
             setStep((step + 1) % 3);
           }}
         >
           {step === 0
-            ? "Prepare the brief"
+            ? example.prepare
             : step === 1
               ? "Approve example"
               : "Try it again"}
@@ -170,10 +175,14 @@ function Automation() {
 const perspectives = [
   {
     label: "Customer",
-    icon: Cursor,
+    icon: UserCircle,
     title: "Everything I need.",
     subtitle: "One clear place to start.",
-    rows: ["My workspace", "Files & conversations", "A clear next step"],
+    rows: [
+      { label: "My workspace", icon: SquaresFour },
+      { label: "Files & conversations", icon: FolderSimple },
+      { label: "A clear next step", icon: NavigationArrow },
+    ],
     note: "A welcome that makes sense.",
     symbol: "H",
   },
@@ -182,7 +191,11 @@ const perspectives = [
     icon: Users,
     title: "Everyone in sync.",
     subtitle: "The work, with its context.",
-    rows: ["Shared work queue", "Owners & handoffs", "Activity in one place"],
+    rows: [
+      { label: "Shared work queue", icon: ClipboardText },
+      { label: "Owners & handoffs", icon: UserSwitch },
+      { label: "Activity in one place", icon: Pulse },
+    ],
     note: "A shared view of what matters.",
     symbol: "T",
   },
@@ -191,7 +204,11 @@ const perspectives = [
     icon: ShieldCheck,
     title: "Room to run it.",
     subtitle: "The right controls, built in.",
-    rows: ["People & permissions", "Plans & billing", "Product settings"],
+    rows: [
+      { label: "People & permissions", icon: UserGear },
+      { label: "Plans & billing", icon: CreditCard },
+      { label: "Product settings", icon: GearSix },
+    ],
     note: "A product you can operate.",
     symbol: "O",
   },
@@ -199,7 +216,10 @@ const perspectives = [
 
 function Product() {
   const [role, setRole] = useState(0);
+  const [visited, setVisited] = useState(1);
   const { root, input } = useInputMotion();
+  const { celebrate, cancel } = useButtonConfetti();
+  const complete = visited === 7;
   return (
     <div ref={root} className="playground-interaction" data-role={role}>
       <div className="snippet-scene product-scene" aria-hidden="true">
@@ -207,7 +227,6 @@ function Product() {
           <Stack />
         </span>
         {perspectives.map((perspective, index) => {
-          const Icon = perspective.icon;
           const order = (index - role + 3) % 3;
           return (
             <div
@@ -230,17 +249,11 @@ function Product() {
                   {perspective.title}
                 </strong>
                 <div className="perspective-rows">
-                  {perspective.rows.map((row, i) => (
-                    <div key={row}>
+                  {perspective.rows.map(({ label, icon: TaskIcon }) => (
+                    <div key={label}>
                       <span>
-                        {i === 0 ? (
-                          <Icon />
-                        ) : i === 1 ? (
-                          <FolderSimple />
-                        ) : (
-                          <Fingerprint />
-                        )}
-                        {row}
+                        <TaskIcon />
+                        {label}
                       </span>
                       <ArrowUpRight />
                     </div>
@@ -264,7 +277,9 @@ function Product() {
       </div>
       <div className="playground-controls">
         <p className="playground-status" aria-live="polite">
-          {perspectives[role].note}
+          {complete
+            ? "All three views explored. Made for everyone."
+            : perspectives[role].note}
         </p>
         <div
           className="snippet-switch"
@@ -277,6 +292,9 @@ function Product() {
               aria-pressed={role === i}
               onClick={(event) => {
                 input(event);
+                const next = visited | (1 << i);
+                if (next === 7 && !complete) celebrate(event);
+                setVisited(next);
                 setRole(i);
               }}
             >
@@ -285,6 +303,21 @@ function Product() {
             </button>
           ))}
         </div>
+        <button
+          type="button"
+          className="playground-reset text-link"
+          data-ready={complete}
+          disabled={!complete}
+          aria-hidden={!complete}
+          onClick={(event) => {
+            input(event);
+            cancel();
+            setRole(0);
+            setVisited(1);
+          }}
+        >
+          Try it again <ArrowsClockwise size={16} />
+        </button>
       </div>
     </div>
   );
@@ -292,7 +325,9 @@ function Product() {
 
 function Website() {
   const [mobile, setMobile] = useState(false);
+  const [visitedMobile, setVisitedMobile] = useState(false);
   const { root, input } = useInputMotion();
+  const { celebrate, cancel } = useButtonConfetti();
   return (
     <div
       ref={root}
@@ -374,9 +409,11 @@ function Website() {
       </div>
       <div className="playground-controls">
         <p className="playground-status" aria-live="polite">
-          {mobile
-            ? "The same idea. Made for your hand."
-            : "A little more room. The same attention to detail."}
+          {visitedMobile
+            ? "Both screens explored. Made for every size."
+            : mobile
+              ? "The same idea. Made for your hand."
+              : "A little more room. The same attention to detail."}
         </p>
         <div
           className="snippet-switch"
@@ -397,6 +434,8 @@ function Website() {
             aria-pressed={mobile}
             onClick={(event) => {
               input(event);
+              if (!visitedMobile) celebrate(event);
+              setVisitedMobile(true);
               setMobile(true);
             }}
           >
@@ -404,6 +443,21 @@ function Website() {
             <span>Mobile</span>
           </button>
         </div>
+        <button
+          type="button"
+          className="playground-reset text-link"
+          data-ready={visitedMobile}
+          disabled={!visitedMobile}
+          aria-hidden={!visitedMobile}
+          onClick={(event) => {
+            input(event);
+            cancel();
+            setMobile(false);
+            setVisitedMobile(false);
+          }}
+        >
+          Try it again <ArrowsClockwise size={16} />
+        </button>
       </div>
     </div>
   );

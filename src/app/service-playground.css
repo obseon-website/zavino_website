@@ -113,6 +113,7 @@
   color: var(--muted);
   font-size: 0.875rem;
   line-height: 1.5;
+  min-height: 3em;
 }
 .snippet-action {
   display: inline-flex;
@@ -747,7 +748,7 @@
 }
 .sp-offer .playground-status {
   max-width: none;
-  min-height: 2.7em;
+  min-height: 3em;
 }
 .sp-offer .snippet-switch {
   align-self: flex-start;
@@ -801,7 +802,7 @@
   }
   .service-experience .playground-status {
     max-width: none;
-    min-height: 2.7em;
+    min-height: 3em;
   }
   .service-experience .snippet-switch {
     align-self: flex-start;
@@ -809,6 +810,25 @@
 }
 .service-experience[data-motion="unavailable"] .home-mobile-playground {
   display: block;
+}
+.home-mobile-playground > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  list-style: none;
+  cursor: pointer;
+  min-height: 44px;
+  font-size: 0.875rem;
+  color: var(--ink);
+}
+.home-mobile-playground > summary::-webkit-details-marker {
+  display: none;
+}
+.home-mobile-playground[open] > summary {
+  margin-bottom: 1rem;
+}
+.home-mobile-playground[open] > summary svg {
+  transform: rotate(180deg);
 }
 @media (max-width: 599px) {
   .playground-controls {
@@ -939,6 +959,45 @@
     gap: 0;
   }
   .snippet-switch button svg {
+    display: none;
+  }
+}
+
+/* Completion feedback never shifts the controls or clips at a concept boundary. */
+.playground-reset {
+  min-height: 44px;
+  font-size: 0.875rem;
+}
+.playground-reset[data-ready="false"] {
+  visibility: hidden;
+  pointer-events: none;
+}
+.playground-controls .playground-reset {
+  flex-basis: 100%;
+  justify-content: flex-start;
+}
+.button-confetti {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  overflow: clip;
+  contain: strict;
+}
+.button-confetti-piece {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+@media (max-width: 599px) {
+  .playground-controls p.playground-status {
+    min-height: 4.5em;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .button-confetti {
     display: none;
   }
 }
