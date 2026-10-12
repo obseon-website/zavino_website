@@ -1,15 +1,15 @@
 import type { MetadataRoute } from "next";
+import { serviceCatalog } from "@/lib/services";
 import { site } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     "",
     "/about",
     "/services",
-    "/services/ai-automation",
-    "/services/saas-development",
+    ...serviceCatalog.map((item) => `/services/${item.slug}`),
     "/services/web-development",
     "/work",
-    "/zavino-owned-products",
+    "/labs",
     "/contact",
     "/privacy-policy",
     "/terms-and-conditions",

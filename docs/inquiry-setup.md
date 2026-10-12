@@ -12,15 +12,20 @@ The contact form saves each valid brief in Cloudflare D1 before returning `recei
 - Migration applied to both local and remote database on 4 October 2026 UTC.
 - No website deployment was performed as part of database setup.
 
-Run local migrations before testing a fresh checkout:
+The isolated persistence tests use Node’s in-memory SQLite database with the actual SQL migration and mocked email. They do not start a Workers process or access a hosted database (verified with Node 24):
+
+```sh
+npm run test:inquiry
+```
+
+For manual development with local bindings, run local migrations on a fresh checkout:
 
 ```sh
 npx wrangler d1 migrations apply zavino-leads --local
 npm run dev
-node --test scripts/test-inquiry.mjs
 ```
 
-`next dev` gets local bindings through the existing `initOpenNextCloudflareForDev()` in `next.config.ts`. Local tests use local D1 and mocked email; they do not write synthetic briefs to production or send email. The normal Worker build remains `npm run build:worker`.
+`next dev` gets local bindings through the existing `initOpenNextCloudflareForDev()` in `next.config.ts`. The automated tests use an isolated SQL adapter and mocked email; they do not write synthetic briefs to production or send email. Website changes in the October update are delivered through GitHub only.
 
 For future schema changes, create a migration and apply it locally, verify it, then apply it remotely:
 
@@ -54,7 +59,9 @@ The database remains the source of truth while email is disabled. Authorized tea
 npx wrangler d1 execute zavino-leads --remote --command "SELECT notification_status, count(*) AS total FROM project_inquiries GROUP BY notification_status"
 ```
 
-Saved fields: name, company/project, email, focus, brief, optional systems/outcome/timing, allowlisted source page, timestamp, payload hash, and notification state. No IP address or user-agent is stored. Logs contain event codes and inquiry references only. This change adds no analytics events or private form data to URLs.
+Saved fields: name, company, country, work email, phone/WhatsApp, service need, requirement, estimated budget, preferred timeline, allowlisted source page, timestamp, payload hash, and notification state.
+
+The October form update keeps the existing database schema: `outcome` stores a versioned JSON context record, `{"version":2,"country":"…","phone":"…","budget":"…","outcome":"…"}`. The final `outcome` member preserves compatibility with clients that still send that optional field. Earlier records remain plain text in this column; consumers must check the version before parsing. The email notification formats the new fields explicitly. The request hash includes country, phone, and budget, so an ID cannot silently overwrite those details. No remote schema migration is needed for this release. No IP address or user-agent is stored. Logs contain event codes and inquiry references only. This change adds no analytics events or private form data to URLs.
 
 The form rejects cross-origin requests, unknown focus/source values, oversized requests, honeypot fills, invalid types, control characters, and missing/invalid required fields. It limits new briefs to five per email in ten minutes. That email limit is a basic abuse control, not a complete bot defense. Domain-level WAF rules can be configured separately if production traffic warrants it.
 

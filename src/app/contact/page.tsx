@@ -10,9 +10,9 @@ import { site } from "@/lib/site";
 import "./contact.css";
 
 export const metadata: Metadata = {
-  title: "Discuss your project",
+  title: "What could work better in your business?",
   description:
-    "Tell Zavino about the workflow, SaaS product, or web platform you want to build. Send a short project brief or book a 30-minute call.",
+    "Tell Zavino about the workflow, product idea, website, platform, or customer journey you want to improve. Book an AI Workflow Audit.",
   alternates: { canonical: "/contact" },
 };
 
@@ -27,14 +27,14 @@ export default async function Contact({
     <main id="main" className="contact-page">
       <section className="page-hero contact-hero section-shell">
         <h1>
-          Tell us what needs
+          What could work better
           <br />
-          <span>to work better.</span>
+          <span>in your business?</span>
         </h1>
         <p>
-          A workflow with too many handoffs. A SaaS product ready for its next
-          chapter. A web platform that needs to do more. Start with the problem
-          and the people around it.
+          Tell us about the workflow, product idea, website, platform, or
+          customer journey you want to improve. We will help you find a
+          practical place to start.
         </p>
       </section>
       <div className="contact-layout section-shell">
@@ -65,7 +65,7 @@ export default async function Contact({
               target="_blank"
               rel="noopener noreferrer"
             >
-              Book a 30-minute call <ArrowUpRight size={20} />
+              Book an AI Workflow Audit <ArrowUpRight size={20} />
             </a>
             <span className="external-note">
               Opens Cal.com · Choose an available time
@@ -113,7 +113,7 @@ export default async function Contact({
             </ol>
           </div>
           <p className="contact-location">
-            Based in Dhaka, working across connected systems.
+            Built in Dhaka. Working with ambitious businesses worldwide.
             <br />
             <span>{site.address}</span>
           </p>

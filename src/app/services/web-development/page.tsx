@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, ArrowRight } from "@phosphor-icons/react/dist/ssr";
-import { ServicePlayground } from "@/components/service-playground";
+import { WebsitePlayground } from "@/components/service-playground";
+import { homeProcess } from "@/lib/home";
+import { OngoingSupport } from "@/components/ongoing-support";
 import {
   ServiceBrief,
   ServiceFaq,
@@ -52,7 +54,7 @@ export default function WebDevelopmentPage() {
   return (
     <main id="main" className="sp-page sp-web-page">
       <ServiceHero
-        label="Web development"
+        label="Websites & Digital Experiences"
         title={
           <>
             A better way
@@ -82,7 +84,7 @@ export default function WebDevelopmentPage() {
             action people came to take.
           </p>
         </div>
-        <ServicePlayground kind="web" />
+        <WebsitePlayground />
       </section>
       <section className="sp-web-paths section-shell">
         <ServiceSectionHeading title="What should your platform do?">
@@ -157,7 +159,7 @@ export default function WebDevelopmentPage() {
               strategy can extend that foundation.
             </p>
             <Link href="/services#more-capabilities" className="text-link">
-              Explore SEO & growth capabilities <ArrowUpRight size={18} />
+              Explore launch support <ArrowUpRight size={18} />
             </Link>
           </div>
           <span className="sp-search-art" aria-hidden="true">
@@ -204,33 +206,13 @@ export default function WebDevelopmentPage() {
       />
       <ServiceProcess
         title="A clear path from brief to live platform."
-        stages={[
-          {
-            title: "Understand",
-            description:
-              "Clarify the audience, the business goal, current content and systems, and the actions the platform needs to support.",
-            artifact: "OUTPUT / PLATFORM BRIEF",
-          },
-          {
-            title: "Design",
-            description:
-              "Shape the journeys and content, resolve the responsive experience, and agree on the platform and integration scope.",
-            artifact: "OUTPUT / EXPERIENCE PLAN",
-          },
-          {
-            title: "Build & connect",
-            description:
-              "Implement the interface and backend, bring in the content, and test the connected business journeys.",
-            artifact: "OUTPUT / WORKING PLATFORM",
-          },
-          {
-            title: "Launch & improve",
-            description:
-              "Complete release checks, hand over the editing and operations, and use the agreed measures to guide improvements.",
-            artifact: "OUTPUT / LAUNCH & SUPPORT PLAN",
-          },
-        ]}
+        stages={homeProcess.map((stage) => ({
+          title: stage.title,
+          description: stage.description,
+          artifact: stage.deliverable,
+        }))}
       />
+      <OngoingSupport />
       <ServiceFaq
         items={[
           {

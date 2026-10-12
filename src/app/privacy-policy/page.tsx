@@ -34,10 +34,11 @@ export default function Privacy() {
           content: (
             <>
               <p>
-                When you contact us through the project form, phone, email, or WhatsApp, we may receive
-                your name, contact details, company information, project brief,
-                files, and the content of our conversations. Please share only
-                information relevant to your inquiry or project.
+                When you contact us through the project form, phone, email, or
+                WhatsApp, we may receive your name, contact details, company
+                information, project brief, files, and the content of our
+                conversations. Please share only information relevant to your
+                inquiry or project.
               </p>
               <p>
                 For client projects, we may also receive billing details,
@@ -46,17 +47,18 @@ export default function Privacy() {
                 one-time payment codes.
               </p>
               <p>
-                The project form collects your name, company or project, email,
-                project focus, and brief. You may also share the systems involved,
-                desired outcome, and timing. Please do not include customer
-                records, passwords, secrets, or confidential datasets.
+                The project form collects your name, company, country, work
+                email, service need, and requirement. You may also share your
+                phone or WhatsApp number, estimated budget, and preferred
+                timeline. Please do not include customer records, passwords,
+                secrets, or confidential datasets.
               </p>
               <p>
                 Submitted briefs are stored in Cloudflare D1 with a submission
                 reference, timestamp, source page, and notification status so we
                 can review and respond. When email notifications are enabled,
-                the brief is sent to leads@thezavino.com. The website has no user
-                accounts, newsletter signup, or on-site checkout.
+                the brief is sent to leads@thezavino.com. The website has no
+                user accounts, newsletter signup, or on-site checkout.
               </p>
             </>
           ),
@@ -75,13 +77,14 @@ export default function Privacy() {
               <p>
                 We do not currently install third-party advertising pixels or
                 visitor analytics scripts. Inquiry contents are not sent to
-                analytics. Interactive examples use temporary page state and
-                do not connect to your business systems or send messages.
+                analytics. Interactive examples use temporary page state and do
+                not connect to your business systems or send messages.
               </p>
               <p>
                 Portfolio videos and fonts are served with the site. Opening an
-                external booking, social, or messaging link takes you to that provider’s
-                service, where its own privacy and storage practices apply.
+                external booking, social, or messaging link takes you to that
+                provider’s service, where its own privacy and storage practices
+                apply.
               </p>
             </>
           ),

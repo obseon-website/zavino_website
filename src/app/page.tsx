@@ -6,6 +6,8 @@ import { Hero } from "@/components/hero";
 import { ServiceExperience } from "@/components/service-experience";
 import { ContactCta } from "@/components/footer";
 import { homeProcess } from "@/lib/home";
+import { OngoingSupport } from "@/components/ongoing-support";
+import { supportingCopy } from "@/lib/services";
 import { projects } from "@/lib/site";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
@@ -31,10 +33,7 @@ export default function Home() {
         </div>
         <ServiceExperience />
         <div className="home-services-foot">
-          <p>
-            Need a brand, content, or a campaign to go with it? That’s part of
-            our practice, too.
-          </p>
+          <p>{supportingCopy}</p>
           <Link href="/services#more-capabilities" className="text-link">
             More ways we help <ArrowRight size={18} aria-hidden="true" />
           </Link>
@@ -51,7 +50,7 @@ export default function Home() {
           <article className="home-owned">
             <Link
               className="home-owned-visual"
-              href="/zavino-owned-products"
+              href="/labs"
               aria-label="Explore Aston Mark, a Zavino owned product"
             >
               <Image
@@ -80,13 +79,14 @@ export default function Home() {
                 It keeps us close to the everyday details that make a product
                 work.
               </p>
-              <Link className="text-link" href="/zavino-owned-products">
-                Meet Aston Mark <ArrowUpRight size={18} aria-hidden="true" />
+              <Link className="text-link" href="/labs">
+                Explore Zavino Labs{" "}
+                <ArrowUpRight size={18} aria-hidden="true" />
               </Link>
             </div>
           </article>
           <div className="home-creative-heading">
-            <h3>A creative point of view.</h3>
+            <h3>Creative Heritage</h3>
             <p>
               Selected campaign and product imagery from our creative practice.
             </p>
@@ -150,6 +150,7 @@ export default function Home() {
           A little more about us <ArrowUpRight size={18} aria-hidden="true" />
         </Link>
       </section>
+      <OngoingSupport />
       <ContactCta />
     </main>
   );
