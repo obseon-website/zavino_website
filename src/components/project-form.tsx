@@ -106,9 +106,6 @@ export function ProjectForm({
               [
                 "name",
                 "company",
-                "country",
-                "phone",
-                "budget",
                 "email",
                 "focus",
                 "brief",
@@ -123,6 +120,14 @@ export function ProjectForm({
             }
           }
           setErrors(fieldErrors);
+          if (
+            fieldErrors.systems ||
+            fieldErrors.outcome ||
+            fieldErrors.timing
+          ) {
+            const details = form.current?.querySelector("details");
+            if (details) details.open = true;
+          }
         }
         setMessage(
           typeof result.message === "string"
@@ -161,7 +166,7 @@ export function ProjectForm({
           target="_blank"
           rel="noopener noreferrer"
         >
-          Book an AI Workflow Audit <ArrowUpRight size={20} />
+          Book a 30-minute call <ArrowUpRight size={20} />
         </a>
         <p className="form-small">
           Have something to add?{" "}
@@ -220,7 +225,7 @@ export function ProjectForm({
             {errorFor("name")}
           </label>
           <label htmlFor="company">
-            Company <span>*</span>
+            Company or project <span>*</span>
             <input
               id="company"
               name="company"
@@ -231,32 +236,8 @@ export function ProjectForm({
             />
             {errorFor("company")}
           </label>
-          <label htmlFor="country">
-            Country <span>*</span>
-            <input
-              id="country"
-              name="country"
-              required
-              autoComplete="country-name"
-              maxLength={inquiryLimits.country}
-              {...accessibility("country")}
-            />
-            {errorFor("country")}
-          </label>
-          <label htmlFor="phone">
-            Phone / WhatsApp <span className="optional-label">Optional</span>
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              autoComplete="tel"
-              maxLength={inquiryLimits.phone}
-              {...accessibility("phone")}
-            />
-            {errorFor("phone")}
-          </label>
           <label className="form-full" htmlFor="email">
-            Work Email <span>*</span>
+            Email <span>*</span>
             <input
               id="email"
               name="email"
@@ -270,7 +251,7 @@ export function ProjectForm({
             {errorFor("email")}
           </label>
           <label className="form-full" htmlFor="focus">
-            What do you need? <span>*</span>
+            Project focus <span>*</span>
             <select
               id="focus"
               name="focus"
@@ -293,7 +274,7 @@ export function ProjectForm({
             {errorFor("focus")}
           </label>
           <label className="form-full" htmlFor="brief">
-            Briefly describe your requirement <span>*</span>
+            What needs to change? <span>*</span>
             <span className="field-hint" id="brief-hint">
               {hint}
             </span>
@@ -309,30 +290,53 @@ export function ProjectForm({
             {errorFor("brief")}
           </label>
         </div>
-        <div className="form-grid form-extra-fields">
-          <label htmlFor="budget">
-            Estimated budget <span className="optional-label">Optional</span>
-            <input
-              id="budget"
-              name="budget"
-              placeholder="Amount and currency, or still exploring"
-              maxLength={inquiryLimits.budget}
-              {...accessibility("budget")}
-            />
-            {errorFor("budget")}
-          </label>
-          <label htmlFor="timing">
-            Preferred timeline <span className="optional-label">Optional</span>
-            <input
-              id="timing"
-              name="timing"
-              placeholder="A target date, or flexible"
-              maxLength={inquiryLimits.timing}
-              {...accessibility("timing")}
-            />
-            {errorFor("timing")}
-          </label>
-        </div>
+        <details className="form-more">
+          <summary>
+            Add systems, goals, or timing <span>Optional</span>
+          </summary>
+          <div className="form-grid">
+            <label className="form-full" htmlFor="systems">
+              Systems or data involved
+              <span className="field-hint">
+                For example: CRM, commerce, support, ERP, documents, or an
+                existing app.
+              </span>
+              <textarea
+                id="systems"
+                name="systems"
+                rows={3}
+                maxLength={inquiryLimits.systems}
+                {...accessibility("systems")}
+              />
+              {errorFor("systems")}
+            </label>
+            <label className="form-full" htmlFor="outcome">
+              Scale or desired outcome
+              <span className="field-hint">
+                Teams involved, time lost, customer journey, or a launch goal.
+              </span>
+              <textarea
+                id="outcome"
+                name="outcome"
+                rows={3}
+                maxLength={inquiryLimits.outcome}
+                {...accessibility("outcome")}
+              />
+              {errorFor("outcome")}
+            </label>
+            <label className="form-full" htmlFor="timing">
+              Timing
+              <input
+                id="timing"
+                name="timing"
+                placeholder="A target date, or still exploring"
+                maxLength={inquiryLimits.timing}
+                {...accessibility("timing")}
+              />
+              {errorFor("timing")}
+            </label>
+          </div>
+        </details>
         <div className="form-trap" aria-hidden="true">
           <label htmlFor="website">
             Leave this empty

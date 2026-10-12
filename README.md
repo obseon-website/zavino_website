@@ -1,6 +1,6 @@
 # Zavino
 
-A studio website for practical AI systems, SaaS products, web platforms, content workflows, and enterprise AI training. Built with Next.js App Router, React, TypeScript, and plain CSS. The visual system is documented in [DESIGN.md](DESIGN.md), with product constraints in [PRODUCT.md](PRODUCT.md).
+A service-led studio website for AI automation, SaaS development, and web development. Built with Next.js App Router, React, TypeScript, and plain CSS. The visual system is documented in [DESIGN.md](DESIGN.md), with product constraints in [PRODUCT.md](PRODUCT.md).
 
 ## Run locally
 
@@ -24,17 +24,13 @@ npm run start
 
 | Route | Purpose |
 | --- | --- |
-| `/` | Business promise, six services, selected work, four-step process, ongoing support, audit invitation |
-| `/services` | Goal-based finder and six primary services |
-| `/services/ai-revenue-systems` | Lead qualification, sales workflows, and an interactive inquiry concept |
-| `/services/ai-operations-agents` | Internal workflows, knowledge sources, and an agent escalation concept |
-| `/services/saas-development` | Custom products and an interactive release planner |
-| `/services/web-apps-platforms` | Custom platforms and a booking/permissions concept |
-| `/services/ai-content-flows` | Content operations and an editorial approval concept |
-| `/services/enterprise-ai-training` | Practical workshops for enterprise teams in Bangladesh, with role-specific exercises |
-| `/services/web-development` | Supporting website capability and original responsive journey concept |
-| `/work` | Five work categories, creative heritage, 13 films, and labeled internal prototypes |
-| `/labs` | Zavino Labs, launched Aston Mark, and a clearly labeled operating experiment |
+| `/` | Promise, three services, selected work, process, project invitation |
+| `/services` | Core services and supporting creative capabilities |
+| `/services/ai-automation` | Automation scope, illustrative workflow, process, FAQs |
+| `/services/saas-development` | Product scope, illustrative role-based concept, process, FAQs |
+| `/services/web-development` | Web scope, responsive concept, standards, process, FAQs |
+| `/work` | Creative archive, 13 films, and clearly labeled lab concepts |
+| `/zavino-owned-products` | Ventures Zavino builds and operates |
 | `/about` | Studio approach, disciplines, working principles, business details |
 | `/contact` | Validated project brief, booking, email, and WhatsApp |
 | Policy routes | Privacy, terms, cancellation, and refunds |
@@ -43,26 +39,25 @@ The site also includes a 404, sitemap, robots file, social preview, icons, and l
 
 ## Editing
 
-- Six-service catalog and support copy: `src/lib/services.ts`; four-step process: `src/lib/home.ts`.
-- Business details and supplied projects: `src/lib/site.ts`.
+- Homepage service and process data: `src/lib/home.ts`.
+- Business details, supplied projects, service scopes: `src/lib/site.ts`.
 - Film titles and order: `src/lib/reels.ts`; original-to-published mapping: `src/lib/reel-manifest.json`.
 - Pages: `src/app/`; shared components: `src/components/`.
 - Shared tokens and components: `src/app/globals.css`.
 - Homepage layouts: `src/app/homepage.css`; expressive motion and footer: `src/app/experience.css`; service layouts: `src/app/service-pages.css`; concept demos: `src/app/demos.css`.
-- Business refinement layouts: `src/app/business-pages.css`; distinct interactive concepts: `src/components/concepts/` and `src/app/business-concepts.css`.
 - Self-hosted Manrope font and license: `src/fonts/`.
 
 The homepage shows evidence with its true scope. The lab concepts are illustrative, creative projects are labeled as creative work, and Aston Mark is described as an owned business. Do not turn these into unsupported client results.
 
 ## Imagery and motion
 
-The hero uses a generated miniature fighter jet on a forest-green ramp, a brand illustration rather than client work. Its prompt is saved in `docs/design/flight-ramp.prompt.txt`; provenance accompanies the asset. Existing portfolio and film assets come from the supplied repository.
+The new daylight bridge image is a generated brand visual, not client work. Its exact prompt is saved in `docs/design/workday-bridge.prompt.txt`. Raster provenance is embedded or stored in adjacent JSON sidecars. Existing portfolio and film assets come from the supplied repository.
 
-The homepage retains a masked **Reveal** and short **Stagger**, then native scrolling advances six dimensional opportunity chapters through an IntersectionObserver. Phones use direct selection. Each detailed service has its own working concept with options, alternate outcomes, and immediate feedback. No page-specific demo is reused across routes.
+The homepage opens with a masked **Reveal** and short **Stagger**. Its three services share a sticky, dimensional CSS interface stage driven by native scroll through GSAP ScrollTrigger. The three UI concepts are labeled as illustrations. On smaller or shorter screens, and with reduced motion, services use a compact static flow.
 
-The shared footer retains a playful wordmark button with tap, drag, and keyboard alternatives. Progressive bottom blur and native page transitions are shared across routes. Controls remain usable with keyboard and reduced motion. The giant signature contains no navigation link.
+The shared footer adds a large Manrope wordmark, physical depth, and pointer-responsive **Parallax** with a moving light field. A homepage-only **Mask / Blur** treatment progressively diffuses the viewport’s bottom edge. The blur cannot intercept input and disappears for visible keyboard focus, open dialogs, and reduced transparency. Pointer effects require a fine pointer and no reduced-motion preference; they reset on leave, focus, scrolling, resizing, and preference changes.
 
-The business update’s state paths and motion vocabulary are recorded in `docs/design/business-update-verification.md`. These locally authored examples never send messages, publish content, reserve real appointments, or process a payment.
+**Press / Tap feedback** on primary controls and **Origin-aware animation** for the native mobile dialog remain. Keyboard focus is immediate. Main content and links are present without JavaScript; a failed motion import falls back to compact services. Motion source: `service-experience.tsx`, `footer-signature.tsx`, `progressive-blur.tsx`, and `experience.css`.
 
 Videos load only after play is pressed. To regenerate the approved 13-film collection with FFmpeg installed, run `npm run media:reels`. Originals remain in `resources-from-old-website/videos/`.
 
@@ -72,9 +67,9 @@ Videos load only after play is pressed. To regenerate the approved 13-film colle
 npm run lint
 npm run build
 npm run typecheck
-npm run test:inquiry
+node scripts/test-inquiry.mjs
 ```
 
-The inquiry test uses isolated in-memory SQLite (verified on Node 24), the real SQL migration, and mocked notifications. It does not start a Workers process, access a hosted database, or send a real inquiry. New contact details use a versioned context record in the existing schema; see `docs/inquiry-setup.md`.
+The inquiry test uses a local database and mocked notifications; it does not send a real project inquiry.
 
 **Deliver this redesign through GitHub only. Do not run Worker deployment commands.** Existing Cloudflare integration remains in the repository because it powers the current contact runtime. The historical [deployment guide](docs/CLOUDFLARE-DEPLOYMENT.md) is background documentation, not authorization to deploy this change manually.

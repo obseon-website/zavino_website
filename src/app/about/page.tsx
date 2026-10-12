@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { ContactCta } from "@/components/footer";
-import { homeProcess } from "@/lib/home";
-import { supportingCopy } from "@/lib/services";
 import { site } from "@/lib/site";
 import "@/app/service-pages.css";
 
@@ -74,17 +72,20 @@ export default function AboutPage() {
         </div>
         <div>
           <p>
-            Zavino builds practical technology for businesses in Bangladesh and
-            around the world: AI systems, SaaS products, web apps, AI-powered
-            websites, and intelligent content workflows. We maintain and improve
-            what we build after launch.
+            Zavino is based in Dhaka, Bangladesh. Our focus is AI automation,
+            SaaS products, and web platforms for businesses with important
+            workflows to improve.
           </p>
           <p>
             We look at how the pieces work together: where data enters, how a
             decision is made, what a person needs to approve, and how the result
             reaches a customer or a team.
           </p>
-          <p>{supportingCopy}</p>
+          <p>
+            Our creative and marketing practice is part of that picture. When a
+            build needs a brand, content, or a campaign around it, those
+            disciplines can work from the same direction.
+          </p>
           <Link href="/work" className="text-link">
             Explore our work & concepts <ArrowUpRight size={18} />
           </Link>
@@ -134,17 +135,32 @@ export default function AboutPage() {
           </p>
         </div>
         <ol>
-          {homeProcess
-            .map((stage) => [stage.title, stage.description])
-            .map(([title, body], index) => (
-              <li key={title}>
-                <span>0{index + 1}</span>
-                <div>
-                  <h3>{title}</h3>
-                  <p>{body}</p>
-                </div>
-              </li>
-            ))}
+          {[
+            [
+              "Agree on the problem",
+              "We map the goal, users, systems, constraints, and what an improved outcome would look like.",
+            ],
+            [
+              "Define the first release",
+              "We make the deliverables, dependencies, responsibilities, and review points explicit in scope.",
+            ],
+            [
+              "Review working progress",
+              "Prototypes and working increments give the team something useful to inspect and respond to.",
+            ],
+            [
+              "Prepare the handoff",
+              "We agree on documentation, ownership, training, operating needs, and support after launch.",
+            ],
+          ].map(([title, body], index) => (
+            <li key={title}>
+              <span>0{index + 1}</span>
+              <div>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </div>
+            </li>
+          ))}
         </ol>
       </section>
       <section className="sp-about-location section-shell">

@@ -1,45 +1,29 @@
 import Image from "next/image";
-import { site } from "@/lib/site";
+import Link from "next/link";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 
 export function Hero() {
   return (
     <section className="home-hero section-shell" aria-labelledby="hero-heading">
       <div className="home-hero-intro">
-        <h1
-          id="hero-heading"
-          aria-label="Technology that helps businesses move smarter."
-        >
+        <h1 id="hero-heading" aria-label="Good technology. A lighter workday.">
           <span className="hero-reveal-line" aria-hidden="true">
-            <span>Technology that helps</span>
+            <span>Good technology.</span>
           </span>
           <span className="hero-reveal-line" aria-hidden="true">
-            <span>businesses move smarter.</span>
+            <span>A lighter workday.</span>
           </span>
         </h1>
         <div className="home-hero-copy">
           <p>
-            Zavino builds AI automation, custom SaaS, web apps, websites, and
-            intelligent content workflows that help businesses save time,
-            strengthen sales, improve operations, and grow with confidence.
+            We build AI automation, SaaS products, and websites that make the
+            everyday work of business feel easier.
           </p>
-          <a
-            href={site.auditBooking}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button"
-          >
-            Book an AI Workflow Audit{" "}
-            <ArrowUpRight size={19} aria-hidden="true" />
-          </a>
-          <a href="#solutions" className="text-link hero-secondary">
-            Explore What We Build <ArrowUpRight size={18} />
-          </a>
+          <Link href="/contact" className="button">
+            Discuss your project <ArrowUpRight size={19} aria-hidden="true" />
+          </Link>
         </div>
       </div>
-      <p className="hero-location">
-        Built in Dhaka. Working with ambitious businesses worldwide.
-      </p>
       <figure className="home-hero-figure">
         <Image
           src="/media/flight-ramp.webp"

@@ -1,43 +1,33 @@
 export const inquiryFocusOptions = [
   {
-    value: "ai-revenue-systems",
-    label: "AI Revenue System",
-    hint: "Where do inquiries arrive, and what should happen before the sales team takes over?",
-  },
-  {
-    value: "ai-operations-agents",
-    label: "AI Operations / Agent",
-    hint: "Which repeated task or handoff should work better, and which tools are involved?",
+    value: "ai-automation",
+    label: "AI automation",
+    hint: "Which systems should connect, and where does a person need to approve the action?",
   },
   {
     value: "saas-development",
-    label: "SaaS Product",
-    hint: "Who will use it, and what is the first useful workflow it should support?",
-  },
-  {
-    value: "web-apps-platforms",
-    label: "Custom Web App",
-    hint: "Tell us about the people, business rules, and workflow your platform needs to support.",
+    label: "SaaS development",
+    hint: "Who will use the product, and what is the first useful workflow it should support?",
   },
   {
     value: "web-development",
-    label: "Website / Digital Experience",
-    hint: "What should the website help visitors understand or do?",
+    label: "Web development",
+    hint: "A website, store, portal, or custom application — what should it help people do?",
   },
   {
-    value: "ai-content-flows",
-    label: "AI Content Flow",
-    hint: "How does content move from research to approval today, and where does it get stuck?",
+    value: "ai-ugc-creative",
+    label: "AI UGC / creative",
+    hint: "Tell us about the audience, the creative you need, and where it will be used.",
   },
   {
-    value: "enterprise-ai-training",
-    label: "Enterprise AI Training",
-    hint: "For enterprise teams in Bangladesh. Tell us about your team, its roles, and what people need to learn.",
+    value: "another-capability",
+    label: "Another capability",
+    hint: "Tell us what you are working on and where your team needs support.",
   },
   {
-    value: "other",
-    label: "Other",
-    hint: "Start with the problem. You do not need to know the solution yet.",
+    value: "not-sure",
+    label: "Still figuring it out",
+    hint: "Start with the problem. You do not need to know the technology or the solution yet.",
   },
 ] as const;
 
@@ -48,12 +38,6 @@ export const inquirySources = [
   "/contact",
   "/services",
   "/services/ai-automation",
-  "/services/ai-revenue-systems",
-  "/services/ai-operations-agents",
-  "/services/web-apps-platforms",
-  "/services/ai-content-flows",
-  "/services/enterprise-ai-training",
-  "/labs",
   "/services/saas-development",
   "/services/web-development",
   "/work",
@@ -74,19 +58,7 @@ export function inquiryContext(
   focus: string | string[] | undefined,
   source: string | string[] | undefined,
 ): { focus: InquiryFocus | ""; source: InquirySource } {
-  const legacy: Record<string, InquiryFocus> = {
-    "ai-automation": "ai-operations-agents",
-    "ai-ugc-creative": "other",
-    "another-capability": "other",
-    "not-sure": "other",
-  };
-  const resolved =
-    typeof focus === "string"
-      ? Object.hasOwn(legacy, focus)
-        ? legacy[focus]
-        : focus
-      : undefined;
-  const knownFocus = isInquiryFocus(resolved) ? resolved : "";
+  const knownFocus = isInquiryFocus(focus) ? focus : "";
   const serviceSource = `/services/${knownFocus}`;
   return {
     focus: knownFocus,
@@ -102,9 +74,6 @@ export const inquiryLimits = {
   name: 120,
   company: 160,
   email: 254,
-  country: 100,
-  phone: 80,
-  budget: 160,
   brief: 4000,
   systems: 1000,
   outcome: 1000,
@@ -116,9 +85,6 @@ export type InquiryFields = {
   name: string;
   company: string;
   email: string;
-  country: string;
-  phone: string;
-  budget: string;
   focus: InquiryFocus | "";
   brief: string;
   systems: string;
@@ -130,31 +96,19 @@ export type InquiryFields = {
 export type InquiryErrors = Partial<Record<keyof InquiryFields, string>>;
 export type ValidatedInquiry = InquiryFields & { focus: InquiryFocus };
 
-const singleLineFields = [
-  "name",
-  "company",
-  "email",
-  "country",
-  "phone",
-  "budget",
-  "timing",
-] as const;
+const singleLineFields = ["name", "company", "email", "timing"] as const;
 const requiredLabels = {
   name: "your name",
   company: "your company or project name",
   email: "your email address",
-  country: "your country",
   brief: "a short project brief",
 } as const;
 
-export function validateInquiry(
-  value: unknown,
-): { ok: true; data: ValidatedInquiry } | { ok: false; errors: InquiryErrors } {
+export function validateInquiry(value: unknown):
+  | { ok: true; data: ValidatedInquiry }
+  | { ok: false; errors: InquiryErrors } {
   if (!value || typeof value !== "object" || Array.isArray(value)) {
-    return {
-      ok: false,
-      errors: { brief: "Please check your project details." },
-    };
+    return { ok: false, errors: { brief: "Please check your project details." } };
   }
 
   const input = value as Record<string, unknown>;
@@ -163,9 +117,6 @@ export function validateInquiry(
     name: "",
     company: "",
     email: "",
-    country: "",
-    phone: "",
-    budget: "",
     focus: "",
     brief: "",
     systems: "",
@@ -174,9 +125,7 @@ export function validateInquiry(
     website: "",
   };
 
-  for (const key of Object.keys(
-    inquiryLimits,
-  ) as (keyof typeof inquiryLimits)[]) {
+  for (const key of Object.keys(inquiryLimits) as (keyof typeof inquiryLimits)[]) {
     const raw = input[key];
     if (raw !== undefined && typeof raw !== "string") {
       errors[key] = "Please enter text in this field.";
@@ -185,16 +134,13 @@ export function validateInquiry(
     const text = typeof raw === "string" ? raw.trim() : "";
     data[key] = text;
     if (text.length > inquiryLimits[key]) {
-      errors[key] =
-        `Please use ${inquiryLimits[key].toLocaleString("en-US")} characters or fewer.`;
+      errors[key] = `Please use ${inquiryLimits[key].toLocaleString("en-US")} characters or fewer.`;
     } else if (/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/.test(text)) {
       errors[key] = "Please remove unsupported characters.";
     }
   }
 
-  for (const key of Object.keys(
-    requiredLabels,
-  ) as (keyof typeof requiredLabels)[]) {
+  for (const key of Object.keys(requiredLabels) as (keyof typeof requiredLabels)[]) {
     if (!data[key] && !errors[key]) {
       errors[key] = `Please add ${requiredLabels[key]}.`;
     }

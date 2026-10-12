@@ -4,13 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, List, X } from "@phosphor-icons/react";
-import { site } from "@/lib/site";
 import { Brand } from "./brand";
 
 const navigation = [
   { href: "/services", label: "Services" },
   { href: "/work", label: "Work" },
-  { href: "/labs", label: "Labs" },
   { href: "/about", label: "Studio" },
 ];
 
@@ -55,15 +53,9 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <a
-          className="header-contact text-link"
-          href={site.auditBooking}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Book an AI Workflow Audit{" "}
-          <ArrowUpRight size={18} aria-hidden="true" />
-        </a>
+        <Link className="header-contact text-link" href="/contact">
+          Let’s talk <ArrowUpRight size={18} aria-hidden="true" />
+        </Link>
         <button
           className="menu-toggle icon-button"
           ref={toggle}
@@ -112,30 +104,29 @@ export function Header() {
             </button>
           </div>
           <nav aria-label="Mobile navigation">
-            {[...navigation, { href: "/contact", label: "Contact" }].map(
-              (link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  aria-current={path === link.href ? "page" : undefined}
-                  onClick={() => closeMenu(true)}
-                >
-                  {link.label}
-                  <ArrowUpRight size={24} aria-hidden="true" />
-                </Link>
-              ),
-            )}
+            {[
+              ...navigation,
+              { href: "/zavino-owned-products", label: "Our products" },
+              { href: "/contact", label: "Contact" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={path === link.href ? "page" : undefined}
+                onClick={() => closeMenu(true)}
+              >
+                {link.label}
+                <ArrowUpRight size={24} aria-hidden="true" />
+              </Link>
+            ))}
           </nav>
-          <a
+          <Link
             className="button"
-            href={site.auditBooking}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact"
             onClick={() => closeMenu(true)}
           >
-            Book an AI Workflow Audit{" "}
-            <ArrowUpRight size={18} aria-hidden="true" />
-          </a>
+            Discuss your project <ArrowUpRight size={18} aria-hidden="true" />
+          </Link>
         </div>
       </dialog>
     </header>

@@ -38,20 +38,20 @@ export function ServiceHero({
         </div>
         <div className="sp-hero-aside">
           <p>{description}</p>
-          <a
+          <Link
             className="button"
+            href={`/contact?focus=${focus}&source=/services/${focus}`}
+          >
+            {action} <ArrowUpRight size={18} />
+          </Link>
+          <a
+            className="sp-down"
             href={site.auditBooking}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Book an AI Workflow Audit <ArrowUpRight size={18} />
+            Book a 30-minute call <ArrowUpRight size={15} />
           </a>
-          <Link
-            className="sp-down"
-            href={`/contact?focus=${focus}&source=/services/${focus}`}
-          >
-            {action} <ArrowUpRight size={15} />
-          </Link>
         </div>
       </div>
       <div className="sp-hero-facts">
@@ -203,21 +203,22 @@ export function ServiceBrief({
       <div className="sp-brief-bottom">
         <p>{description}</p>
         <div className="sp-brief-actions">
-          <a
+          <Link
+            href={`/contact?focus=${focus}&source=/services/${focus}`}
             className="button"
+          >
+            {action}
+            <ArrowUpRight size={18} />
+          </Link>
+          <a
             href={site.auditBooking}
             target="_blank"
             rel="noopener noreferrer"
-          >
-            Book an AI Workflow Audit <ArrowUpRight size={18} />
-          </a>
-          <Link
             className="text-link"
-            href={`/contact?focus=${focus}&source=/services/${focus}`}
           >
-            {action}
+            Book a 30-minute call
             <ArrowUpRight size={17} />
-          </Link>
+          </a>
         </div>
       </div>
     </section>

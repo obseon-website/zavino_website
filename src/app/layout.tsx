@@ -11,8 +11,6 @@ import "./homepage.css";
 import "./service-pages.css";
 import "./experience.css";
 import "./service-playground.css";
-import "./business-concepts.css";
-import "./business-pages.css";
 
 const display = localFont({
   src: "../fonts/manrope-latin-wght-normal.woff2",
@@ -23,18 +21,18 @@ const display = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Zavino | Practical Technology for Business",
+    default: "Zavino | AI Automation Agency & SaaS Development",
     template: "%s | Zavino",
   },
   description:
-    "Zavino builds AI systems, SaaS, web apps, websites, and content workflows for businesses in Bangladesh and worldwide. Built to launch. Supported to grow.",
+    "AI automation, SaaS products, and thoughtful websites. Zavino brings design and engineering together to make everyday business work easier.",
   openGraph: {
     type: "website",
     locale: "en_BD",
     siteName: "Zavino",
-    title: "Zavino | Practical Technology for Business",
+    title: "Zavino | AI Automation Agency & SaaS Development",
     description:
-      "Technology that helps businesses move smarter. Built in Dhaka. Working with ambitious businesses worldwide.",
+      "AI automation, SaaS products, and thoughtful websites. Good technology for a lighter workday.",
     images: [
       {
         url: "/og.jpg",

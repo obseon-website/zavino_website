@@ -8,16 +8,6 @@ const nextConfig: NextConfig = {
   images: { unoptimized: true }, // Responsive WebP assets are generated before build; no paid image binding required.
   async redirects() {
     return [
-      {
-        source: "/services/ai-automation",
-        destination: "/services/ai-operations-agents",
-        permanent: true,
-      },
-      {
-        source: "/zavino-owned-products",
-        destination: "/labs",
-        permanent: true,
-      },
       { source: "/portfolio", destination: "/work", permanent: true },
       { source: "/case-study", destination: "/work", permanent: true },
       { source: "/about-us", destination: "/about", permanent: true },

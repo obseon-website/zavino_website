@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowUp, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { FooterSignature } from "./footer-signature";
-import { serviceCatalog, auditCopy } from "@/lib/services";
 import { policyLinks, site } from "@/lib/site";
 
 export function ContactCta({ focus }: { focus?: string }) {
@@ -14,26 +13,30 @@ export function ContactCta({ focus }: { focus?: string }) {
           <span>work better?</span>
         </h2>
         <div className="contact-cta-copy">
-          <p>{auditCopy}</p>
+          <p>
+            Bring the idea, the question, or the thing that takes too much time.
+            We’ll find a useful place to start.
+          </p>
           <div className="button-group">
-            <a
-              className="button"
-              href={site.auditBooking}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Book an AI Workflow Audit <ArrowUpRight size={19} />
-            </a>
             <Link
-              className="text-link"
+              className="button"
               href={
                 focus
                   ? `/contact?focus=${encodeURIComponent(focus)}`
                   : "/contact"
               }
             >
-              Or tell us what you have in mind <ArrowUpRight size={17} />
+              Discuss your project <ArrowUpRight size={19} aria-hidden="true" />
             </Link>
+            <a
+              className="text-link"
+              href={site.auditBooking}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Or book a 30-minute call{" "}
+              <ArrowUpRight size={17} aria-hidden="true" />
+            </a>
           </div>
         </div>
       </div>
@@ -49,17 +52,16 @@ export function Footer() {
         <div className="footer-top">
           <nav className="footer-links" aria-label="Footer services">
             <span className="footer-label">What we do</span>
-            {serviceCatalog.map((item) => (
-              <Link key={item.slug} href={`/services/${item.slug}`}>
-                {item.name}
-              </Link>
-            ))}
+            <Link href="/services/ai-automation">AI automation</Link>
+            <Link href="/services/saas-development">SaaS development</Link>
+            <Link href="/services/web-development">Web development</Link>
+            <Link href="/services#more-capabilities">Creative & more</Link>
           </nav>
           <nav className="footer-links" aria-label="Footer navigation">
             <span className="footer-label">Zavino</span>
             <Link href="/work">Our work</Link>
             <Link href="/about">The studio</Link>
-            <Link href="/labs">Zavino Labs</Link>
+            <Link href="/zavino-owned-products">Our products</Link>
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="footer-links footer-contact">

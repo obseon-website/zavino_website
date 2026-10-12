@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Check } from "@phosphor-icons/react/dist/ssr";
-import { SaasRelease } from "@/components/concepts/saas-release";
-import { OngoingSupport } from "@/components/ongoing-support";
-import { homeProcess } from "@/lib/home";
+import { ServicePlayground } from "@/components/service-playground";
 import {
   ServiceBrief,
   ServiceFaq,
@@ -23,7 +21,7 @@ export default function SaasDevelopmentPage() {
   return (
     <main id="main" className="sp-page sp-saas-page">
       <ServiceHero
-        label="Custom SaaS Products"
+        label="SaaS development"
         title={
           <>
             A product people
@@ -40,23 +38,20 @@ export default function SaasDevelopmentPage() {
           "A deliberate path to release",
         ]}
       />
-      <section className="service-concept-section section-shell">
-        <div className="service-concept-intro">
+      <section className="sp-product-showcase section-shell" id="approach">
+        <div className="sp-product-intro">
           <h2>
-            A first release.
+            One product.
             <br />
-            With a reason.
+            <span>Every perspective.</span>
           </h2>
           <p>
-            Choose what belongs in your product. See the customer and team
-            perspectives, then assemble a release that does one useful thing
-            well.
-          </p>
-          <p className="concept-invitation">
-            Add or remove modules. Switch perspective. Assemble your preview.
+            A customer needs a clear next step. An admin needs control.
+            Operations needs to know what happened. A useful product considers
+            all three.
           </p>
         </div>
-        <SaasRelease />
+        <ServicePlayground kind="saas" />
       </section>
       <section className="sp-release section-shell">
         <ServiceSectionHeading
@@ -191,13 +186,33 @@ export default function SaasDevelopmentPage() {
       />
       <ServiceProcess
         title="Make the product real, one decision at a time."
-        stages={homeProcess.map((stage) => ({
-          title: stage.title,
-          description: stage.description,
-          artifact: stage.deliverable,
-        }))}
+        stages={[
+          {
+            title: "Discover",
+            description:
+              "Identify users, commercial intent, core workflows, constraints, and what would make the first release worthwhile.",
+            artifact: "OUTPUT / PRODUCT BRIEF",
+          },
+          {
+            title: "Shape",
+            description:
+              "Work through the UX, test a prototype, and align the architecture and release scope with the product’s priorities.",
+            artifact: "OUTPUT / RELEASE BLUEPRINT",
+          },
+          {
+            title: "Build",
+            description:
+              "Deliver in visible increments. Review working journeys, test the boundaries, and connect the systems the product needs.",
+            artifact: "OUTPUT / TESTED PRODUCT",
+          },
+          {
+            title: "Release & learn",
+            description:
+              "Launch with agreed ownership. Use actual feedback, instrumentation, and operating experience to prioritize the next work.",
+            artifact: "OUTPUT / NEXT-RELEASE PLAN",
+          },
+        ]}
       />
-      <OngoingSupport />
       <ServiceFaq
         items={[
           {
