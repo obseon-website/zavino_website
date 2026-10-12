@@ -2466,66 +2466,12 @@
 }
 .labs-product {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   gap: clamp(2rem, 6vw, 6rem);
   align-items: center;
   padding-block: 3rem;
   border-top: 1px solid var(--line);
   scroll-margin-top: 7rem;
-}
-.labs-product-visual {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: clamp(2rem, 4vw, 3.5rem);
-  min-height: 24rem;
-  background: var(--forest-200);
-  border-radius: var(--rounded-image, 0.25rem);
-}
-.labs-visual-forma {
-  background: var(--linen);
-}
-.labs-product-logotype {
-  font:
-    500 clamp(2.5rem, 4.8vw, 4.5rem) / 1.08 var(--font-display),
-    sans-serif;
-  letter-spacing: -0.04em;
-}
-.labs-ranking > div {
-  display: grid;
-  grid-template-columns: 2rem 1fr auto;
-  align-items: center;
-  gap: 1rem;
-  border-bottom: 1px solid var(--line);
-  padding-block: 0.75rem;
-}
-.labs-ranking > div > span:first-child {
-  font-size: 0.8125rem;
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-}
-.labs-visual-caption {
-  font-size: 0.8125rem;
-  color: var(--muted);
-}
-.labs-file-formats {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-}
-.labs-file-formats > span {
-  display: grid;
-  place-items: center;
-  width: 7rem;
-  aspect-ratio: 0.85;
-  background: var(--white);
-  border-radius: 0.375rem;
-  font:
-    500 1.5rem var(--font-display),
-    sans-serif;
-  box-shadow: 4px 10px 24px oklch(from var(--ink) l c h / 0.08);
 }
 .labs-product-heading {
   display: flex;
@@ -2567,16 +2513,6 @@
     grid-template-columns: minmax(0, 1fr);
     gap: 2rem;
     padding-block: 2rem;
-  }
-  .labs-product-visual {
-    min-height: 20rem;
-    padding: 2rem;
-  }
-  .labs-file-formats {
-    gap: 1rem;
-  }
-  .labs-file-formats > span {
-    width: 5.5rem;
   }
 }
 

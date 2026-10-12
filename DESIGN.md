@@ -327,7 +327,7 @@ The scene sizes with its component through container units. At phone widths, aut
 
 ### Images and Evidence
 
-The active hero is a static tabletop illustration of an ivory miniature fighter jet on a forest-green ribbon ramp. Keep its descriptive alternative text, coherent contact shadows, and complete silhouette in the responsive crop. The earlier blue bridge is historical, not the active asset. Supplied creative work retains its project title and category; Aston Mark is identified as a Zavino owned product in ordinary copy. Supporting demos and concept work keep visible concept attribution near the artifact. Labels describe evidence instead of decorating headings.
+The active hero is a static tabletop illustration of an ivory miniature fighter jet on a forest-green ribbon ramp. Keep its descriptive alternative text, coherent contact shadows, and complete silhouette in the responsive crop. The earlier blue bridge is historical, not the active asset. The remaining supplied creative work retains its project title and category. Labs identifies Outbid.bd as work in progress and Forma as available to try, with short descriptions and direct product links. Supporting demos and concept work keep visible concept attribution near the artifact. Labels describe evidence instead of decorating headings.
 
 Shipping raster provenance remains with each asset in its metadata/sidecar. The exact jet-edit prompt is recorded in `docs/design/flight-ramp.prompt.txt`; the active raster and its provenance sidecar are `public/media/flight-ramp.webp` and `public/media/flight-ramp.webp.json`. Review captures are evidence of the implementation, not design comps.
 
@@ -380,3 +380,9 @@ The latest user brief preserves the forest-green catalogue world and replaces th
 Completion confetti is a single 18-piece burst anchored to the action button. It uses the existing forest and sand colors, only transform/opacity, and cleans up after 760–920ms. This is rare completion feedback; buttons update immediately. Repeated clicks cancel the prior burst; reset, unmount, visibility changes, keyboard input, and reduced-motion handling avoid lingering effects. SaaS and web views reserve space for reset controls so completion does not move the controls.
 
 The scroll stage uses matching CSS/GSAP initial poses, a reserved viewport height budget, exact native sticky start/end boundaries, a 180ms scrub catch-up, and small overlapping transitions. Product feature icons reflect each task: workspace, files, next step, queue, handoffs, activity, people/access, billing, and settings. The hero, global blur, route transitions, and footer lettering retain their established visual treatment.
+
+## Product previews and footer hierarchy — 13 October 2026
+
+Labs uses the products’ own marks, including the original Outbid symbol and Poppins lettering, and Forma’s original three-layer blue mark. These colors and font remain isolated to product branding; the studio palette and Manrope typography remain the house system. The homepage’s product links use the same marks.
+
+The Outbid preview reflects its category filters, amount controls, and business leaderboard, with clearly labeled sample businesses and no submission or payment action. The Forma preview reflects its two file objects, original mountain sample, format selection, and optional size/quality controls. Conversion produces an actual local PNG, JPEG, or WebP download. File output and reset feedback reserve their space. Both previews use the shared completion burst, immediate keyboard states, and reduced-motion handling. Footer navigation headings use 18px semibold Manrope and a full-column rule above the 14px links.

@@ -422,13 +422,13 @@
       },
       {
         "name": "Scroll-driven animation",
-        "value": "scrub: true; ease: none; start: top 45%; end: bottom 75%",
-        "purpose": "Desktop-only native-scroll stage at minimum 800px width and 650px height, without reduced motion. Setup and refreshInit fit the plane uniformly using sticky top, unscaled caption/margin, blur height, and 16px clearance. The 35rem natural plane at 800–1100px has its scaled height reserved by an outer frame. Compact, short, reduced-motion, and import-failure modes expose working local concepts instead of the stage. Cleanup removes refresh listeners and inline height/transform."
+        "value": "scrub: 0.18; ease: none; start/end match native sticky stage boundaries",
+        "purpose": "Four 54svh desktop chapters at minimum 800px width and 650px height, without reduced motion. CSS reserves the viewport-fitting frame before GSAP loads. Setup/refresh uniformly fit the plane using sticky top, full-size caption, blur height, and 16px clearance. Compact, short, reduced-motion, and import-failure modes offer examples through native disclosures. Cleanup removes refresh listeners and inline height/transform."
       },
       {
         "name": "service-concept-pose",
         "value": "rotateX(6deg) rotateY(-9deg) rotateZ(-3deg)",
-        "purpose": "Resting dimensional pose for the first two concepts; the final web concept settles flat. Transform and opacity are reversible through scroll."
+        "purpose": "Matching CSS/GSAP resting pose for all four service concepts. Small overlapping transform/opacity transitions remain reversible through native scroll."
       },
       {
         "name": "Automation object motion",
@@ -479,6 +479,11 @@
         "name": "Route preference alternative",
         "value": "80ms linear opacity; keyboard animation none",
         "purpose": "Reduced motion or reduced transparency removes snapshot blur. Keyboard navigation has no animation."
+      },
+      {
+        "name": "Button completion celebration",
+        "value": "18 pieces; 760–920ms; transform/opacity; strong ease-out",
+        "purpose": "One forest/sand burst from the completion button. State changes immediately. Keyboard and reduced-motion input omit particles. Reset, repeated bursts, visibility changes, and unmount cancel and clean up."
       }
     ],
     "breakpoints": [

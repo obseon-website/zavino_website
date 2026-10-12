@@ -453,9 +453,15 @@ svg {
   text-decoration: underline;
 }
 .footer-label {
-  font-size: 0.75rem;
-  color: var(--muted);
+  align-self: stretch;
+  padding-bottom: 1rem;
   margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font:
+    600 1.125rem / 1.3 var(--font-display),
+    sans-serif;
+  letter-spacing: -0.02em;
 }
 .footer-contact p {
   font-size: 0.8125rem;
@@ -473,6 +479,89 @@ svg {
   display: inline-flex;
   align-items: center;
   min-height: 2.5rem;
+}
+
+/* Product branding is isolated from the studio's Manrope / forest system. */
+@font-face {
+  font-family: "Outbid Poppins";
+  src: url("/products/outbid-poppins-600.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+.product-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0.5rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+.product-logo-outbid {
+  font-family: "Outbid Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+.product-logo-mark {
+  width: 2.25rem;
+  height: 2.25rem;
+  object-fit: contain;
+}
+.product-logo-suffix {
+  font-weight: inherit;
+}
+.product-logo-forma {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.625rem;
+  font-weight: 650;
+  letter-spacing: -0.04em;
+}
+.forma-brand-mark {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 29px;
+  margin-right: 0.125rem;
+  transform: rotate(-10deg);
+}
+.forma-brand-mark i {
+  position: absolute;
+  width: 11px;
+  border-radius: 4px;
+}
+.forma-brand-mark i:nth-child(1) {
+  left: 2px;
+  top: 5px;
+  height: 23px;
+  background: #3448ed;
+}
+.forma-brand-mark i:nth-child(2) {
+  left: 10px;
+  top: 2px;
+  height: 18px;
+  background: #6b7afa;
+}
+.forma-brand-mark i:nth-child(3) {
+  left: 18px;
+  top: 0;
+  height: 11px;
+  background: #b8c0ff;
+}
+.forma-brand-dot {
+  color: #3448ed;
+}
+.product-logo-compact {
+  font-size: 1.25rem;
+  gap: 0.5rem;
+}
+.product-logo-compact .product-logo-mark {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+.product-logo-compact .forma-brand-mark {
+  transform: rotate(-10deg) scale(0.86);
+  transform-origin: center;
 }
 .footer-bottom {
   display: flex;

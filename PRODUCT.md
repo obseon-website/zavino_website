@@ -41,6 +41,7 @@ Provide working revenue, operations, SaaS, and content examples in the services 
 - `docs/design/flight-ramp.prompt.txt` and `public/media/flight-ramp.webp.json`: exact prompt and provenance for the active hero.
 - `docs/design/services-motion-verification.md`: saved build/browser evidence and its limits. Viewport emulation does not establish physical-touch or frame-time performance.
 - `src/lib/products.ts` and `src/app/labs/page.tsx`: Outbid.bd’s work-in-progress business discovery preview and Forma’s browser-based PNG, JPEG, and WebP tool. The names, links, and Outbid status were supplied by the user; descriptions were checked against their live previews. The former owned-products URL redirects to Labs.
+- `src/components/product-logo.tsx`, `labs-product-preview.tsx`, and `public/products/README.md`: original product branding and simplified interactive views based on the live apps. Outbid uses labeled sample rankings; Forma converts its original sample image in the browser and offers a real download. The homepage uses the same product logos.
 - `src/components/button-confetti.ts`: bounded button-origin celebration on completed examples; no particles for keyboard or reduced-motion input. Product features use task-specific icons.
 - No supported numerical business outcomes, testimonials, enterprise certifications, or delivery guarantees are supplied.
 

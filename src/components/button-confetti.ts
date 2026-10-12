@@ -25,7 +25,9 @@ export function useButtonConfetti() {
   }, [cancel]);
 
   const celebrate = useCallback(
-    (event: MouseEvent<HTMLButtonElement>) => {
+    (
+      event: Pick<MouseEvent<HTMLButtonElement>, "currentTarget" | "detail">,
+    ) => {
       cancel();
       // Completion text still updates immediately for keyboard and reduced motion.
       if (

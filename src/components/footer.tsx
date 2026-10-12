@@ -48,23 +48,30 @@ export function Footer() {
       <FooterSignature />
       <div className="section-shell footer-information">
         <div className="footer-top">
-          <nav className="footer-links" aria-label="Footer services">
-            <span className="footer-label">What we do</span>
+          <nav className="footer-links" aria-labelledby="footer-services-title">
+            <h2 className="footer-label" id="footer-services-title">
+              What we do
+            </h2>
             {serviceCatalog.map((service) => (
               <Link key={service.slug} href={`/services#${service.slug}`}>
                 {service.name}
               </Link>
             ))}
           </nav>
-          <nav className="footer-links" aria-label="Footer navigation">
-            <span className="footer-label">Zavino</span>
+          <nav
+            className="footer-links"
+            aria-labelledby="footer-navigation-title"
+          >
+            <h2 className="footer-label" id="footer-navigation-title">
+              Zavino
+            </h2>
             <Link href="/work">Our work</Link>
             <Link href="/about">The studio</Link>
             <Link href="/labs">Zavino Labs</Link>
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="footer-links footer-contact">
-            <span className="footer-label">A direct line</span>
+            <h2 className="footer-label">A direct line</h2>
             <a href={`mailto:${site.email}`}>
               {site.email} <ArrowUpRight size={14} aria-hidden="true" />
             </a>

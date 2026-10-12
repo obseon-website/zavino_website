@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   },
   description:
     "AI systems that help you follow up with leads, handle daily tasks, and create content. SaaS products built around your idea. Based in Dhaka, working worldwide.",
+  robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     locale: "en_BD",

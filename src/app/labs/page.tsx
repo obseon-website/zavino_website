@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { ContactCta } from "@/components/footer";
 import { labProducts } from "@/lib/products";
+import { LabsProductPreview } from "@/components/labs-product-preview";
+import "./labs.css";
 
 export const metadata: Metadata = {
   title: "Zavino Labs — our products",
@@ -42,30 +44,7 @@ export default function ZavinoLabsPage() {
             key={product.id}
             aria-labelledby={`${product.id}-title`}
           >
-            <div
-              className={`labs-product-visual labs-visual-${product.id}`}
-              aria-hidden="true"
-            >
-              <span className="labs-product-logotype">{product.name}</span>
-              {product.id === "outbid" ? (
-                <div className="labs-ranking">
-                  {["Discover", "Explore", "Connect"].map((label, index) => (
-                    <div key={label}>
-                      <span>{String(index + 1).padStart(2, "0")}</span>
-                      <span>{label}</span>
-                      <ArrowUpRight size={18} />
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="labs-file-formats">
-                  <span>PNG</span>
-                  <ArrowUpRight size={24} />
-                  <span>WebP</span>
-                </div>
-              )}
-              <span className="labs-visual-caption">{product.category}</span>
-            </div>
+            <LabsProductPreview product={product.id} />
             <div className="labs-product-copy">
               <div className="labs-product-heading">
                 <h3 id={`${product.id}-title`}>{product.name}</h3>

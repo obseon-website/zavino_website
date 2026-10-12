@@ -35,6 +35,7 @@ export function SpWorkGallery() {
                 width={960}
                 height={index === 0 ? 1280 : 960}
                 sizes="(max-width: 700px) 90vw, 45vw"
+                loading={index === 0 ? "eager" : "lazy"}
               />
               <span>
                 <ArrowUpRight size={23} />

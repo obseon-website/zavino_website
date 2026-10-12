@@ -6,6 +6,7 @@ import { ServiceExperience } from "@/components/service-experience";
 import { ContactCta } from "@/components/footer";
 import { homeProcess } from "@/lib/home";
 import { labProducts } from "@/lib/products";
+import { ProductLogo } from "@/components/product-logo";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 
@@ -57,7 +58,7 @@ export default function Home() {
                 <li key={product.id}>
                   <Link href={`/labs#${product.id}`}>
                     <span>
-                      {product.name}
+                      <ProductLogo product={product.id} compact />
                       <small>{product.status}</small>
                     </span>
                     <ArrowUpRight size={18} aria-hidden="true" />

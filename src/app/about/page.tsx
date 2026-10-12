@@ -48,6 +48,7 @@ export default function AboutPage() {
           width={1600}
           height={900}
           sizes="(max-width: 1480px) 90vw, 1320px"
+          loading="eager"
         />
         <figcaption>Design, engineering, and AI. Working together.</figcaption>
       </figure>
