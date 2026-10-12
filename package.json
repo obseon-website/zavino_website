@@ -14,7 +14,8 @@
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "check:size": "wrangler deploy --dry-run",
-    "media:reels": "node scripts/prepare-reels.mjs"
+    "media:reels": "node scripts/prepare-reels.mjs",
+    "test:inquiry": "node --test scripts/test-inquiry.mjs"
   },
   "engines": {
     "node": ">=22.0.0"

@@ -17,10 +17,10 @@ Run local migrations before testing a fresh checkout:
 ```sh
 npx wrangler d1 migrations apply zavino-leads --local
 npm run dev
-node --test scripts/test-inquiry.mjs
+npm run test:inquiry
 ```
 
-`next dev` gets local bindings through the existing `initOpenNextCloudflareForDev()` in `next.config.ts`. Local tests use local D1 and mocked email; they do not write synthetic briefs to production or send email. The normal Worker build remains `npm run build:worker`.
+`next dev` gets local bindings through the existing `initOpenNextCloudflareForDev()` in `next.config.ts`. The inquiry tests use an isolated in-memory SQLite database with the actual migration and mocked email. They do not require a running dev server, write synthetic briefs to production, or send email. The website update is delivered through GitHub only.
 
 For future schema changes, create a migration and apply it locally, verify it, then apply it remotely:
 
@@ -54,7 +54,7 @@ The database remains the source of truth while email is disabled. Authorized tea
 npx wrangler d1 execute zavino-leads --remote --command "SELECT notification_status, count(*) AS total FROM project_inquiries GROUP BY notification_status"
 ```
 
-Saved fields: name, company/project, email, focus, brief, optional systems/outcome/timing, allowlisted source page, timestamp, payload hash, and notification state. No IP address or user-agent is stored. Logs contain event codes and inquiry references only. This change adds no analytics events or private form data to URLs.
+Saved fields: name, company, work email, focus, requirement, country, optional phone/WhatsApp, budget and timeline, allowlisted source page, timestamp, payload hash, and notification state. New records preserve country, phone and budget in the existing `outcome` text column as JSON `{version: 2, country, phone, budget, outcome}`; legacy records remain plain text. Readers must check the version before treating the field as structured context. No database migration is required. No IP address or user-agent is stored. Logs contain event codes and inquiry references only. This change adds no analytics events or private form data to URLs.
 
 The form rejects cross-origin requests, unknown focus/source values, oversized requests, honeypot fills, invalid types, control characters, and missing/invalid required fields. It limits new briefs to five per email in ten minutes. That email limit is a basic abuse control, not a complete bot defense. Domain-level WAF rules can be configured separately if production traffic warrants it.
 

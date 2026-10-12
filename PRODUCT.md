@@ -16,7 +16,7 @@ Zavino's marketing website explains its capabilities and supports project inquir
 
 ## Positioning
 
-AI automation, SaaS development, and web development remain the three core services. The user reconfirmed this hierarchy on 8 October 2026. Brand, content, and creative production support the core offer.
+The 12 October 2026 business brief defines six primary services: AI Revenue Systems, AI Operations & Agents, Custom SaaS Products, Custom Web Apps & AI-Powered Platforms, AI Content Flows, and Enterprise AI Training (Bangladesh enterprise teams only). Websites remain part of the digital experience practice; brand direction, launch content, creative assets, and growth support accompany builds. The user explicitly requested adding this information while preserving the existing theme and art direction after reverting a broader redesign.
 
 ## Capabilities and Constraints
 
@@ -34,13 +34,13 @@ Provide distinct working concepts for automation, SaaS, and web on detailed serv
 
 ## Evidence on Hand
 
-- `src/lib/site.ts`: contact details, approved creative project descriptions, service scopes, and clients.
+- `src/lib/site.ts`: contact details, approved creative project descriptions, and clients. `src/lib/services.ts`: the six-service catalogue and support copy.
 - `public/media/`: supplied creative portfolio, showreels, and owned-product cover.
 - `src/components/service-playground.tsx` and `service-experience.tsx`: local illustrative concepts with truthful captions, not customer outcomes. Automation approval sends no data.
 - `docs/design/services-motion-brief.md`: the latest explicit visual, interaction, mobile, asset, and delivery contract.
 - `docs/design/flight-ramp.prompt.txt` and `public/media/flight-ramp.webp.json`: exact prompt and provenance for the active hero.
 - `docs/design/services-motion-verification.md`: saved build/browser evidence and its limits. Viewport emulation does not establish physical-touch or frame-time performance.
-- `src/app/zavino-owned-products/page.tsx`: existing owned-product description.
+- `src/app/labs/page.tsx`: renamed owned-product page; Aston Mark is the documented launched digital product. The former URL redirects here.
 - No supported numerical business outcomes, testimonials, enterprise certifications, or delivery guarantees are supplied.
 
 ## Product Principles

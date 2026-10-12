@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowDown, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { ContactCta } from "@/components/footer";
 import { ReelGallery } from "@/components/reel-gallery";
 import { SpWorkGallery } from "@/components/sp-work-gallery";
@@ -9,7 +9,7 @@ import { ProductDemo } from "@/components/product-demo";
 import "@/app/service-pages.css";
 
 export const metadata: Metadata = {
-  title: "Work & Zavino Lab — creative archive and system concepts",
+  title: "Work — technology, products & creative heritage",
   description:
     "Explore Zavino’s selected campaign creative, product imagery, and films, alongside clearly labeled in-house automation and SaaS concepts.",
   alternates: { canonical: "/work" },
@@ -25,23 +25,30 @@ export default function WorkPage() {
         </h1>
         <div className="sp-work-intro">
           <p>
-            Selected creative work from our archive, and an open look at the
-            systems we are exploring in Zavino Lab.
+            Selected work, our launched digital product, and clearly labeled
+            internal concepts. Explore the technology we build and the creative
+            heritage behind it.
           </p>
           <nav aria-label="Work collections">
-            <a href="#creative-archive">
-              Creative archive <span aria-hidden="true">↓</span>
-            </a>
-            <a href="#zavino-lab">
-              Zavino Lab <span aria-hidden="true">↓</span>
-            </a>
+            {[
+              ["automation-agents", "AI Automation & Agents"],
+              ["digital-products", "SaaS & Digital Products"],
+              ["web-platforms", "Web Apps & Platforms"],
+              ["digital-experiences", "Websites & Digital Experiences"],
+              ["creative-heritage", "Creative Heritage"],
+            ].map(([id, label]) => (
+              <a key={id} href={`#${id}`}>
+                {label}
+                <ArrowDown size={16} aria-hidden="true" />
+              </a>
+            ))}
           </nav>
         </div>
       </section>
-      <section className="sp-work-archive section-shell" id="creative-archive">
+      <section className="sp-work-archive section-shell" id="creative-heritage">
         <div className="sp-work-collection-heading">
           <h2>
-            Creative direction.
+            Creative Heritage.
             <br />
             <span>A distinct point of view.</span>
           </h2>
@@ -77,16 +84,15 @@ export default function WorkPage() {
             a commissioned deployment or client results.
           </p>
         </div>
-        <article className="sp-lab-project">
+        <article className="sp-lab-project" id="automation-agents">
           <div className="sp-lab-project-heading">
             <div>
               <span className="sp-concept-label">
-                ILLUSTRATIVE WORKFLOW / ZAVINO CONCEPT
+                ZAVINO INTERNAL PROTOTYPE
               </span>
               <h3>
-                From customer signal
-                <br />
-                to approved action.
+                AI Automation
+                <br />& Agents.
               </h3>
               <p>
                 Concept scope: connected data, eligibility rules, AI assistance,
@@ -99,16 +105,13 @@ export default function WorkPage() {
           </div>
           <WorkflowDemo />
         </article>
-        <article className="sp-lab-project">
+        <article className="sp-lab-project" id="web-platforms">
           <div className="sp-lab-project-heading">
             <div>
-              <span className="sp-concept-label">
-                ILLUSTRATIVE PRODUCT / ZAVINO CONCEPT
-              </span>
+              <span className="sp-concept-label">PRODUCT CONCEPT</span>
               <h3>
-                One workspace.
-                <br />
-                Different responsibilities.
+                Web Apps
+                <br />& Platforms.
               </h3>
               <p>
                 Concept scope: a useful product workflow viewed through
@@ -123,6 +126,41 @@ export default function WorkPage() {
         </article>
       </section>
 
+      <section className="sp-fit section-shell" id="digital-products">
+        <h2>
+          SaaS &<br />
+          Digital Products
+        </h2>
+        <div>
+          <p>
+            Aston Mark is a launched Zavino-owned digital product: a
+            downloadable creative bundle with an in-house storefront, payments,
+            and automated delivery. Its scope is a digital product business, not
+            a subscription SaaS platform.
+          </p>
+          <Link href="/labs#aston-mark" className="text-link">
+            Explore Aston Mark in Zavino Labs{" "}
+            <ArrowUpRight size={18} aria-hidden="true" />
+          </Link>
+        </div>
+      </section>
+      <section className="sp-fit section-shell" id="digital-experiences">
+        <h2>
+          Websites &<br />
+          Digital Experiences
+        </h2>
+        <div>
+          <p>
+            The Zavino website you are using is our own studio project. Its
+            editorial structure, responsive interface concepts, and connected
+            inquiry journey demonstrate our website practice.
+          </p>
+          <Link href="/services/web-development" className="text-link">
+            Explore our website practice{" "}
+            <ArrowUpRight size={18} aria-hidden="true" />
+          </Link>
+        </div>
+      </section>
       <ContactCta />
     </main>
   );

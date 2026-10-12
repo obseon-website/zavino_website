@@ -1,3 +1,4 @@
+import { OngoingSupport } from "@/components/ongoing-support";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, ArrowRight } from "@phosphor-icons/react/dist/ssr";
@@ -266,6 +267,7 @@ export default function WebDevelopmentPage() {
         href="/services/saas-development"
         label="Explore SaaS development"
       />
+      <OngoingSupport />
       <ServiceBrief
         focus="web-development"
         title="What should your next platform make easier?"

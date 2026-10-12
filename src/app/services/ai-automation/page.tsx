@@ -1,3 +1,4 @@
+import { OngoingSupport } from "@/components/ongoing-support";
 import type { Metadata } from "next";
 import { ArrowDown, Check, ShieldCheck } from "@phosphor-icons/react/dist/ssr";
 import { ServicePlayground } from "@/components/service-playground";
@@ -41,7 +42,7 @@ export default function AiAutomationPage() {
   return (
     <main id="main" className="sp-page sp-ai-page">
       <ServiceHero
-        label="AI automation"
+        label="AI Revenue Systems / AI Operations & Agents"
         title={
           <>
             Connect the systems.
@@ -243,6 +244,7 @@ export default function AiAutomationPage() {
         href="/services/saas-development"
         label="Explore SaaS development"
       />
+      <OngoingSupport />
       <ServiceBrief
         focus="ai-automation"
         title="Which handoff should work better?"

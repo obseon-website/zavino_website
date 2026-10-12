@@ -1,27 +1,43 @@
 import Image from "next/image";
-import Link from "next/link";
+import { site } from "@/lib/site";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 
 export function Hero() {
   return (
     <section className="home-hero section-shell" aria-labelledby="hero-heading">
       <div className="home-hero-intro">
-        <h1 id="hero-heading" aria-label="Good technology. A lighter workday.">
+        <h1
+          id="hero-heading"
+          aria-label="Technology that helps businesses move smarter."
+        >
           <span className="hero-reveal-line" aria-hidden="true">
-            <span>Good technology.</span>
+            <span>Technology that helps</span>
           </span>
           <span className="hero-reveal-line" aria-hidden="true">
-            <span>A lighter workday.</span>
+            <span>businesses move smarter.</span>
           </span>
         </h1>
         <div className="home-hero-copy">
           <p>
-            We build AI automation, SaaS products, and websites that make the
-            everyday work of business feel easier.
+            Zavino builds AI automation, custom SaaS, web apps, websites, and
+            intelligent content workflows that help businesses save time,
+            strengthen sales, improve operations, and grow with confidence.
           </p>
-          <Link href="/contact" className="button">
-            Discuss your project <ArrowUpRight size={19} aria-hidden="true" />
-          </Link>
+          <a
+            href={site.auditBooking}
+            className="button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book an AI Workflow Audit{" "}
+            <ArrowUpRight size={19} aria-hidden="true" />
+          </a>
+          <a href="#solutions" className="text-link hero-explore">
+            Explore What We Build <ArrowUpRight size={18} aria-hidden="true" />
+          </a>
+          <p className="hero-location">
+            Built in Dhaka. Working with ambitious businesses worldwide.
+          </p>
         </div>
       </div>
       <figure className="home-hero-figure">

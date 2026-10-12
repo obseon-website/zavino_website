@@ -21,18 +21,18 @@ const display = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Zavino | AI Automation Agency & SaaS Development",
+    default: "Zavino | Practical technology for business",
     template: "%s | Zavino",
   },
   description:
-    "AI automation, SaaS products, and thoughtful websites. Zavino brings design and engineering together to make everyday business work easier.",
+    "Zavino builds AI systems, SaaS products, custom web apps, websites, and content workflows for businesses in Bangladesh and globally.",
   openGraph: {
     type: "website",
     locale: "en_BD",
     siteName: "Zavino",
-    title: "Zavino | AI Automation Agency & SaaS Development",
+    title: "Zavino | Practical technology for business",
     description:
-      "AI automation, SaaS products, and thoughtful websites. Good technology for a lighter workday.",
+      "Technology that helps businesses move smarter. AI systems, SaaS, web apps, and intelligent content workflows.",
     images: [
       {
         url: "/og.jpg",

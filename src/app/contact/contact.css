@@ -369,3 +369,12 @@
     justify-content: space-between;
   }
 }
+
+.form-extra-fields {
+  margin-top: 25px;
+}
+.project-form .optional-label {
+  margin-left: 6px;
+  font-size: 12px;
+  font-weight: 400;
+}

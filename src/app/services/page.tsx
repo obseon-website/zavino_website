@@ -1,93 +1,80 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowDown, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { ContactCta } from "@/components/footer";
 import { ServicePlayground } from "@/components/service-playground";
+import { OngoingSupport } from "@/components/ongoing-support";
+import { serviceCatalog, supportingCopy } from "@/lib/services";
 
 export const metadata: Metadata = {
-  title: "AI automation, SaaS & web development",
+  title: "AI systems, SaaS, web apps & content workflows",
   description:
-    "Explore Zavino’s AI automation, SaaS development, and web platforms, with supporting AI creative, content, branding, marketing, and SEO capabilities.",
+    "Practical technology for businesses: AI revenue systems, operations agents, SaaS, custom web apps, content workflows, and enterprise AI training in Bangladesh.",
   alternates: { canonical: "/services" },
 };
 
-const capabilities = [
-  {
-    id: "ai-automation",
-    kind: "automation" as const,
-    title: "AI automation",
-    question: "Where does the work get stuck?",
-    description:
-      "Connect the data, decisions, and handoffs across your business. Build a system that knows when to act, when to wait, and when to bring a person in.",
-    scope: [
-      "Workflow & data discovery",
-      "AI agents & integrations",
-      "Human review & guardrails",
-      "Monitoring & iteration",
-    ],
-    link: "Explore AI automation",
+const illustrations = {
+  "ai-revenue-systems": {
+    kind: "automation",
+    href: "/services/ai-automation",
+    label: "Explore our automation approach",
   },
-  {
-    id: "saas-development",
-    kind: "saas" as const,
-    title: "SaaS development",
-    question: "What should your product make possible?",
-    description:
-      "Turn a defined problem into a product people can use. We shape the first useful release and build the roles, data, and operating foundations behind it.",
-    scope: [
-      "Product discovery & UX",
-      "Frontend & backend engineering",
-      "Roles, billing & integrations",
-      "Release & ownership",
-    ],
-    link: "Explore SaaS development",
+  "saas-development": {
+    kind: "saas",
+    href: "/services/saas-development",
+    label: "Explore SaaS development",
   },
-  {
-    id: "web-development",
-    kind: "web" as const,
-    title: "Web development",
-    question: "What does your digital front door need to do?",
-    description:
-      "A website, store, portal, or custom application. Designed around the people using it and connected to the operations that make it work.",
-    scope: [
-      "Sites, stores & portals",
-      "Custom web applications",
-      "CMS & business integrations",
-      "Accessibility, speed & SEO",
-    ],
-    link: "Explore web development",
+  "web-apps-platforms": {
+    kind: "web",
+    href: "/services/web-development",
+    label: "Explore websites & platforms",
   },
-];
-const supporting = [
-  [
-    "Custom AI",
-    "Private knowledge assistants, retrieval over approved data, tailored agents, and in-product AI. We scope evaluation, access boundaries, cost, and the decisions a person should own.",
+} as const;
+
+const serviceNotes = {
+  "ai-operations-agents": [
+    [
+      "Connect the everyday work",
+      "Reporting, support, internal tasks, and knowledge retrieval can share the business tools your team already uses.",
+    ],
+    [
+      "Keep people in control",
+      "Agree on approved sources, access, review points, and when an agent should hand a decision back to your team.",
+    ],
+    [
+      "Improve after launch",
+      "Monitor the workflow, review exceptions, and refine the system as the business changes.",
+    ],
   ],
-  [
-    "AI UGC creative",
-    "AI-assisted creator-style concepts, image and video variants, and platform-ready campaign assets. Synthetic media, rights, brand standards, and approval are part of the brief.",
+  "ai-content-flows": [
+    [
+      "From research to a useful brief",
+      "Connect content research, planning, and asset organization around the audience and business objective.",
+    ],
+    [
+      "A human approval point",
+      "Give your team a clear place to review drafts, correct the direction, and approve material before it moves forward.",
+    ],
+    [
+      "A connected content operation",
+      "Repurpose approved material for different channels and maintain the workflow as your content needs grow.",
+    ],
   ],
-  [
-    "Content production",
-    "Cinematic reels, product and food films, photography, motion graphics, and CGI. A clear creative direction carries through from production to the final deliverables.",
+  "enterprise-ai-training": [
+    [
+      "Workshops around real roles",
+      "Practical AI workshops for the work your sales, operations, and leadership teams actually do.",
+    ],
+    [
+      "Judgment alongside productivity",
+      "Help people understand what to share, what to check, and when to bring their own expertise to a result.",
+    ],
+    [
+      "Support adoption",
+      "Connect the training to an AI adoption strategy, useful productivity systems, and implementation support.",
+    ],
   ],
-  [
-    "Branding & creative",
-    "Brand identity, visual direction, packaging, and social content. A coherent system for the touchpoints around a product, a launch, or an established business.",
-  ],
-  [
-    "Digital marketing",
-    "Campaign strategy, Meta and Google execution, creative inputs, tracking, and iteration. The channel plan follows the audience and objective, with measurement defined in scope.",
-  ],
-  [
-    "SEO",
-    "Technical and on-page SEO, local search and citations, and off-page strategy. We connect site structure, content, and discoverability without promising a ranking.",
-  ],
-  [
-    "Offline marketing",
-    "Event and stall production, print and banner materials, and activation campaigns. Physical experiences can follow the same brand direction as the digital work.",
-  ],
-];
+} as const;
 
 export default function ServicesPage() {
   return (
@@ -100,103 +87,101 @@ export default function ServicesPage() {
         </h1>
         <div className="sp-index-intro">
           <p>
-            AI automation. SaaS products. Web platforms. We build around the
-            work your business needs to do, and the people who need to do it.
+            AI systems, SaaS products, custom web apps, websites, and content
+            workflows. Built around your business, maintained and improved after
+            launch.
           </p>
-          <a href="#ai-automation" className="text-link">
-            Find your starting point <span aria-hidden="true">↓</span>
+          <a href="#ai-revenue-systems" className="text-link">
+            Find your starting point <ArrowDown size={18} aria-hidden="true" />
           </a>
         </div>
-        <nav className="sp-service-nav" aria-label="Our capabilities">
-          {capabilities.map((item, i) => (
-            <a key={item.id} href={`#${item.id}`}>
-              <span>0{i + 1}</span>
-              {item.title}
-              <ArrowUpRight size={15} />
+        <nav
+          className="sp-service-nav service-catalog-nav"
+          aria-label="Six primary services"
+        >
+          {serviceCatalog.map((item) => (
+            <a key={item.slug} href={`#${item.slug}`}>
+              {item.name}
+              <ArrowUpRight size={15} aria-hidden="true" />
             </a>
           ))}
         </nav>
       </section>
       <div className="sp-offers">
-        {capabilities.map((item) => (
-          <section
-            key={item.id}
-            id={item.id}
-            className={`sp-offer sp-offer-${item.kind} section-shell`}
-            aria-labelledby={`${item.id}-title`}
-          >
-            <div className="sp-offer-copy">
-              <h2 id={`${item.id}-title`}>{item.title}</h2>
-              <h3>{item.question}</h3>
-              <p>{item.description}</p>
-              <ul className="sp-inline-scope">
-                {item.scope.map((scope) => (
-                  <li key={scope}>{scope}</li>
-                ))}
-              </ul>
-              <Link href={`/services/${item.id}`} className="text-link">
-                {item.link}
-                <ArrowUpRight size={20} />
-              </Link>
-            </div>
-            <ServicePlayground kind={item.kind} compact />
-          </section>
-        ))}
-      </div>
-      <section
-        className="sp-more section-shell"
-        id="more-capabilities"
-        aria-labelledby="sp-more-title"
-      >
-        <div className="sp-more-heading">
-          <h2 id="sp-more-title">
-            The work
-            <br />
-            around the work.
-          </h2>
-          <p>
-            A product launch may need a brand. An automated journey may need
-            creative. These capabilities can support a wider build or form their
-            own engagement.
-          </p>
-          <Link
-            href="/contact?focus=another-capability&source=/services"
-            className="text-link"
-          >
-            Discuss a supporting need <ArrowUpRight size={18} />
-          </Link>
-        </div>
-        <div className="sp-more-list">
-          {supporting.map(([title, description], index) => (
-            <article key={title}>
-              <span className="sp-number">
-                {String(index + 4).padStart(2, "0")}
-              </span>
-              <div>
-                <h3>{title}</h3>
-                <p>{description}</p>
+        {serviceCatalog.map((item) => {
+          const illustration =
+            item.slug in illustrations
+              ? illustrations[item.slug as keyof typeof illustrations]
+              : undefined;
+          const notes =
+            item.slug in serviceNotes
+              ? serviceNotes[item.slug as keyof typeof serviceNotes]
+              : undefined;
+          return (
+            <section
+              key={item.slug}
+              id={item.slug}
+              className={`sp-offer sp-offer-${illustration?.kind ?? "information"} section-shell`}
+              aria-labelledby={`${item.slug}-title`}
+            >
+              <div className="sp-offer-copy">
+                <h2 id={`${item.slug}-title`}>{item.name}</h2>
+                <h3>{item.line}</h3>
+                <p>{item.description}</p>
+                {"availability" in item && (
+                  <p>
+                    <strong>{item.availability} only.</strong>
+                  </p>
+                )}
+                <ul className="sp-inline-scope">
+                  {item.items.map((scope) => (
+                    <li key={scope}>{scope}</li>
+                  ))}
+                </ul>
+                <Link
+                  href={
+                    illustration?.href ??
+                    `/contact?focus=${item.slug}&source=/services`
+                  }
+                  className="text-link"
+                >
+                  {illustration?.label ?? "Tell us what your team needs"}
+                  <ArrowUpRight size={20} aria-hidden="true" />
+                </Link>
               </div>
-            </article>
-          ))}
-        </div>
-      </section>
-      <section className="sp-fit section-shell">
+              {illustration ? (
+                <ServicePlayground kind={illustration.kind} compact />
+              ) : (
+                <div className="sp-scope-list">
+                  {notes?.map(([title, body]) => (
+                    <article key={title}>
+                      <div>
+                        <h3>{title}</h3>
+                        <p>{body}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              )}
+            </section>
+          );
+        })}
+      </div>
+      <section className="sp-fit section-shell" id="more-capabilities">
         <h2>
-          You do not need
+          The work
           <br />
-          to arrive with a specification.
+          around the work.
         </h2>
         <div>
-          <p>
-            Bring the workflow, the product idea, or the platform that needs to
-            improve. We map the people and systems involved, agree on a useful
-            first release, and make the next decisions clear.
-          </p>
-          <Link href="/contact?source=/services" className="text-link">
-            Tell us what needs to change <ArrowUpRight size={18} />
+          <p>{supportingCopy}</p>
+          <Link href="/work#creative-heritage" className="text-link">
+            Explore our creative heritage{" "}
+            <ArrowUpRight size={18} aria-hidden="true" />
           </Link>
         </div>
       </section>
+      <OngoingSupport />
       <ContactCta />
     </main>
   );

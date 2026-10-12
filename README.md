@@ -24,13 +24,13 @@ npm run start
 
 | Route | Purpose |
 | --- | --- |
-| `/` | Promise, three services, selected work, process, project invitation |
+| `/` | Business promise, six-service index, original three showcases, selected work, four-step process, ongoing support |
 | `/services` | Core services and supporting creative capabilities |
 | `/services/ai-automation` | Automation scope, illustrative workflow, process, FAQs |
 | `/services/saas-development` | Product scope, illustrative role-based concept, process, FAQs |
 | `/services/web-development` | Web scope, responsive concept, standards, process, FAQs |
 | `/work` | Creative archive, 13 films, and clearly labeled lab concepts |
-| `/zavino-owned-products` | Ventures Zavino builds and operates |
+| `/labs` | Zavino Labs and the launched Aston Mark product; former products URL redirects here |
 | `/about` | Studio approach, disciplines, working principles, business details |
 | `/contact` | Validated project brief, booking, email, and WhatsApp |
 | Policy routes | Privacy, terms, cancellation, and refunds |
@@ -39,7 +39,7 @@ The site also includes a 404, sitemap, robots file, social preview, icons, and l
 
 ## Editing
 
-- Homepage service and process data: `src/lib/home.ts`.
+- Service catalogue: `src/lib/services.ts`; homepage showcase and process data: `src/lib/home.ts`.
 - Business details, supplied projects, service scopes: `src/lib/site.ts`.
 - Film titles and order: `src/lib/reels.ts`; original-to-published mapping: `src/lib/reel-manifest.json`.
 - Pages: `src/app/`; shared components: `src/components/`.
@@ -53,7 +53,7 @@ The homepage shows evidence with its true scope. The lab concepts are illustrati
 
 The new daylight bridge image is a generated brand visual, not client work. Its exact prompt is saved in `docs/design/workday-bridge.prompt.txt`. Raster provenance is embedded or stored in adjacent JSON sidecars. Existing portfolio and film assets come from the supplied repository.
 
-The homepage opens with a masked **Reveal** and short **Stagger**. Its three services share a sticky, dimensional CSS interface stage driven by native scroll through GSAP ScrollTrigger. The three UI concepts are labeled as illustrations. On smaller or shorter screens, and with reduced motion, services use a compact static flow.
+The homepage opens with a masked **Reveal** and short **Stagger**. Its three retained illustrative showcases share a sticky, dimensional CSS interface stage driven by native scroll through GSAP ScrollTrigger. The three UI concepts are labeled as illustrations. On smaller or shorter screens, and with reduced motion, services use a compact static flow.
 
 The shared footer adds a large Manrope wordmark, physical depth, and pointer-responsive **Parallax** with a moving light field. A homepage-only **Mask / Blur** treatment progressively diffuses the viewport’s bottom edge. The blur cannot intercept input and disappears for visible keyboard focus, open dialogs, and reduced transparency. Pointer effects require a fine pointer and no reduced-motion preference; they reset on leave, focus, scrolling, resizing, and preference changes.
 

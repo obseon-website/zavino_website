@@ -6,6 +6,8 @@ import { Hero } from "@/components/hero";
 import { ServiceExperience } from "@/components/service-experience";
 import { ContactCta } from "@/components/footer";
 import { homeProcess } from "@/lib/home";
+import { serviceCatalog, supportingCopy } from "@/lib/services";
+import { OngoingSupport } from "@/components/ongoing-support";
 import { projects } from "@/lib/site";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
@@ -29,12 +31,26 @@ export default function Home() {
             We’ll bring the right mix of design and engineering.
           </p>
         </div>
+        <nav
+          className="sp-service-nav home-service-index"
+          aria-label="Six primary services"
+        >
+          {serviceCatalog.map((service) => (
+            <Link key={service.slug} href={`/services#${service.slug}`}>
+              <div>
+                <h3>{service.name}</h3>
+                <p>{service.line}</p>
+                {"availability" in service && (
+                  <small>{service.availability} only</small>
+                )}
+              </div>
+              <ArrowUpRight size={18} aria-hidden="true" />
+            </Link>
+          ))}
+        </nav>
         <ServiceExperience />
         <div className="home-services-foot">
-          <p>
-            Need a brand, content, or a campaign to go with it? That’s part of
-            our practice, too.
-          </p>
+          <p>{supportingCopy}</p>
           <Link href="/services#more-capabilities" className="text-link">
             More ways we help <ArrowRight size={18} aria-hidden="true" />
           </Link>
@@ -51,7 +67,7 @@ export default function Home() {
           <article className="home-owned">
             <Link
               className="home-owned-visual"
-              href="/zavino-owned-products"
+              href="/labs"
               aria-label="Explore Aston Mark, a Zavino owned product"
             >
               <Image
@@ -80,7 +96,7 @@ export default function Home() {
                 It keeps us close to the everyday details that make a product
                 work.
               </p>
-              <Link className="text-link" href="/zavino-owned-products">
+              <Link className="text-link" href="/labs">
                 Meet Aston Mark <ArrowUpRight size={18} aria-hidden="true" />
               </Link>
             </div>
@@ -150,6 +166,7 @@ export default function Home() {
           A little more about us <ArrowUpRight size={18} aria-hidden="true" />
         </Link>
       </section>
+      <OngoingSupport />
       <ContactCta />
     </main>
   );
