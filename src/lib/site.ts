@@ -10,6 +10,8 @@ export const site = {
   whatsapp:
     "https://wa.me/8801844293698?text=Hello%20Zavino%2C%20I%27d%20like%20to%20discuss%20a%20project.",
   auditBooking: "https://cal.com/zavino/audit",
+  auditLabel: "Book an AI audit with Zavino",
+  auditShortLabel: "Book an AI audit",
   address: "Bashundhara R/A, Dhaka, Bangladesh",
   socials: [
     { name: "Instagram", url: "https://www.instagram.com/thezavino/" },

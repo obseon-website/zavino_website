@@ -4,7 +4,7 @@ import { FooterSignature } from "./footer-signature";
 import { serviceCatalog, auditCopy } from "@/lib/services";
 import { policyLinks, site } from "@/lib/site";
 
-export function ContactCta({ focus }: { focus?: string }) {
+export function ContactCta() {
   return (
     <section className="contact-cta" aria-labelledby="contact-cta-title">
       <div className="section-shell contact-cta-inner">
@@ -16,24 +16,13 @@ export function ContactCta({ focus }: { focus?: string }) {
         <div className="contact-cta-copy">
           <p>{auditCopy}</p>
           <div className="button-group">
-            <Link
-              className="button"
-              href={
-                focus
-                  ? `/contact?focus=${encodeURIComponent(focus)}`
-                  : "/contact"
-              }
-            >
-              Tell us about your project{" "}
-              <ArrowUpRight size={17} aria-hidden="true" />
-            </Link>
             <a
-              className="text-link"
+              className="button"
               href={site.auditBooking}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Or book a call <ArrowUpRight size={19} aria-hidden="true" />
+              {site.auditLabel} <ArrowUpRight size={19} aria-hidden="true" />
             </a>
           </div>
         </div>

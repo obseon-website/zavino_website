@@ -27,8 +27,8 @@ npm run start
 | `/` | Business promise, six-service index, original three showcases, selected work, four-step process, ongoing support |
 | `/services` | Core services and supporting creative capabilities |
 | `/services/ai-automation` | Automation scope, illustrative workflow, process, FAQs |
-| `/services/saas-development` | Product scope, illustrative role-based concept, process, FAQs |
-| `/services/web-development` | Web scope, responsive concept, standards, process, FAQs |
+| `/services/saas-development` | Combined SaaS and web scope, product and responsive concepts, FAQs |
+| `/services/web-development` | Permanent redirect to `/services/saas-development` |
 | `/work` | Creative archive, 13 films, and clearly labeled lab concepts |
 | `/labs` | Zavino Labs and the launched Aston Mark product; former products URL redirects here |
 | `/about` | Studio approach, disciplines, working principles, business details |

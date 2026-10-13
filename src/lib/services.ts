@@ -27,12 +27,13 @@ export const serviceCatalog = [
   },
   {
     slug: "saas-development",
-    name: "SaaS Products",
+    name: "SaaS & Web Development",
     line: "Turn your idea into a product.",
     description:
-      "Design, build, and launch software your customers can use and pay for. Start with the features they need most.",
+      "Design, build, and launch SaaS products, websites, and web apps. Start with the features your customers and team need most.",
     items: [
-      "Product design",
+      "Product & website design",
+      "Portals & dashboards",
       "Accounts, roles & billing",
       "Build & launch",
       "Improvements after launch",
@@ -40,7 +41,7 @@ export const serviceCatalog = [
   },
   {
     slug: "ai-content-flows",
-    name: "AI Content",
+    name: "AI Content Workflow",
     line: "Create content with less effort.",
     description:
       "Plan, draft, and reuse content across channels. We connect the steps, and your team approves what goes out.",
@@ -55,18 +56,11 @@ export const serviceCatalog = [
 
 export const additionalServices = [
   {
-    slug: "web-apps-platforms",
-    name: "Websites & Web Apps",
-    description:
-      "Websites, client portals, dashboards, and custom tools for your business.",
-    href: "/services/web-development",
-  },
-  {
     slug: "enterprise-ai-training",
     name: "Enterprise AI Training",
     description:
       "Practical workshops that help your team use AI in their daily work. For enterprise teams in Bangladesh.",
-    href: "/contact?focus=enterprise-ai-training&source=/services",
+    href: "https://cal.com/zavino/audit",
   },
 ] as const;
 

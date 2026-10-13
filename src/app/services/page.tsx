@@ -5,11 +5,12 @@ import { ContactCta } from "@/components/footer";
 import { ServicePlayground } from "@/components/service-playground";
 import { OngoingSupport } from "@/components/ongoing-support";
 import { serviceCatalog, additionalServices } from "@/lib/services";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "AI revenue, operations, SaaS & content",
+  title: "AI, SaaS & web services | AI Content Workflow",
   description:
-    "Capture leads, automate routine tasks, launch your software product, or simplify content creation. Find the right service for your business.",
+    "Capture leads, automate routine tasks, launch a product or website, and connect your content workflow. Find the right service for your business.",
   alternates: { canonical: "/services" },
 };
 
@@ -21,18 +22,18 @@ const illustrations = {
   },
   "ai-operations-agents": {
     kind: "operations",
-    href: "/contact?focus=ai-operations-agents&source=/services",
-    label: "Discuss an AI assistant",
+    href: site.auditBooking,
+    label: site.auditLabel,
   },
   "saas-development": {
     kind: "saas",
     href: "/services/saas-development",
-    label: "Explore SaaS development",
+    label: "Explore SaaS & web development",
   },
   "ai-content-flows": {
     kind: "content",
-    href: "/contact?focus=ai-content-flows&source=/services",
-    label: "Discuss your content needs",
+    href: site.auditBooking,
+    label: site.auditLabel,
   },
 } as const;
 
@@ -85,7 +86,20 @@ export default function ServicesPage() {
                     <li key={scope}>{scope}</li>
                   ))}
                 </ul>
-                <Link href={illustration.href} className="text-link">
+                <Link
+                  href={illustration.href}
+                  className="text-link"
+                  target={
+                    illustration.href === site.auditBooking
+                      ? "_blank"
+                      : undefined
+                  }
+                  rel={
+                    illustration.href === site.auditBooking
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
+                >
                   {illustration.label}
                   <ArrowUpRight size={20} aria-hidden="true" />
                 </Link>

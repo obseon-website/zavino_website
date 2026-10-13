@@ -28,8 +28,6 @@ export default function AiAutomationPage() {
           </>
         }
         description="AI systems that follow up with leads, answer questions, and handle routine tasks. Built around the tools your team already uses."
-        focus="ai-automation"
-        action="Discuss your AI project"
         facts={["Sales follow-up", "AI assistants", "People in control"]}
       />
       <section className="sp-demo-section section-shell" id="approach">
@@ -104,10 +102,8 @@ export default function AiAutomationPage() {
         ]}
       />
       <ServiceBrief
-        focus="ai-automation"
         title="What could your team spend less time on?"
         description="Tell us about the task and the tools you use. We’ll help you choose a useful first step."
-        action="Discuss your AI project"
       />
     </main>
   );

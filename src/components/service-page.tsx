@@ -11,15 +11,11 @@ export function ServiceHero({
   label,
   title,
   description,
-  focus,
-  action,
   facts,
 }: {
   label: string;
   title: ReactNode;
   description: string;
-  focus: string;
-  action: string;
   facts: string[];
 }) {
   return (
@@ -38,19 +34,13 @@ export function ServiceHero({
         </div>
         <div className="sp-hero-aside">
           <p>{description}</p>
-          <Link
-            className="button"
-            href={`/contact?focus=${focus}&source=/services/${focus}`}
-          >
-            {action} <ArrowUpRight size={15} />
-          </Link>
           <a
-            className="sp-down"
+            className="button"
             href={site.auditBooking}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Or book a call <ArrowUpRight size={18} />
+            {site.auditLabel} <ArrowUpRight size={15} />
           </a>
         </div>
       </div>
@@ -187,15 +177,11 @@ export function ServiceRelated({
 }
 
 export function ServiceBrief({
-  focus,
   title,
   description,
-  action,
 }: {
-  focus: string;
   title: string;
   description: string;
-  action: string;
 }) {
   return (
     <section className="sp-brief section-shell">
@@ -203,19 +189,13 @@ export function ServiceBrief({
       <div className="sp-brief-bottom">
         <p>{description}</p>
         <div className="sp-brief-actions">
-          <Link
-            className="button"
-            href={`/contact?focus=${focus}&source=/services/${focus}`}
-          >
-            {action} <ArrowUpRight size={17} />
-          </Link>
           <a
-            className="text-link"
+            className="button"
             href={site.auditBooking}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Or book a call <ArrowUpRight size={18} />
+            {site.auditLabel} <ArrowUpRight size={17} />
           </a>
         </div>
       </div>

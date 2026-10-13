@@ -21,19 +21,19 @@ const display = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Zavino | AI revenue, operations, SaaS & content",
+    default: "Zavino | AI, SaaS & Web | AI Content Workflow",
     template: "%s | Zavino",
   },
   description:
-    "AI systems that help you follow up with leads, handle daily tasks, and create content. SaaS products built around your idea. Based in Dhaka, working worldwide.",
+    "Follow up with leads, handle daily tasks, and connect your content workflow with AI. Build SaaS products and websites with our team in Dhaka, working worldwide.",
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     locale: "en_BD",
     siteName: "Zavino",
-    title: "Zavino | AI revenue, operations, SaaS & content",
+    title: "Zavino | AI, SaaS & Web | AI Content Workflow",
     description:
-      "Grow your business. Simplify the work. AI for sales, operations, and content, plus SaaS products for your next idea.",
+      "Grow your business. Simplify the work. AI for sales, operations, and content workflows, plus SaaS products, websites, and web apps for your next idea.",
     images: [
       {
         url: "/og.jpg",

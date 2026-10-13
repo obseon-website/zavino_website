@@ -11,12 +11,12 @@ export const inquiryFocusOptions = [
   },
   {
     value: "saas-development",
-    label: "SaaS Products",
+    label: "SaaS & Web Development",
     hint: "Who will use it, and what is the first useful workflow it should support?",
   },
   {
     value: "ai-content-flows",
-    label: "AI Content",
+    label: "AI Content Workflow",
     hint: "What content do you create, and which steps would you like to make easier?",
   },
   {

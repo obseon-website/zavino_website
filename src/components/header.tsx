@@ -55,9 +55,14 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Link className="header-contact text-link" href="/contact">
-          Let’s talk <ArrowUpRight size={18} aria-hidden="true" />
-        </Link>
+        <a
+          className="header-contact text-link"
+          href={site.auditBooking}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {site.auditShortLabel} <ArrowUpRight size={18} aria-hidden="true" />
+        </a>
         <button
           className="menu-toggle icon-button"
           ref={toggle}
@@ -127,7 +132,7 @@ export function Header() {
             rel="noopener noreferrer"
             onClick={() => closeMenu(true)}
           >
-            Book a call <ArrowUpRight size={18} aria-hidden="true" />
+            {site.auditLabel} <ArrowUpRight size={18} aria-hidden="true" />
           </a>
         </div>
       </dialog>

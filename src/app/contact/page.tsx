@@ -12,7 +12,7 @@ import "./contact.css";
 export const metadata: Metadata = {
   title: "Contact Zavino — let’s talk about your project",
   description:
-    "Tell us what you want to build or improve. Send your project details or book a call with the Zavino team.",
+    "Tell us what you want to build or improve. Send your project details or book an AI audit with Zavino.",
   alternates: { canonical: "/contact" },
 };
 
@@ -61,7 +61,7 @@ export default async function Contact({
               target="_blank"
               rel="noopener noreferrer"
             >
-              Book a call <ArrowUpRight size={20} />
+              {site.auditLabel} <ArrowUpRight size={20} />
             </a>
             <span className="external-note">
               Opens Cal.com · Choose an available time

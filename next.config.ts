@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/services/web-development",
+        destination: "/services/saas-development",
+        permanent: true,
+      },
+      {
         source: "/zavino-owned-products",
         destination: "/labs",
         permanent: true,

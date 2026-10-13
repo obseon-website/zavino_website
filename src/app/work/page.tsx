@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowDown, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowDown } from "@phosphor-icons/react/dist/ssr";
 import { ContactCta } from "@/components/footer";
 import { ReelGallery } from "@/components/reel-gallery";
 import { SpWorkGallery } from "@/components/sp-work-gallery";
+import { WorkProducts } from "@/components/work-products";
+import "../labs/labs.css";
+import "./work.css";
 
 export const metadata: Metadata = {
-  title: "Selected work — campaigns & films",
+  title: "Selected work — software, systems & creative",
   description:
-    "See campaign visuals and films from Zavino’s creative projects. Looking for our software products? Explore Zavino Labs.",
+    "Explore Outbid.bd and Forma with app screenshots and interactive previews, alongside Zavino’s AI capabilities, campaign visuals, and films.",
   alternates: { canonical: "/work" },
 };
 
@@ -19,11 +21,15 @@ export default function WorkPage() {
         <h1>
           Selected work.
           <br />
-          <span>A creative point of view.</span>
+          <span>Built for what’s next.</span>
         </h1>
         <div className="sp-work-intro">
-          <p>Campaign visuals and films from our creative projects.</p>
+          <p>Products, AI capabilities, and a creative point of view.</p>
           <nav aria-label="Work collections">
+            <a href="#software-work">
+              Software
+              <ArrowDown size={16} aria-hidden="true" />
+            </a>
             <a href="#creative-heritage">
               Campaigns
               <ArrowDown size={16} aria-hidden="true" />
@@ -32,20 +38,22 @@ export default function WorkPage() {
               Films
               <ArrowDown size={16} aria-hidden="true" />
             </a>
-            <Link href="/labs">
-              Our products
-              <ArrowUpRight size={16} aria-hidden="true" />
-            </Link>
           </nav>
         </div>
       </section>
-      <section
+      <WorkProducts />
+
+{/* older zavino works are commented out.  */}
+
+
+      {/* <section
         className="sp-work-archive section-shell"
         id="creative-heritage"
         aria-labelledby="campaigns-heading"
       >
         <div className="sp-work-collection-heading">
-          <h2 id="campaigns-heading">Campaigns.</h2>
+          <h2 id="campaigns-heading">Content & campaigns.</h2>
+          <p>Campaign visuals and films from our client creative projects.</p>
         </div>
         <SpWorkGallery />
         <div className="sp-work-films" id="films">
@@ -58,7 +66,7 @@ export default function WorkPage() {
           </div>
           <ReelGallery />
         </div>
-      </section>
+      </section> */}
       <ContactCta />
     </main>
   );

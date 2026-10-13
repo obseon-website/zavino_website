@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { site } from "@/lib/site";
 
 export function Hero() {
   return (
@@ -19,13 +19,18 @@ export function Hero() {
         </h1>
         <div className="home-hero-copy">
           <p>
-            We build AI systems for sales, daily operations, and content. And
-            SaaS products for your next idea.
+            We build AI systems for sales, daily operations, and content
+            workflows. We also develop SaaS products and custom web apps for
+            your next idea.
           </p>
-          <Link href="/contact" className="button">
-            Let’s talk about your project{" "}
-            <ArrowUpRight size={19} aria-hidden="true" />
-          </Link>
+          <a
+            href={site.auditBooking}
+            className="button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {site.auditLabel} <ArrowUpRight size={19} aria-hidden="true" />
+          </a>
           <a href="#solutions" className="text-link hero-explore">
             See what we do <ArrowUpRight size={18} aria-hidden="true" />
           </a>

@@ -9,9 +9,9 @@ import {
 } from "@/components/service-page";
 
 export const metadata: Metadata = {
-  title: "SaaS development — from idea to launch",
+  title: "SaaS & web development — from idea to launch",
   description:
-    "Turn your idea into software customers can use and pay for. Product design, accounts, billing, development, and support from Zavino.",
+    "Build software customers can use and pay for, or a website that connects your business with them. Design, development, and support from Zavino.",
   alternates: { canonical: "/services/saas-development" },
 };
 
@@ -19,7 +19,7 @@ export default function SaasDevelopmentPage() {
   return (
     <main id="main" className="sp-page sp-saas-page">
       <ServiceHero
-        label="SaaS Products"
+        label="SaaS & Web Development"
         title={
           <>
             Your idea.
@@ -27,9 +27,7 @@ export default function SaasDevelopmentPage() {
             <span>A working product.</span>
           </>
         }
-        description="We design and build software your customers can use and pay for. Start with a useful first version, then grow from real feedback."
-        focus="saas-development"
-        action="Discuss your product"
+        description="We design and build SaaS products, websites, and web apps. Start with a useful first version for your customers and team, then grow from real feedback."
         facts={["Product design", "Build & launch", "Support after launch"]}
       />
       <section className="sp-product-showcase section-shell" id="approach">
@@ -45,6 +43,20 @@ export default function SaasDevelopmentPage() {
           </p>
         </div>
         <ServicePlayground kind="saas" />
+      </section>
+      <section className="sp-web-showcase section-shell" id="web-experience">
+        <div className="sp-web-showcase-heading">
+          <h2>
+            Thoughtful at
+            <br />
+            <span>every size.</span>
+          </h2>
+          <p>
+            A clear experience on desktop and mobile. Switch between screens to
+            explore this example.
+          </p>
+        </div>
+        <ServicePlayground kind="web" />
       </section>
       <section className="sp-release section-shell">
         <div className="sp-release-grid">
@@ -101,6 +113,21 @@ export default function SaasDevelopmentPage() {
         description="One team for design, development, and the work after release."
         items={[
           {
+            title: "Business websites",
+            description:
+              "Explain what you do and give visitors a clear way to contact you.",
+          },
+          {
+            title: "Stores & booking tools",
+            description:
+              "Help customers find what they need and complete a purchase or booking.",
+          },
+          {
+            title: "Portals & dashboards",
+            description:
+              "Give customers and staff a place to manage information and tasks.",
+          },
+          {
             title: "Product plan & design",
             description:
               "Define who it’s for, what it does, and how people will use it.",
@@ -130,14 +157,24 @@ export default function SaasDevelopmentPage() {
               "Yes. We agree on the most useful first version so you can launch, learn, and decide what to build next.",
           },
           {
-            question: "Can you improve an existing product?",
+            question: "Can you improve an existing product or website?",
             answer:
-              "Yes. We review the current code, user needs, and problems before planning the next release.",
+              "Yes. We review the current code, user needs, and what gets in the way before agreeing on improvements.",
           },
           {
             question: "Can it include AI?",
             answer:
               "Yes, when AI helps your users complete a task. We test the feature and agree on how people review its results.",
+          },
+          {
+            question: "Will it work on mobile?",
+            answer:
+              "We design and test the main pages and actions for both mobile and desktop.",
+          },
+          {
+            question: "Can it connect to our other tools?",
+            answer:
+              "We check your tools and available connections during planning, then explain what’s possible.",
           },
           {
             question: "What about ongoing support?",
@@ -147,10 +184,8 @@ export default function SaasDevelopmentPage() {
         ]}
       />
       <ServiceBrief
-        focus="saas-development"
         title="What do you want to build?"
         description="Tell us who it’s for and what it should help them do."
-        action="Discuss your product"
       />
     </main>
   );

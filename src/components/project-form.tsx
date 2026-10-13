@@ -161,7 +161,7 @@ export function ProjectForm({
           target="_blank"
           rel="noopener noreferrer"
         >
-          Book a call <ArrowUpRight size={20} />
+          {site.auditLabel} <ArrowUpRight size={20} />
         </a>
         <p className="form-small">
           Have something to add?{" "}

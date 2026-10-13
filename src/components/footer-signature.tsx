@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Link from "next/link";
 import { ArrowUpRight } from "@phosphor-icons/react";
 import { site } from "@/lib/site";
 
@@ -194,12 +193,17 @@ export function FooterSignature() {
           <br />
           Connected work.
         </p>
-        <Link href="/contact" className="signature-invite">
+        <a
+          href={site.auditBooking}
+          className="signature-invite"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Have something in mind?
           <span>
-            Let’s make it happen <ArrowUpRight size={22} aria-hidden="true" />
+            {site.auditLabel} <ArrowUpRight size={22} aria-hidden="true" />
           </span>
-        </Link>
+        </a>
       </div>
       <button
         type="button"
