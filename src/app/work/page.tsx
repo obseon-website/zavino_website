@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { ArrowDown } from "@phosphor-icons/react/dist/ssr";
+import Link from "next/link";
+import { ArrowDown, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { ContactCta } from "@/components/footer";
-import { ReelGallery } from "@/components/reel-gallery";
-import { SpWorkGallery } from "@/components/sp-work-gallery";
 import { WorkProducts } from "@/components/work-products";
 import "../labs/labs.css";
 import "./work.css";
 
 export const metadata: Metadata = {
-  title: "Selected work — software, systems & creative",
+  title: "Selected work — software & AI capabilities",
   description:
-    "Explore Outbid.bd and Forma with app screenshots and interactive previews, alongside Zavino’s AI capabilities, campaign visuals, and films.",
+    "Explore Outbid.bd and Forma with real app screenshots, technical capabilities, and interactive previews. See what Zavino builds for your business.",
   alternates: { canonical: "/work" },
 };
 
@@ -24,27 +23,26 @@ export default function WorkPage() {
           <span>Built for what’s next.</span>
         </h1>
         <div className="sp-work-intro">
-          <p>Products, AI capabilities, and a creative point of view.</p>
+          <p>AI capabilities and products built by Zavino.</p>
           <nav aria-label="Work collections">
+            <a href="#what-we-build">
+              Capabilities
+              <ArrowDown size={16} aria-hidden="true" />
+            </a>
             <a href="#software-work">
               Software
               <ArrowDown size={16} aria-hidden="true" />
             </a>
-            <a href="#creative-heritage">
-              Campaigns
-              <ArrowDown size={16} aria-hidden="true" />
-            </a>
-            <a href="#films">
-              Films
-              <ArrowDown size={16} aria-hidden="true" />
-            </a>
+            <Link href="/labs">
+              Zavino Labs
+              <ArrowUpRight size={16} aria-hidden="true" />
+            </Link>
           </nav>
         </div>
       </section>
       <WorkProducts />
 
-{/* older zavino works are commented out.  */}
-
+      {/* older zavino works are commented out.  */}
 
       {/* <section
         className="sp-work-archive section-shell"

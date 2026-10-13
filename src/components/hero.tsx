@@ -32,7 +32,7 @@ export function Hero() {
             {site.auditLabel} <ArrowUpRight size={19} aria-hidden="true" />
           </a>
           <a href="#solutions" className="text-link hero-explore">
-            See what we do <ArrowUpRight size={18} aria-hidden="true" />
+            Explore what we build <ArrowUpRight size={18} aria-hidden="true" />
           </a>
           <p className="hero-location">Based in Dhaka. Working worldwide.</p>
         </div>

@@ -27,7 +27,7 @@ export const serviceCatalog = [
   },
   {
     slug: "saas-development",
-    name: "SaaS & Web Development",
+    name: "Saas & Custom Web Apps",
     line: "Turn your idea into a product.",
     description:
       "Design, build, and launch SaaS products, websites, and web apps. Start with the features your customers and team need most.",
@@ -60,6 +60,13 @@ export const additionalServices = [
     name: "Enterprise AI Training",
     description:
       "Practical workshops that help your team use AI in their daily work. For enterprise teams in Bangladesh.",
+    href: "https://cal.com/zavino/audit",
+  },
+  {
+    slug: "go-to-market-strategy",
+    name: "Go To Market Strategy (GTM)",
+    description:
+      "Strategy, planning, and execution. We’ll handle it all if needed.",
     href: "https://cal.com/zavino/audit",
   },
 ] as const;

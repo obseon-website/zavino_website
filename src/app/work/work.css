@@ -112,6 +112,7 @@
   border-radius: 0.375rem;
   color: var(--muted);
   font-size: 0.875rem;
+  white-space: nowrap;
 }
 .work-product-views button[aria-pressed="true"] {
   background: var(--forest-200);
@@ -256,5 +257,10 @@
     flex: 1;
     padding-inline: 0.625rem;
     font-size: 0.8125rem;
+  }
+}
+@media (max-width: 359px) {
+  .work-product-views button svg {
+    display: none;
   }
 }

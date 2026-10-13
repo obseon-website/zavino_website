@@ -29,7 +29,7 @@ npm run start
 | `/services/ai-automation` | Automation scope, illustrative workflow, process, FAQs |
 | `/services/saas-development` | Combined SaaS and web scope, product and responsive concepts, FAQs |
 | `/services/web-development` | Permanent redirect to `/services/saas-development` |
-| `/work` | Creative archive, 13 films, and clearly labeled lab concepts |
+| `/work` | Four-service capability overview, Outbid.bd and Forma case studies, real app screenshots, and interactive product previews |
 | `/labs` | Zavino Labs and the launched Aston Mark product; former products URL redirects here |
 | `/about` | Studio approach, disciplines, working principles, business details |
 | `/contact` | Validated project brief, booking, email, and WhatsApp |
