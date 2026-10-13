@@ -1,0 +1,13 @@
+{
+  "id": "british-bangla-travel",
+  "file": "british-bangla-travel.webp",
+  "width": 384,
+  "height": 68,
+  "bytes": 1990,
+  "originalBytes": 8664,
+  "sourceFile": "client-logo-assets/british-bangla-travel.png",
+  "sourceUrl": "https://britishbanglatravel.com/",
+  "crop": null,
+  "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+  "prompt": "Sourced logo from https://britishbanglatravel.com/, using the original asset british-bangla-travel.png. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+}

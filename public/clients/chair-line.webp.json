@@ -1,0 +1,13 @@
+{
+  "id": "chair-line",
+  "file": "chair-line.webp",
+  "width": 384,
+  "height": 178,
+  "bytes": 3396,
+  "originalBytes": 49368,
+  "sourceFile": "client-logo-assets/chair-line.png",
+  "sourceUrl": "https://chairlinebd.com/",
+  "crop": null,
+  "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+  "prompt": "Sourced logo from https://chairlinebd.com/, using the original asset chair-line.png. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+}

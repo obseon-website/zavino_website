@@ -1,0 +1,18 @@
+{
+  "id": "popsicles",
+  "file": "popsicles.webp",
+  "width": 384,
+  "height": 74,
+  "bytes": 2374,
+  "originalBytes": 1618022,
+  "sourceFile": "client-logo-assets/popsicles-logo-reference.png",
+  "sourceUrl": "https://www.behance.net/gallery/202338943/Popsicles-Branding",
+  "crop": {
+    "left": 290,
+    "top": 230,
+    "width": 610,
+    "height": 135
+  },
+  "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+  "prompt": "Sourced logo from https://www.behance.net/gallery/202338943/Popsicles-Branding, using the original asset popsicles-logo-reference.png. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+}

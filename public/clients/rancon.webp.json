@@ -1,0 +1,13 @@
+{
+  "id": "rancon",
+  "file": "rancon.webp",
+  "width": 217,
+  "height": 30,
+  "bytes": 968,
+  "originalBytes": 1856,
+  "sourceFile": "client-logo-assets/rancon-white.png",
+  "sourceUrl": "https://rancon.com.bd/",
+  "crop": null,
+  "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+  "prompt": "Sourced logo from https://rancon.com.bd/, using the original asset rancon-white.png. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+}

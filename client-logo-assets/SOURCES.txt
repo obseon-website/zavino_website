@@ -1,0 +1,103 @@
+ZAVINO — PREVIOUS CLIENT LOGO COLLECTION
+Collected: 13 October 2026
+Scope: downloaded logo assets only. Website code and configuration were not changed.
+Original download bytes retained; no backgrounds removed, logos redrawn, or recoloring applied.
+Coverage: logo images for 11 clients and a Popsicles branding reference sheet; all 12 requested client names are represented.
+
+Rancon
+File: rancon.png
+File details: PNG; 512 x 512; RGBA
+Source page: https://rancon.com.bd/
+Direct asset: https://rancon.com.bd/storage/2024/10/android-chrome-512x512-1.png
+Notes: Official symbol; white mark with transparency.
+
+Rancon — white wordmark
+File: rancon-white.png
+File details: PNG; 236 x 48; RGBA
+Source page: https://rancon.com.bd/
+Direct asset: https://rancon.com.bd/wp-content/uploads/2024/10/White-Logo-2.png
+Notes: Official transparent white wordmark; only 236 x 48 pixels.
+
+Halda Valley
+File: halda-valley.png
+File details: PNG; 3335 x 1555; RGBA
+Source page: https://haldavalley.com/
+Direct asset: https://haldavalley.com/cdn/shop/files/Halda_Valley_Logo_e765c85c-9419-4070-822c-e271a20a1a38.png?v=1780901535
+Notes: Official high-resolution logo.
+
+Ventro
+File: ventro.png
+File details: PNG; 787 x 175; RGBA
+Source page: https://ventro.com.bd/
+Direct asset: https://ventro.com.bd/cdn/shop/files/VENTRO_LOGO.png?v=1750269352
+Notes: Official header wordmark.
+
+Steak & Marrow
+File: steak-and-marrow.jpg
+File details: JPEG; 1168 x 1168; RGB
+Source page: https://sites.google.com/view/steakandmarrow/home
+Direct asset: https://sites.google.com/sitesv-images-rt/AMxu72sIJbUcugaTVV-EOku02VEaOuWRmtBCmvD8RMVpi8abU5yfrs8fSvJijurRSYs2UPaGUq0DTnOStHwhOcqCA67-q5UvmiihQRu-oIsh8utHu1jRiIJuPpcRj-XB6daAANk_fKOrfbmoG-Kd8VtHG_dIp_Qxk5CuunZEOlwX2dCX9AmBYXpjxacltMIP=w16383
+Notes: Logo from linked restaurant menu site; includes fire background. The main steakandmarrow.com domain did not resolve. Current name reads STEAK & MARROW. Earlier MEAT & MARROW logo was excluded.
+
+Borsalle
+File: borsalle.png
+File details: PNG; 545 x 545; RGBA
+Source page: https://linktr.ee/borsalle
+Direct asset: https://ugc.production.linktr.ee/6e299cea-d460-4edf-a8e3-96633484688e_1-2-.png
+Notes: Official Linktree profile image, linked to borsalle Facebook and borsallebd Instagram; white background.
+
+Saus Taus
+File: saus-taus.jpg
+File details: JPEG; 200 x 200; RGB
+Source page: https://vc4a.com/ventures/saus-taus-global-pvt-ltd/?cmt=16&lang=ar
+Direct asset: https://vc4a.com/wp-content/uploads/2026/01/1720361015397.jpeg
+Notes: Venture profile logo. Low resolution: 200 x 200 pixels; white background.
+
+Popsicles
+File: popsicles-logo-reference.png
+File details: PNG; 1200 x 1920; P
+Source page: https://www.behance.net/gallery/202338943/Popsicles-Branding
+Direct asset: https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e9795f202338943.66845545bbd57.png
+Notes: Designer branding reference sheet, credited to Jubair Zidan and Scratchboard in Dhaka. Includes primary and secondary logo variants on purple background. Reference only: no clean standalone logo was available; confirm this identity against your client before use.
+
+Thanda Garam
+File: thanda-garam.jpg
+File details: JPEG; 1000 x 1000; RGB
+Source page: https://www.foodpanda.com.bd/restaurant/s3ny/thanda-garam-dhanmondi
+Direct asset: https://images.deliveryhero.io/image/fd-bd/bd-logos/cb1jw-logo.jpg
+Notes: Bangladesh Foodpanda vendor logo; white decorative background.
+
+Chair Line
+File: chair-line.png
+File details: PNG; 800 x 371; RGBA
+Source page: https://chairlinebd.com/
+Direct asset: https://chairlinebd.com/wp-content/uploads/2025/06/Chair-Line-Logo.png
+Notes: Official header logo.
+
+MK Electronics
+File: mk-electronics.svg
+File details: SVG; viewBox 0 0 105.53 20.75
+Source page: https://mke.com.bd/
+Direct asset: https://mke.com.bd/mke-logo.svg
+Notes: Official vector logo.
+
+MK Electronics — white
+File: mk-electronics-white.svg
+File details: SVG; viewBox 0 0 105.53 20.75
+Source page: https://mke.com.bd/
+Direct asset: https://mke.com.bd/mke-logo-white.svg
+Notes: Official vector variant for dark backgrounds.
+
+British Bangla Travel Ltd
+File: british-bangla-travel.png
+File details: PNG; 699 x 123; RGBA
+Source page: https://britishbanglatravel.com/
+Direct asset: https://travnet-cart-tenancy-bucket.s3.eu-west-2.amazonaws.com/tenant_uploads/da933969-6c84-4a4b-b6a1-7d3c037e1c5d_British_Bangla_Travel.png
+Notes: Official white wordmark with transparency; use on a dark background.
+
+Nawabi Delight
+File: nawabi-delight.jpg
+File details: JPEG; 720 x 720; RGB
+Source page: https://www.facebook.com/nawabidelight
+Direct asset: https://scontent.fdac189-1.fna.fbcdn.net/v/t39.30808-1/418734086_389814133551453_1385627324154290563_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s720x720&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=3ab345&_nc_ohc=YqLradjRJDYQ7kNvwFaAcN8&_nc_oc=AdoOmgNJuSuSEY9SLVWt4ITHQC_5d9ZeVkEVJsjibF4QT6IXynk49OxISLt5hEH4p8s&_nc_zt=24&_nc_ht=scontent.fdac189-1.fna&_nc_gid=xdgfqnnuUzpt-4zNQHasQQ&_nc_ss=7f20f&oh=00_AQPzJYp2v87Jr-ZE256m-3Ph0g0mfPxjccEVNEQ-TZpJlQ&oe=6AD4312D
+Notes: Facebook profile picture from the exact page supplied by the user, titled Nawabi Delight Kitchens | Dhaka. User confirmed their profile picture is their logo. Original white background retained. Facebook CDN URL may expire; downloaded file is saved locally.

@@ -1,0 +1,185 @@
+[
+  {
+    "id": "rancon",
+    "file": "rancon.webp",
+    "width": 217,
+    "height": 30,
+    "bytes": 968,
+    "originalBytes": 1856,
+    "sourceFile": "client-logo-assets/rancon-white.png",
+    "sourceUrl": "https://rancon.com.bd/",
+    "crop": null,
+    "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+    "prompt": "Sourced logo from https://rancon.com.bd/, using the original asset rancon-white.png. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+  },
+  {
+    "id": "halda-valley",
+    "file": "halda-valley.webp",
+    "width": 384,
+    "height": 121,
+    "bytes": 3528,
+    "originalBytes": 43142,
+    "sourceFile": "client-logo-assets/halda-valley.png",
+    "sourceUrl": "https://haldavalley.com/",
+    "crop": null,
+    "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+    "prompt": "Sourced logo from https://haldavalley.com/, using the original asset halda-valley.png. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+  },
+  {
+    "id": "ventro",
+    "file": "ventro.webp",
+    "width": 384,
+    "height": 64,
+    "bytes": 1758,
+    "originalBytes": 19853,
+    "sourceFile": "client-logo-assets/ventro.png",
+    "sourceUrl": "https://ventro.com.bd/",
+    "crop": null,
+    "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+    "prompt": "Sourced logo from https://ventro.com.bd/, using the original asset ventro.png. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+  },
+  {
+    "id": "steak-and-marrow",
+    "file": "steak-and-marrow.webp",
+    "width": 384,
+    "height": 152,
+    "bytes": 7050,
+    "originalBytes": 187103,
+    "sourceFile": "client-logo-assets/steak-and-marrow.jpg",
+    "sourceUrl": "https://sites.google.com/view/steakandmarrow/home",
+    "crop": {
+      "left": 268,
+      "top": 475,
+      "width": 627,
+      "height": 280
+    },
+    "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+    "prompt": "Sourced logo from https://sites.google.com/view/steakandmarrow/home, using the original asset steak-and-marrow.jpg. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+  },
+  {
+    "id": "borsalle",
+    "file": "borsalle.webp",
+    "width": 384,
+    "height": 91,
+    "bytes": 2698,
+    "originalBytes": 28524,
+    "sourceFile": "client-logo-assets/borsalle.png",
+    "sourceUrl": "https://linktr.ee/borsalle",
+    "crop": {
+      "left": 55,
+      "top": 200,
+      "width": 435,
+      "height": 110
+    },
+    "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+    "prompt": "Sourced logo from https://linktr.ee/borsalle, using the original asset borsalle.png. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+  },
+  {
+    "id": "saus-taus",
+    "file": "saus-taus.webp",
+    "width": 163,
+    "height": 130,
+    "bytes": 780,
+    "originalBytes": 6356,
+    "sourceFile": "client-logo-assets/saus-taus.jpg",
+    "sourceUrl": "https://vc4a.com/ventures/saus-taus-global-pvt-ltd/?cmt=16&lang=ar",
+    "crop": null,
+    "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+    "prompt": "Sourced logo from https://vc4a.com/ventures/saus-taus-global-pvt-ltd/?cmt=16&lang=ar, using the original asset saus-taus.jpg. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+  },
+  {
+    "id": "nawabi-delight",
+    "file": "nawabi-delight.webp",
+    "width": 384,
+    "height": 138,
+    "bytes": 5760,
+    "originalBytes": 27921,
+    "sourceFile": "client-logo-assets/nawabi-delight.jpg",
+    "sourceUrl": "https://www.facebook.com/nawabidelight",
+    "crop": {
+      "left": 20,
+      "top": 225,
+      "width": 680,
+      "height": 252
+    },
+    "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+    "prompt": "Sourced logo from https://www.facebook.com/nawabidelight, using the original asset nawabi-delight.jpg. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+  },
+  {
+    "id": "popsicles",
+    "file": "popsicles.webp",
+    "width": 384,
+    "height": 74,
+    "bytes": 2374,
+    "originalBytes": 1618022,
+    "sourceFile": "client-logo-assets/popsicles-logo-reference.png",
+    "sourceUrl": "https://www.behance.net/gallery/202338943/Popsicles-Branding",
+    "crop": {
+      "left": 290,
+      "top": 230,
+      "width": 610,
+      "height": 135
+    },
+    "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+    "prompt": "Sourced logo from https://www.behance.net/gallery/202338943/Popsicles-Branding, using the original asset popsicles-logo-reference.png. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+  },
+  {
+    "id": "thanda-garam",
+    "file": "thanda-garam.webp",
+    "width": 384,
+    "height": 40,
+    "bytes": 1984,
+    "originalBytes": 66398,
+    "sourceFile": "client-logo-assets/thanda-garam.jpg",
+    "sourceUrl": "https://www.foodpanda.com.bd/restaurant/s3ny/thanda-garam-dhanmondi",
+    "crop": {
+      "left": 200,
+      "top": 570,
+      "width": 610,
+      "height": 70
+    },
+    "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+    "prompt": "Sourced logo from https://www.foodpanda.com.bd/restaurant/s3ny/thanda-garam-dhanmondi, using the original asset thanda-garam.jpg. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+  },
+  {
+    "id": "chair-line",
+    "file": "chair-line.webp",
+    "width": 384,
+    "height": 178,
+    "bytes": 3396,
+    "originalBytes": 49368,
+    "sourceFile": "client-logo-assets/chair-line.png",
+    "sourceUrl": "https://chairlinebd.com/",
+    "crop": null,
+    "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+    "prompt": "Sourced logo from https://chairlinebd.com/, using the original asset chair-line.png. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+  },
+  {
+    "id": "mk-electronics",
+    "file": "mk-electronics.svg",
+    "width": 80,
+    "height": 12,
+    "bytes": 20848,
+    "originalBytes": 20851,
+    "sourceFile": "client-logo-assets/mk-electronics.svg",
+    "sourceUrl": "https://mke.com.bd/",
+    "crop": {
+      "viewBox": "26 0 79.53 12"
+    },
+    "method": "Original vector paths, monochrome fill and stroke; viewBox crops to the primary wordmark and excludes the tiny slogan; whitespace compacted.",
+    "prompt": "Sourced logo from https://mke.com.bd/, using the original asset mk-electronics.svg. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+  },
+  {
+    "id": "british-bangla-travel",
+    "file": "british-bangla-travel.webp",
+    "width": 384,
+    "height": 68,
+    "bytes": 1990,
+    "originalBytes": 8664,
+    "sourceFile": "client-logo-assets/british-bangla-travel.png",
+    "sourceUrl": "https://britishbanglatravel.com/",
+    "crop": null,
+    "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+    "prompt": "Sourced logo from https://britishbanglatravel.com/, using the original asset british-bangla-travel.png. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+  }
+]

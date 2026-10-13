@@ -1,0 +1,15 @@
+{
+  "id": "mk-electronics",
+  "file": "mk-electronics.svg",
+  "width": 80,
+  "height": 12,
+  "bytes": 20848,
+  "originalBytes": 20851,
+  "sourceFile": "client-logo-assets/mk-electronics.svg",
+  "sourceUrl": "https://mke.com.bd/",
+  "crop": {
+    "viewBox": "26 0 79.53 12"
+  },
+  "method": "Original vector paths, monochrome fill and stroke; viewBox crops to the primary wordmark and excludes the tiny slogan; whitespace compacted.",
+  "prompt": "Sourced logo from https://mke.com.bd/, using the original asset mk-electronics.svg. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+}

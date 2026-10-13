@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowDown, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { ContactCta } from "@/components/footer";
 import { WorkProducts } from "@/components/work-products";
+import { WorkBrands } from "@/components/work-brands";
 import "../labs/labs.css";
 import "./work.css";
 
@@ -65,6 +66,7 @@ export default function WorkPage() {
           <ReelGallery />
         </div>
       </section> */}
+      <WorkBrands />
       <ContactCta />
     </main>
   );

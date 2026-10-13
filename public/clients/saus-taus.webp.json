@@ -1,0 +1,13 @@
+{
+  "id": "saus-taus",
+  "file": "saus-taus.webp",
+  "width": 163,
+  "height": 130,
+  "bytes": 780,
+  "originalBytes": 6356,
+  "sourceFile": "client-logo-assets/saus-taus.jpg",
+  "sourceUrl": "https://vc4a.com/ventures/saus-taus-global-pvt-ltd/?cmt=16&lang=ar",
+  "crop": null,
+  "method": "Original logo lettering, optional recorded crop, noise-free monochrome foreground mask, transparent trim, size-limited lossless WebP. No generated or redrawn lettering.",
+  "prompt": "Sourced logo from https://vc4a.com/ventures/saus-taus-global-pvt-ltd/?cmt=16&lang=ar, using the original asset saus-taus.jpg. Preserve the supplied lettering and shapes. Recorded crops isolate the primary mark; produce a dark, transparent, readable logo for the Work page. This asset was processed with Sharp, not generated."
+}
