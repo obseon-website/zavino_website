@@ -64,9 +64,9 @@ export const additionalServices = [
   },
   {
     slug: "go-to-market-strategy",
-    name: "Go To Market Strategy (GTM)",
+    name: "SaaS Go To Market Strategy (GTM)",
     description:
-      "Strategy, planning, and execution. We’ll handle it all if needed.",
+      "Let's turn your ideas into revenue streams! We develop a structured blueprint that takes you from product dev to sales.",
     href: "https://cal.com/zavino/audit",
   },
 ] as const;
