@@ -11,7 +11,7 @@ export const inquiryFocusOptions = [
   },
   {
     value: "saas-development",
-    label: "Saas & Custom Web Apps",
+    label: "SaaS & Custom Web Apps",
     hint: "Who will use it, and what is the first useful workflow it should support?",
   },
   {

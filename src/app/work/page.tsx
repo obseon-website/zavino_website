@@ -10,7 +10,7 @@ import "./work.css";
 export const metadata: Metadata = {
   title: "Selected work — software & AI capabilities",
   description:
-    "Explore Outbid.bd and Forma with real app screenshots, technical capabilities, and interactive previews. See what Zavino builds for your business.",
+    "Explore Zavino’s AI and software capabilities and discover our own products in Zavino Labs.",
   alternates: { canonical: "/work" },
 };
 
@@ -28,10 +28,6 @@ export default function WorkPage() {
           <nav aria-label="Work collections">
             <a href="#what-we-build">
               Capabilities
-              <ArrowDown size={16} aria-hidden="true" />
-            </a>
-            <a href="#software-work">
-              Software
               <ArrowDown size={16} aria-hidden="true" />
             </a>
             <Link href="/labs">

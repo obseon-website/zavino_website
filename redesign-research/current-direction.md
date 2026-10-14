@@ -14,7 +14,7 @@ Zavino is an **AI automation agency and SaaS development partner** for organizat
 
 | Role | Recommended copy | Why |
 | --- | --- | --- |
-| Small positioning label | **AI AUTOMATION AGENCY · SAAS DEVELOPMENT** | Names the offer immediately. |
+| Small positioning label | **AI AUTOMATION AGENCY · SaaS DEVELOPMENT** | Names the offer immediately. |
 | H1 | **AI automation for the work your business runs on.** | Links AI to important operational work, rather than a novelty tool. |
 | Supporting line | **We connect customer and operational data, automate decisions and handoffs, and build the SaaS products that make it all work.** | Says what is connected and what Zavino builds. |
 | Primary action | **Discuss your project** | Leads to a serious-project brief or discovery conversation. |

@@ -8,7 +8,7 @@ Redesign Zavino into a **professional, high-converting AI automation agency webs
 
 The working homepage message is:
 
-- Positioning label: **AI AUTOMATION AGENCY · SAAS DEVELOPMENT**
+- Positioning label: **AI AUTOMATION AGENCY · SaaS DEVELOPMENT**
 - Headline: **AI automation for the work your business runs on.**
 - Support: **We connect customer and operational data, automate decisions and handoffs, and build the SaaS products that make it all work.**
 - Primary action: **Discuss your project**

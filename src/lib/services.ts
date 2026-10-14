@@ -27,7 +27,7 @@ export const serviceCatalog = [
   },
   {
     slug: "saas-development",
-    name: "Saas & Custom Web Apps",
+    name: "SaaS & Custom Web Apps",
     line: "Turn your idea into a product.",
     description:
       "Design, build, and launch SaaS products, websites, and web apps. Start with the features your customers and team need most.",

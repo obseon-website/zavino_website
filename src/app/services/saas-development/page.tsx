@@ -9,7 +9,7 @@ import {
 } from "@/components/service-page";
 
 export const metadata: Metadata = {
-  title: "Saas & Custom Web Apps — from idea to launch",
+  title: "SaaS & Custom Web Apps — from idea to launch",
   description:
     "Build software customers can use and pay for, or a website that connects your business with them. Design, development, and support from Zavino.",
   alternates: { canonical: "/services/saas-development" },
@@ -19,7 +19,7 @@ export default function SaasDevelopmentPage() {
   return (
     <main id="main" className="sp-page sp-saas-page">
       <ServiceHero
-        label="Saas & Custom Web Apps"
+        label="SaaS & Custom Web Apps"
         title={
           <>
             Your idea.
